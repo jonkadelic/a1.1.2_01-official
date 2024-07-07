@@ -1,0 +1,6182 @@
+CLASS a net/minecraft/world/level/pathfinder/Node
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	FIELD d hash I
+	FIELD e heapIdx I
+	FIELD f g F
+	FIELD g h F
+	FIELD h f F
+	FIELD i cameFrom La;
+	FIELD j closed Z
+	METHOD <init> (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a inOpenSet ()Z
+	METHOD a distanceTo (La;)F
+		ARG 1 node
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 obj
+CLASS aa net/minecraft/client/renderer/ptexture/CompassTexture
+	FIELD g current [F
+	FIELD h next [F
+	FIELD i mc Lnet/minecraft/client/Minecraft;
+	FIELD j raw [I
+	FIELD k rot D
+	FIELD l rota D
+	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
+		ARG 1 mc
+CLASS ab net/minecraft/client/renderer/entity/ItemRenderer
+	FIELD d _tileRenderer Lbc;
+	FIELD e random Ljava/util/Random;
+	METHOD a blit (IIIIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 sx
+		ARG 4 sy
+		ARG 5 w
+		ARG 6 h
+	METHOD a fillRect (Lho;IIIII)V
+		ARG 1 t
+		ARG 2 x
+		ARG 3 y
+		ARG 4 w
+		ARG 5 h
+		ARG 6 c
+	METHOD a renderGuiItem (Lkd;Ley;Lev;II)V
+		ARG 1 font
+		ARG 2 textures
+		ARG 3 item
+		ARG 4 x
+		ARG 5 y
+	METHOD b renderGuiItemDecorations (Lkd;Ley;Lev;II)V
+		ARG 1 font
+		ARG 2 textures
+		ARG 3 item
+		ARG 4 x
+		ARG 5 y
+CLASS ac net/minecraft/world/item/BucketItem
+	FIELD a content I
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 content
+CLASS ad net/minecraft/isom/IsomPreview
+	FIELD a currentRender I
+	FIELD b zoom I
+	FIELD c showHelp Z
+	FIELD d level Lcn;
+	FIELD e workDir Ljava/io/File;
+	FIELD f running Z
+	FIELD g zonesToRender Ljava/util/List;
+	FIELD h zoneMap [[Ljj;
+	FIELD i xCam I
+	FIELD j yCam I
+	FIELD k xDrag I
+	FIELD l yDrag I
+	METHOD a getWorkingDirectory ()Ljava/io/File;
+	METHOD a setBrightness (I)V
+		ARG 1 i
+	METHOD a getZone (II)Ljj;
+		ARG 1 x
+		ARG 2 y
+	METHOD a render (Ljava/awt/Graphics2D;)V
+	METHOD a getWorkingDirectory (Ljava/lang/String;)Ljava/io/File;
+		ARG 1 applicationName
+	METHOD b start ()V
+	METHOD b loadLevel (Ljava/lang/String;)V
+		ARG 1 levelName
+	METHOD c stop ()V
+	METHOD d render ()V
+	METHOD e getPlatform ()Lfa;
+	METHOD keyPressed (Ljava/awt/event/KeyEvent;)V
+		ARG 1 ke
+	METHOD keyReleased (Ljava/awt/event/KeyEvent;)V
+		ARG 1 arg0
+	METHOD keyTyped (Ljava/awt/event/KeyEvent;)V
+		ARG 1 arg0
+	METHOD mouseClicked (Ljava/awt/event/MouseEvent;)V
+		ARG 1 m
+	METHOD mouseDragged (Ljava/awt/event/MouseEvent;)V
+		ARG 1 m
+	METHOD mouseEntered (Ljava/awt/event/MouseEvent;)V
+		ARG 1 arg0
+	METHOD mouseExited (Ljava/awt/event/MouseEvent;)V
+		ARG 1 arg0
+	METHOD mouseMoved (Ljava/awt/event/MouseEvent;)V
+		ARG 1 arg0
+	METHOD mousePressed (Ljava/awt/event/MouseEvent;)V
+		ARG 1 m
+	METHOD mouseReleased (Ljava/awt/event/MouseEvent;)V
+		ARG 1 arg0
+	METHOD paint (Ljava/awt/Graphics;)V
+		ARG 1 _g
+	METHOD update (Ljava/awt/Graphics;)V
+		ARG 1 g
+CLASS ae net/minecraft/world/level/levelgen/feature/FlowerFeature
+	FIELD a tile I
+	METHOD <init> (I)V
+		ARG 1 tile
+CLASS af net/minecraft/world/level/chunk/storage/ChunkStorage
+	METHOD a tick ()V
+	METHOD a load (Lcn;II)Lga;
+		ARG 1 level
+		ARG 2 x
+		ARG 3 z
+	METHOD a save (Lcn;Lga;)V
+		ARG 1 level
+		ARG 2 chunk
+	METHOD b flush ()V
+	METHOD b saveEntities (Lcn;Lga;)V
+		ARG 1 level
+		ARG 2 chunk
+CLASS ag net/minecraft/world/entity/animal/Animal
+CLASS ah net/minecraft/client/sound/Sound
+	FIELD a name Ljava/lang/String;
+	FIELD b url Ljava/net/URL;
+	METHOD <init> (Ljava/lang/String;Ljava/net/URL;)V
+		ARG 1 name
+		ARG 2 url
+CLASS ai net/minecraft/world/level/tile/RedStoneOreTile
+	FIELD a lit Z
+	METHOD <init> (IIZ)V
+		ARG 1 id
+		ARG 2 tex
+		ARG 3 lit
+	METHOD h interact (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD i poofParticles (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS aj net/minecraft/world/phys/Vec3
+	FIELD a y D
+	FIELD b x D
+	FIELD c z D
+	FIELD d pool Ljava/util/List;
+	FIELD e poolPointer I
+	METHOD <init> (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD a resetPool ()V
+	METHOD a newPermanent (DDD)Laj;
+		ARG 0 x
+		ARG 2 y
+		ARG 4 z
+	METHOD a xRot (F)V
+		ARG 1 r
+	METHOD a vectorTo (Laj;)Laj;
+		ARG 1 v
+	METHOD a clipX (Laj;D)Laj;
+		ARG 1 v
+		ARG 2 x
+	METHOD b normalize ()Laj;
+	METHOD b newTemp (DDD)Laj;
+		ARG 0 x
+		ARG 2 y
+		ARG 4 z
+	METHOD b yRot (F)V
+		ARG 1 r
+	METHOD b cross (Laj;)Laj;
+		ARG 1 v
+	METHOD b clipY (Laj;D)Laj;
+		ARG 1 v
+		ARG 2 y
+	METHOD c length ()D
+	METHOD c add (DDD)Laj;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD c distanceTo (Laj;)D
+		ARG 1 v
+	METHOD c clipZ (Laj;D)Laj;
+		ARG 1 v
+		ARG 2 z
+	METHOD d distanceToSqr (DDD)D
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD d distanceToSqr (Laj;)D
+		ARG 1 v
+	METHOD e set (DDD)Laj;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+CLASS ak net/minecraft/client/renderer/entity/EntityRenderer
+	FIELD a entityRenderDispatcher Lkx;
+	FIELD b shadowRadius F
+	FIELD c shadowStrength F
+	FIELD d model Lfo;
+	FIELD e tileRenderer Lbc;
+	METHOD a getFont ()Lkd;
+	METHOD a renderFlat (Lcf;)V
+		ARG 0 bb
+	METHOD a render (Lcf;DDD)V
+		ARG 0 bb
+		ARG 1 xo
+		ARG 3 yo
+		ARG 5 zo
+	METHOD a bindTexture (Ljava/lang/String;)V
+		ARG 1 resourceName
+	METHOD a bindTexture (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 urlTexture
+		ARG 2 backupTexture
+	METHOD a renderFlame (Lkh;DDDF)V
+		ARG 1 e
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 a
+	METHOD a render (Lkh;DDDFF)V
+		ARG 1 mob
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 rot
+		ARG 9 a
+	METHOD a init (Lkx;)V
+		ARG 1 entityRenderDispatcher
+	METHOD a renderTileShadow (Lly;DDDIIIFFDDD)V
+		ARG 1 tt
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xt
+		ARG 9 yt
+		ARG 10 zt
+		ARG 11 pow
+		ARG 12 r
+		ARG 13 xo
+		ARG 15 yo
+		ARG 17 zo
+	METHOD b getLevel ()Lcn;
+	METHOD b postRender (Lkh;DDDFF)V
+		ARG 1 entity
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 rot
+		ARG 9 a
+	METHOD c renderShadow (Lkh;DDDFF)V
+		ARG 1 e
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 pow
+		ARG 9 a
+CLASS al net/minecraft/world/level/tile/PressurePlateTile
+	FIELD a sensitivity Ljs;
+	METHOD <init> (IILjs;)V
+		ARG 1 id
+		ARG 2 tex
+		ARG 3 sensitivity
+	METHOD h checkPressed (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS am net/minecraft/world/entity/animal/Cow
+CLASS an net/minecraft/world/inventory/ResultSlot
+	FIELD c craftSlots Lgh;
+	METHOD <init> (Lee;Lgh;Lgh;III)V
+		ARG 1 screen
+		ARG 2 craftSlots
+		ARG 3 container
+		ARG 4 slot
+		ARG 5 x
+		ARG 6 y
+CLASS ao net/minecraft/world/entity/projectile/Snowball
+	FIELD a shakeTime I
+	FIELD b xTile I
+	FIELD c yTile I
+	FIELD d zTile I
+	FIELD e lastTile I
+	FIELD f inGround Z
+	FIELD g owner Lge;
+	FIELD h life I
+	FIELD i flightTime I
+	METHOD <init> (Lcn;Lge;)V
+		ARG 1 level
+		ARG 2 owner
+	METHOD a shoot (DDDFF)V
+		ARG 1 xd
+		ARG 3 yd
+		ARG 5 zd
+		ARG 7 speed
+		ARG 8 waver
+CLASS ap net/minecraft/world/item/BowlFoodItem
+CLASS aq net/minecraft/client/CrashInfoPanel
+	METHOD <init> (Lgo;)V
+		ARG 1 report
+CLASS ar net/minecraft/world/inventory/AbstractContainerMenu
+	FIELD c lastSlots Ljava/util/List;
+	METHOD a removed (Ldm;)V
+		ARG 1 player
+	METHOD a slotsChanged (Lgh;)V
+		ARG 1 container
+CLASS as net/minecraft/client/gui/ErrorScreen
+	FIELD a title Ljava/lang/String;
+	FIELD h message Ljava/lang/String;
+CLASS at net/minecraft/client/renderer/ptexture/LavaTexture
+	FIELD g current [F
+	FIELD h next [F
+	FIELD i heat [F
+	FIELD j heata [F
+CLASS au net/minecraft/client/gui/DeathScreen
+CLASS av net/minecraft/world/item/TileItem
+	FIELD a tileId I
+CLASS aw net/minecraft/world/level/chunk/ChunkSource
+	METHOD a tick ()Z
+	METHOD a hasChunk (II)Z
+		ARG 1 x
+		ARG 2 z
+	METHOD a postProcess (Law;II)V
+		ARG 1 parent
+		ARG 2 x
+		ARG 3 z
+	METHOD a save (ZLnu;)Z
+		ARG 1 force
+		ARG 2 progressListener
+	METHOD b shouldSave ()Z
+	METHOD b getChunk (II)Lga;
+		ARG 1 x
+		ARG 2 z
+CLASS ax net/minecraft/world/entity/monster/Spider
+CLASS ay net/minecraft/client/gui/OptionsScreen
+	FIELD a title Ljava/lang/String;
+	FIELD h lastScreen Lbh;
+	FIELD i options Lfr;
+	METHOD <init> (Lbh;Lfr;)V
+		ARG 1 lastScreen
+		ARG 2 options
+CLASS az net/minecraft/world/level/MobSpawner
+	FIELD a maxMobs I
+	FIELD b category Ljava/lang/Class;
+	FIELD c mobs [Ljava/lang/Class;
+	FIELD d chunksToPoll Ljava/util/Set;
+	METHOD <init> (ILjava/lang/Class;[Ljava/lang/Class;)V
+		ARG 1 maxMobs
+		ARG 2 category
+		ARG 3 mobs
+	METHOD a tick (Lcn;)V
+		ARG 1 level
+	METHOD a getRandomPosWithin (Lcn;II)Lmt;
+		ARG 1 level
+		ARG 2 xOff
+		ARG 3 zOff
+	METHOD a tick (Lcn;ILnu;)I
+		ARG 1 level
+		ARG 2 b
+		ARG 3 progress
+CLASS b net/minecraft/world/level/tile/ChestTile
+	FIELD a random Ljava/util/Random;
+	METHOD <init> (I)V
+		ARG 1 id
+	METHOD h isFullChest (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS ba net/minecraft/client/particle/BubbleParticle
+CLASS bb net/minecraft/world/level/tile/Tile_SoundType
+	FIELD a name Ljava/lang/String;
+	FIELD b volume F
+	FIELD c pitch F
+	METHOD <init> (Ljava/lang/String;FF)V
+		ARG 1 name
+		ARG 2 volume
+		ARG 3 pitch
+	METHOD a getBreakSound ()Ljava/lang/String;
+	METHOD b getVolume ()F
+	METHOD c getPitch ()F
+	METHOD d getStepSound ()Ljava/lang/String;
+CLASS bc net/minecraft/client/renderer/TileRenderer
+	FIELD a level Lnm;
+	FIELD b fixedTexture I
+	FIELD c xFlipTexture Z
+	FIELD d noCulling Z
+	METHOD <init> (Lnm;)V
+		ARG 1 level
+	METHOD a canRender (I)Z
+		ARG 0 renderShape
+	METHOD a getWaterHeight (IIILgb;)F
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 m
+	METHOD a renderTile (Lly;)V
+		ARG 1 tile
+	METHOD a tesselateTorch (Lly;DDDDD)V
+		ARG 1 tt
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xxa
+		ARG 10 zza
+	METHOD a renderFaceUp (Lly;DDDI)V
+		ARG 1 tt
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 tex
+	METHOD a renderCube (Lly;F)V
+		ARG 1 tile
+		ARG 2 alpha
+	METHOD a tesselateCrossTexture (Lly;IDDD)V
+		ARG 1 tt
+		ARG 2 data
+		ARG 3 x
+		ARG 5 y
+		ARG 7 z
+	METHOD a tesselateInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD a tesselateBlockInWorld (Lly;IIIFFF)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 r
+		ARG 6 g
+		ARG 7 b
+	METHOD a tesselateInWorld (Lly;IIII)V
+		ARG 1 tile
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 fixedTexture
+	METHOD a renderBlock (Lly;Lcn;III)V
+		ARG 1 tt
+		ARG 2 level
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+	METHOD b renderFaceDown (Lly;DDDI)V
+		ARG 1 tt
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 tex
+	METHOD b tesselateRowTexture (Lly;IDDD)V
+		ARG 1 tt
+		ARG 2 data
+		ARG 3 x
+		ARG 5 y
+		ARG 7 z
+	METHOD b tesselateTorchInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD b tesselateCactusInWorld (Lly;IIIFFF)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 r
+		ARG 6 g
+		ARG 7 b
+	METHOD c renderNorth (Lly;DDDI)V
+		ARG 1 tt
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 tex
+	METHOD c tesselateLeverInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD d renderSouth (Lly;DDDI)V
+		ARG 1 tt
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 tex
+	METHOD d tesselateFireInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD e renderWest (Lly;DDDI)V
+		ARG 1 tt
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 tex
+	METHOD e tesselateDustInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD f renderEast (Lly;DDDI)V
+		ARG 1 tt
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 tex
+	METHOD f tesselateRailInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD g tesselateLadderInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD h tesselateCrossInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD i tesselateRowInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD j tesselateWaterInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD k tesselateBlockInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD l tesselateCactusInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD m tesselateFenceInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD n tesselateStairsInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD o tesselateDoorInWorld (Lly;III)Z
+		ARG 1 tt
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS bd net/minecraft/world/level/tile/entity/MobSpawnerTileEntity
+	FIELD a spawnDelay I
+	FIELD b entityId Ljava/lang/String;
+	FIELD c spin D
+	FIELD d oSpin D
+	METHOD a isNearPlayer ()Z
+	METHOD c delay ()V
+CLASS be net/minecraft/client/OpenGLCapabilities
+	FIELD a USE_OCCLUSION_QUERY Z
+	METHOD a hasOcclusionChecks ()Z
+CLASS bf net/minecraft/client/BackgroundDownloader
+	FIELD a workingDirectory Ljava/io/File;
+	FIELD b minecraft Lnet/minecraft/client/Minecraft;
+	FIELD c stopped Z
+	METHOD <init> (Ljava/io/File;Lnet/minecraft/client/Minecraft;)V
+		ARG 1 workDir
+		ARG 2 minecraft
+	METHOD a forceReload ()V
+	METHOD a loadAll (Ljava/io/File;Ljava/lang/String;)V
+		ARG 1 dir
+		ARG 2 prefix
+	METHOD a download (Ljava/net/URL;Ljava/io/File;J)V
+		ARG 1 url
+		ARG 2 file
+		ARG 3 length
+	METHOD a checkDownload (Ljava/net/URL;Ljava/lang/String;JI)V
+		ARG 1 resourceUrl
+		ARG 2 name
+		ARG 3 size
+		ARG 5 pass
+	METHOD b halt ()V
+	METHOD run run ()V
+CLASS bg net/minecraft/world/level/tile/NotGateTile
+	FIELD a on Z
+	FIELD b recentToggles Ljava/util/List;
+	METHOD <init> (IIZ)V
+		ARG 1 id
+		ARG 2 tex
+		ARG 3 on
+	METHOD a isToggledTooFrequently (Lcn;IIIZ)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 storeToggles
+	METHOD h hasNeighborSignal (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS bh net/minecraft/client/gui/Screen
+	FIELD a clickedButton Lfk;
+	FIELD b minecraft Lnet/minecraft/client/Minecraft;
+	FIELD c width I
+	FIELD d height I
+	FIELD e buttons Ljava/util/List;
+	FIELD f passEvents Z
+	FIELD g font Lkd;
+	METHOD a init ()V
+	METHOD a keyPressed (CI)V
+		ARG 1 eventCharacter
+		ARG 2 eventKey
+	METHOD a renderBackground (I)V
+		ARG 1 vo
+	METHOD a render (IIF)V
+		ARG 1 xm
+		ARG 2 ym
+		ARG 3 a
+	METHOD a mouseClicked (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 buttonNum
+	METHOD a buttonClicked (Lfk;)V
+		ARG 1 button
+	METHOD a init (Lnet/minecraft/client/Minecraft;II)V
+		ARG 1 minecraft
+		ARG 2 width
+		ARG 3 height
+	METHOD a confirmResult (ZI)V
+		ARG 1 result
+		ARG 2 id
+	METHOD b isPauseScreen ()Z
+	METHOD b renderDirtBackground (I)V
+		ARG 1 vo
+	METHOD b mouseReleased (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 buttonNum
+	METHOD c getClipboard ()Ljava/lang/String;
+	METHOD d updateEvents ()V
+	METHOD e mouseEvent ()V
+	METHOD f keyboardEvent ()V
+	METHOD g tick ()V
+	METHOD h removed ()V
+	METHOD i renderBackground ()V
+CLASS bi net/minecraft/client/player/LocalPlayer
+	FIELD a input Llv;
+	FIELD bg minecraft Lnet/minecraft/client/Minecraft;
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lcn;Ldl;)V
+		ARG 1 minecraft
+		ARG 2 level
+		ARG 3 user
+	METHOD a setKey (IZ)V
+		ARG 1 eventKey
+		ARG 2 eventKeyState
+	METHOD a chat (Ljava/lang/String;)V
+		ARG 1 message
+	METHOD a attack (Lkh;)V
+		ARG 1 entity
+	METHOD k releaseAllKeys ()V
+	METHOD m getArmor ()I
+	METHOD n prepareForTick ()V
+CLASS bj net/minecraft/world/level/tile/MobSpawnerTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS bk net/minecraft/world/level/levelgen/synth/Synth
+CLASS bl net/minecraft/world/level/pathfinder/Path
+	FIELD a length I
+	FIELD b nodes [La;
+	FIELD c pos I
+	METHOD <init> ([La;)V
+		ARG 1 nodes
+	METHOD a next ()V
+	METHOD a current (Lkh;)Laj;
+		ARG 1 e
+	METHOD b isDone ()Z
+CLASS bm net/minecraft/network/packet/TakeItemEntityPacket
+	FIELD a itemId I
+	FIELD b playerId I
+CLASS bn net/minecraft/client/renderer/Chunk
+	FIELD A skyLit Z
+	FIELD B renderableTileEntities Ljava/util/List;
+	FIELD C lists I
+	FIELD D t Lho;
+	FIELD E compiled Z
+	FIELD F globalRenderableTileEntities Ljava/util/List;
+	FIELD a level Lcn;
+	FIELD b updates I
+	FIELD c x I
+	FIELD d y I
+	FIELD e z I
+	FIELD f xs I
+	FIELD g ys I
+	FIELD h zs I
+	FIELD i xRender I
+	FIELD j yRender I
+	FIELD k zRender I
+	FIELD l xRenderOffs I
+	FIELD m yRenderOffs I
+	FIELD n zRenderOffs I
+	FIELD o visible Z
+	FIELD p empty [Z
+	FIELD q xm I
+	FIELD r ym I
+	FIELD s zm I
+	FIELD t radius F
+	FIELD u dirty Z
+	FIELD v bb Lcf;
+	FIELD w id I
+	FIELD x occlusion_visible Z
+	FIELD y occlusion_querying Z
+	FIELD z occlusion_id I
+	METHOD <init> (Lcn;Ljava/util/List;IIIII)V
+		ARG 1 level
+		ARG 2 globalRenderableTileEntities
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+		ARG 6 size
+		ARG 7 lists
+	METHOD a rebuild ()V
+	METHOD a getList (I)I
+		ARG 1 layer
+	METHOD a setPos (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a distanceToSqr (Lkh;)F
+		ARG 1 player
+	METHOD a cull (Loe;)V
+		ARG 1 culler
+	METHOD b reset ()V
+	METHOD c delete ()V
+	METHOD d renderBB ()V
+	METHOD e isEmpty ()Z
+	METHOD f setDirty ()V
+	METHOD g translateToPos ()V
+CLASS bo net/minecraft/world/entity/animal/Sheep
+	FIELD a sheared Z
+CLASS bp net/minecraft/world/item/SnowballItem
+CLASS bq net/minecraft/client/particle/ParticleEngine
+	FIELD a level Lcn;
+	FIELD b particles [Ljava/util/List;
+	FIELD c textures Ley;
+	FIELD d random Ljava/util/Random;
+	METHOD <init> (Lcn;Ley;)V
+		ARG 1 level
+		ARG 2 textures
+	METHOD a tick ()V
+	METHOD a destroy (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a crack (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+	METHOD a setLevel (Lcn;)V
+		ARG 1 level
+	METHOD a render (Lkh;F)V
+		ARG 1 player
+		ARG 2 a
+	METHOD a add (Lnq;)V
+		ARG 1 p
+	METHOD b countParticles ()Ljava/lang/String;
+	METHOD b renderLit (Lkh;F)V
+		ARG 1 player
+		ARG 2 a
+CLASS br net/minecraft/world/level/tile/LadderTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS bs net/minecraft/world/item/DiggerItem
+	FIELD a tier I
+	FIELD aX tiles [Lly;
+	FIELD aY speed F
+	FIELD aZ attackDamage I
+	METHOD <init> (III[Lly;)V
+		ARG 1 id
+		ARG 2 damage
+		ARG 3 tier
+		ARG 4 tiles
+CLASS bt net/minecraft/client/renderer/culling/FrustumData
+	FIELD a m_Frustum [[F
+	FIELD b proj [F
+	FIELD c modl [F
+	FIELD d clip [F
+	METHOD a cubeInFrustum (DDDDDD)Z
+		ARG 1 x1
+		ARG 3 y1
+		ARG 5 z1
+		ARG 7 x2
+		ARG 9 y2
+		ARG 11 z2
+CLASS bu net/minecraft/client/renderer/entity/PlayerRenderer
+	FIELD f humanoidModel Lcr;
+	FIELD g armorParts1 Lcr;
+	FIELD h armorParts2 Lcr;
+	FIELD i MATERIAL_NAMES [Ljava/lang/String;
+	METHOD b renderHand ()V
+CLASS bv net/minecraft/world/item/crafting/Recipy
+	FIELD a resultId I
+	FIELD b width I
+	FIELD c height I
+	FIELD d recipeItems [I
+	FIELD e result Lev;
+	METHOD <init> (II[ILev;)V
+		ARG 1 width
+		ARG 2 height
+		ARG 3 recipeItems
+		ARG 4 item
+	METHOD a size ()I
+	METHOD a matches ([I)Z
+		ARG 1 items
+	METHOD a matches ([IIIZ)Z
+		ARG 1 items
+		ARG 2 width
+		ARG 3 height
+		ARG 4 mirrored
+	METHOD b assemble ([I)Lev;
+		ARG 1 items
+CLASS bw net/minecraft/client/renderer/entity/PaintingRenderer
+	FIELD d random Ljava/util/Random;
+	METHOD a setBrightness (Ljc;FF)V
+		ARG 1 painting
+		ARG 2 ss
+		ARG 3 ya
+	METHOD a renderPainting (Ljc;IIII)V
+		ARG 1 painting
+		ARG 2 w
+		ARG 3 h
+		ARG 4 uo
+		ARG 5 vo
+CLASS bx net/minecraft/client/model/SheepFurModel
+CLASS by net/minecraft/world/level/LightLayer
+	FIELD c surrounding I
+	METHOD <init> (Ljava/lang/String;II)V
+		ARG 3 surrounding
+CLASS bz net/minecraft/network/packet/BlockRegionUpdatePacket
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	FIELD d xs I
+	FIELD e ys I
+	FIELD f zs I
+	FIELD g buffer [B
+	FIELD h size I
+CLASS c net/minecraft/world/level/tile/MetalTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS ca net/minecraft/client/model/PigModel
+	METHOD <init> (F)V
+		ARG 1 grow
+CLASS cb net/minecraft/client/model/ZombieModel
+CLASS cc net/minecraft/client/renderer/HttpTexture
+	FIELD a loadedImage Ljava/awt/image/BufferedImage;
+	FIELD b count I
+	FIELD c id I
+	FIELD d isLoaded Z
+	METHOD <init> (Ljava/lang/String;Lhb;)V
+		ARG 1 _url
+		ARG 2 processor
+CLASS cd net/minecraft/client/particle/TakeAnimationParticle
+	FIELD a item Lkh;
+	FIELD o target Lkh;
+	FIELD p life I
+	FIELD q lifeTime I
+	FIELD r yOffs F
+	METHOD <init> (Lcn;Lkh;Lkh;F)V
+		ARG 1 level
+		ARG 2 item
+		ARG 3 target
+		ARG 4 yOffs
+CLASS ce net/minecraft/world/level/tile/StoneTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS cf net/minecraft/world/phys/AABB
+	FIELD a x0 D
+	FIELD b y0 D
+	FIELD c z0 D
+	FIELD d x1 D
+	FIELD e y1 D
+	FIELD f z1 D
+	FIELD g pool Ljava/util/List;
+	FIELD h poolPointer I
+	METHOD <init> (DDDDDD)V
+		ARG 1 x0
+		ARG 3 y0
+		ARG 5 z0
+		ARG 7 x1
+		ARG 9 y1
+		ARG 11 z1
+	METHOD a resetPool ()V
+	METHOD a expand (DDD)Lcf;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD a newPermanent (DDDDDD)Lcf;
+		ARG 0 x0
+		ARG 2 y0
+		ARG 4 z0
+		ARG 6 x1
+		ARG 8 y1
+		ARG 10 z1
+	METHOD a containsX (Laj;)Z
+		ARG 1 v
+	METHOD a clip (Laj;Laj;)Lmf;
+		ARG 1 from
+		ARG 2 to
+	METHOD a intersects (Lcf;)Z
+		ARG 1 bb
+	METHOD a clipXCollide (Lcf;D)D
+		ARG 1 bb
+		ARG 2 x
+	METHOD b getSize ()D
+	METHOD b grow (DDD)Lcf;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD b newTemp (DDDDDD)Lcf;
+		ARG 0 x0
+		ARG 2 y0
+		ARG 4 z0
+		ARG 6 x1
+		ARG 8 y1
+		ARG 10 z1
+	METHOD b containsY (Laj;)Z
+		ARG 1 v
+	METHOD b set (Lcf;)V
+		ARG 1 bb
+	METHOD b clipYCollide (Lcf;D)D
+		ARG 1 bb
+		ARG 2 y
+	METHOD c copy ()Lcf;
+	METHOD c cloneMove (DDD)Lcf;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD c set (DDDDDD)Lcf;
+		ARG 1 x0
+		ARG 3 y0
+		ARG 5 z0
+		ARG 7 x1
+		ARG 9 y1
+		ARG 11 z1
+	METHOD c containsZ (Laj;)Z
+		ARG 1 v
+	METHOD c clipZCollide (Lcf;D)D
+		ARG 1 bb
+		ARG 2 z
+	METHOD d move (DDD)Lcf;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+CLASS cg net/minecraft/world/level/levelgen/feature/MonsterRoomFeature
+	METHOD a randomItem (Ljava/util/Random;)Lev;
+		ARG 1 random
+	METHOD b randomEntityId (Ljava/util/Random;)Ljava/lang/String;
+		ARG 1 random
+CLASS ch net/minecraft/network/packet/MovePlayerPacket_PosRot
+	METHOD <init> (DDDDFFZ)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 yView
+		ARG 7 z
+		ARG 9 yRot
+		ARG 10 xRot
+		ARG 11 onGround
+CLASS ci net/minecraft/world/level/Region
+	FIELD a xc1 I
+	FIELD b zc1 I
+	FIELD c chunks [[Lga;
+	FIELD d level Lcn;
+	METHOD <init> (Lcn;IIIIII)V
+		ARG 1 level
+		ARG 2 x0
+		ARG 3 y0
+		ARG 4 z0
+		ARG 5 x1
+		ARG 6 y1
+		ARG 7 z1
+	METHOD a getRawBrightness (IIIZ)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 checkNeighbors
+	METHOD d getRawBrightness (III)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+CLASS cj net/minecraft/client/multiplayer/DisconnectedScreen
+	FIELD a title Ljava/lang/String;
+	FIELD h reason Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 title
+		ARG 2 reason
+CLASS ck net/minecraft/world/level/chunk/ReadOnlyChunkCache
+	FIELD a emptyPixels [B
+	FIELD b chunks [Lga;
+	FIELD c level Lcn;
+	FIELD d storage Laf;
+	METHOD <init> (Lcn;Laf;)V
+		ARG 1 level
+		ARG 2 storage
+	METHOD c load (II)Lga;
+		ARG 1 x
+		ARG 2 z
+CLASS cl net/minecraft/client/model/BoatModel
+	FIELD a cubes [Lip;
+CLASS cm net/minecraft/world/level/tile/ObsidianTile
+CLASS cn net/minecraft/world/level/Level
+	FIELD A entitiesToRemove Ljava/util/List;
+	FIELD B tickNextTickList Ljava/util/TreeSet;
+	FIELD C tickNextTickSet Ljava/util/Set;
+	FIELD D skyColor J
+	FIELD E fogColor J
+	FIELD F cloudColor J
+	FIELD G sessionId J
+	FIELD H chunkSource Law;
+	FIELD I loadedPlayerTag Lhm;
+	FIELD J boxes Ljava/util/ArrayList;
+	FIELD K chunksToPoll Ljava/util/Set;
+	FIELD L delayUntilNextMoodSound I
+	FIELD M es Ljava/util/List;
+	FIELD a entities Ljava/util/List;
+	FIELD b tileEntityList Ljava/util/List;
+	FIELD c time J
+	FIELD d snowCovered Z
+	FIELD e skyDarken I
+	FIELD f randValue I
+	FIELD g addend I
+	FIELD h noNeighborUpdate Z
+	FIELD i brightnessRamp [F
+	FIELD j saveInterval I
+	FIELD k players Ljava/util/List;
+	FIELD l difficulty I
+	FIELD m font Ljava/lang/Object;
+	FIELD n random Ljava/util/Random;
+	FIELD o xSpawn I
+	FIELD p ySpawn I
+	FIELD q zSpawn I
+	FIELD r isNew Z
+	FIELD s listeners Ljava/util/List;
+	FIELD t dir Ljava/io/File;
+	FIELD u seed J
+	FIELD v sizeOnDisk J
+	FIELD w name Ljava/lang/String;
+	FIELD x isFindingSpawn Z
+	FIELD y isOnline Z
+	FIELD z lightUpdates Ljava/util/List;
+	METHOD <init> (Ljava/io/File;Ljava/lang/String;)V
+		ARG 1 savesDir
+		ARG 2 name
+	METHOD <init> (Ljava/io/File;Ljava/lang/String;J)V
+		ARG 1 savesDir
+		ARG 2 name
+		ARG 3 seed
+	METHOD <init> (Ljava/lang/String;)V
+		ARG 1 name
+	METHOD a validateSpawn ()V
+	METHOD a getNearestPlayer (DDDD)Ldm;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 range
+	METHOD a playSound (DDDLjava/lang/String;FF)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 name
+		ARG 8 volume
+		ARG 9 pitch
+	METHOD a getSkyDarken (F)I
+		ARG 1 a
+	METHOD a pauseSave (I)Z
+		ARG 1 saveStep
+	METHOD a getChunkAt (II)Lga;
+		ARG 1 x
+		ARG 2 z
+	METHOD a setTileNoUpdate (IIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tile
+	METHOD a setTileAndDataNoUpdate (IIIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tile
+		ARG 5 data
+	METHOD a hasChunksAt (IIIIII)Z
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 z0
+		ARG 4 x1
+		ARG 5 y1
+		ARG 6 z1
+	METHOD a setBlocksAndData (IIIIII[B)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 z0
+		ARG 4 x1
+		ARG 5 y1
+		ARG 6 z1
+		ARG 7 data
+	METHOD a mayPlace (IIIIZ)Z
+		ARG 1 id
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 ignoreBb
+	METHOD a setTileEntity (IIILic;)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tileEntity
+	METHOD a getRawBrightness (IIIZ)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 checkNeighbors
+	METHOD a setTime (J)V
+		ARG 1 time
+	METHOD a clip (Laj;Laj;)Lmf;
+		ARG 1 from
+		ARG 2 to
+	METHOD a clip (Laj;Laj;Z)Lmf;
+		ARG 1 from
+		ARG 2 to
+		ARG 3 includeLiquids
+	METHOD a getSeenPercent (Laj;Lcf;)F
+		ARG 1 camera
+		ARG 2 bb
+	METHOD a getBrightness (Lby;III)I
+		ARG 1 layer
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD a updateLightIfOtherThan (Lby;IIII)V
+		ARG 1 layer
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 br
+	METHOD a updateLight (Lby;IIIIII)V
+		ARG 1 layer
+		ARG 2 x0
+		ARG 3 y0
+		ARG 4 z0
+		ARG 5 x1
+		ARG 6 y1
+		ARG 7 z1
+	METHOD a updateLight (Lby;IIIIIIZ)V
+		ARG 1 layer
+		ARG 2 x0
+		ARG 3 y0
+		ARG 4 z0
+		ARG 5 x1
+		ARG 6 y1
+		ARG 7 z1
+		ARG 8 mergeUpdates
+	METHOD a isUnobstructed (Lcf;)Z
+		ARG 1 bb
+	METHOD a containsMaterial (Lcf;Lgb;)Z
+		ARG 1 bb
+		ARG 2 m
+	METHOD a checkAndHandleWater (Lcf;Lgb;Lkh;)Z
+		ARG 1 bb
+		ARG 2 m
+		ARG 3 e
+	METHOD a loadPlayer (Ldm;)V
+		ARG 1 player
+	METHOD a addListener (Lim;)V
+		ARG 1 listener
+	METHOD a createChunkSource (Ljava/io/File;)Law;
+		ARG 1 dir
+	METHOD a getDataTagFor (Ljava/io/File;Ljava/lang/String;)Lhm;
+		ARG 0 workingDir
+		ARG 1 name
+	METHOD a findSubclassOf (Ljava/lang/Class;)Lkh;
+		ARG 1 clas
+	METHOD a getEntitiesOfClass (Ljava/lang/Class;Lcf;)Ljava/util/List;
+		ARG 1 clas
+		ARG 2 bb
+	METHOD a addParticle (Ljava/lang/String;DDDDDD)V
+		ARG 1 name
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xa
+		ARG 10 ya
+		ARG 12 za
+	METHOD a playStreamingMusic (Ljava/lang/String;III)V
+		ARG 1 name
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD a addEntities (Ljava/util/List;)V
+		ARG 1 entities
+	METHOD a addEntity (Lkh;)Z
+		ARG 1 e
+	METHOD a getNearestPlayer (Lkh;D)Ldm;
+		ARG 1 e
+		ARG 2 range
+	METHOD a explode (Lkh;DDDF)V
+		ARG 1 e
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 r
+	METHOD a findPath (Lkh;IIIF)Lbl;
+		ARG 1 e
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 distance
+	METHOD a getCubes (Lkh;Lcf;)Ljava/util/List;
+		ARG 1 e
+		ARG 2 bb
+	METHOD a playSound (Lkh;Ljava/lang/String;FF)V
+		ARG 1 e
+		ARG 2 name
+		ARG 3 volume
+		ARG 4 pitch
+	METHOD a findPath (Lkh;Lkh;F)Lbl;
+		ARG 1 e
+		ARG 2 target
+		ARG 3 distance
+	METHOD a forceSave (Lnu;)V
+		ARG 1 progressListener
+	METHOD a tickPendingTicks (Z)Z
+		ARG 1 force
+	METHOD a save (ZLnu;)V
+		ARG 1 force
+		ARG 2 progressListener
+	METHOD a delete ([Ljava/io/File;)V
+		ARG 0 files
+	METHOD b isDay ()Z
+	METHOD b getSkyColor (F)Laj;
+		ARG 1 a
+	METHOD b getChunk (II)Lga;
+		ARG 1 x
+		ARG 2 z
+	METHOD b setData (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 data
+	METHOD b setTileAndData (IIIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tile
+		ARG 5 data
+	METHOD b setTilesDirty (IIIIII)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 z0
+		ARG 4 x1
+		ARG 5 y1
+		ARG 6 z1
+	METHOD b tileEntityChanged (IIILic;)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tileEntity
+	METHOD b setBrightness (Lby;IIII)V
+		ARG 1 layer
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 br
+	METHOD b containsAnyLiquid (Lcf;)Z
+		ARG 1 bb
+	METHOD b containsLiquid (Lcf;Lgb;)Z
+		ARG 1 bb
+		ARG 2 m
+	METHOD b removeListener (Lim;)V
+		ARG 1 listener
+	METHOD b deleteLevel (Ljava/io/File;Ljava/lang/String;)V
+		ARG 0 workingDir
+		ARG 1 name
+	METHOD b countInstanceOf (Ljava/lang/Class;)I
+		ARG 1 clas
+	METHOD b removeEntities (Ljava/util/List;)V
+		ARG 1 entities
+	METHOD b entityAdded (Lkh;)V
+		ARG 1 e
+	METHOD b getEntities (Lkh;Lcf;)Ljava/util/List;
+		ARG 1 e
+		ARG 2 bb
+	METHOD c tickEntities ()V
+	METHOD c getTimeOfDay (F)F
+		ARG 1 a
+	METHOD c getHeightmap (II)I
+		ARG 1 x
+		ARG 2 z
+	METHOD c setDataNoUpdate (IIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 data
+	METHOD c containsFireTile (Lcf;)Z
+		ARG 1 bb
+	METHOD c entityRemoved (Lkh;)V
+		ARG 1 e
+	METHOD d gatherStats ()Ljava/lang/String;
+	METHOD d getCloudColor (F)Laj;
+		ARG 1 a
+	METHOD d getTopSolidBlock (II)I
+		ARG 1 x
+		ARG 2 z
+	METHOD d hasChunkAt (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD d setTile (IIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tile
+	METHOD d removeEntity (Lkh;)V
+		ARG 1 e
+	METHOD e updateLights ()Z
+	METHOD e getFogColor (F)Laj;
+		ARG 1 a
+	METHOD e getLightDepth (II)I
+		ARG 1 x
+		ARG 2 z
+	METHOD e tileUpdated (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+	METHOD e tick (Lkh;)V
+		ARG 1 e
+	METHOD f updateSkyBrightness ()V
+	METHOD f getStarBrightness (F)F
+		ARG 1 a
+	METHOD f isValidSpawn (II)Z
+		ARG 1 x
+		ARG 2 z
+	METHOD f lightColumnChanged (IIII)V
+		ARG 1 x
+		ARG 2 z
+		ARG 3 y0
+		ARG 4 y1
+	METHOD f ensureAdded (Lkh;)V
+		ARG 1 e
+	METHOD g tick ()V
+	METHOD g getTopTile (II)I
+		ARG 1 x
+		ARG 2 z
+	METHOD g updateNeighborsAt (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+	METHOD h tickTiles ()V
+	METHOD h hasChunk (II)Z
+		ARG 1 x
+		ARG 2 z
+	METHOD h sendTileUpdated (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD h addToTickNextTick (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tileId
+	METHOD i getAllEntities ()Ljava/util/List;
+	METHOD i canSeeSky (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD i extinguishFire (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+	METHOD j prepare ()V
+	METHOD j getRawBrightness (III)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD j getDirectSignal (IIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+	METHOD k disconnect ()V
+	METHOD k isSkyLit (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD k getSignal (IIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+	METHOD l checkSession ()V
+	METHOD l removeTileEntity (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD l neighborChanged (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+	METHOD m saveLevelData ()V
+	METHOD m animateTick (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD n getDirectSignal (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD o hasNeighborSignal (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+CLASS co net/minecraft/world/entity/monster/Enemy
+CLASS cp net/minecraft/client/renderer/entity/BoatRenderer
+	FIELD d model Lfo;
+CLASS cq net/minecraft/client/particle/LavaParticle
+	FIELD a oSize F
+	METHOD <init> (Lcn;DDD)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+CLASS cr net/minecraft/client/model/HumanoidModel
+	FIELD a head Lip;
+	FIELD b hair Lip;
+	FIELD c body Lip;
+	FIELD d arm0 Lip;
+	FIELD e arm1 Lip;
+	FIELD f leg0 Lip;
+	FIELD g leg1 Lip;
+	FIELD h holdingLeftHand Z
+	FIELD i holdingRightHand Z
+	FIELD j sneaking Z
+	METHOD <init> (F)V
+		ARG 1 g
+	METHOD <init> (FF)V
+		ARG 1 g
+		ARG 2 yOffset
+CLASS cs net/minecraft/world/level/tile/WorkbenchTile
+	METHOD <init> (I)V
+		ARG 1 id
+CLASS ct net/minecraft/world/level/tile/GlassTile
+CLASS cu net/minecraft/world/level/levelgen/feature/OreFeature
+	FIELD a tile I
+	FIELD b count I
+	METHOD <init> (II)V
+		ARG 1 tile
+		ARG 2 count
+CLASS cv net/minecraft/world/level/tile/RecordPlayerTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+	METHOD e dropRecording (Lcn;IIII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 recording
+CLASS cw net/minecraft/world/entity/monster/Skeleton
+CLASS cx net/minecraft/client/title/TitleScreen
+	FIELD a logo [Ljava/lang/String;
+	FIELD h random Ljava/util/Random;
+	FIELD i letterBlocks [[Lkc;
+	FIELD j vo F
+	FIELD l splash Ljava/lang/String;
+	METHOD a renderMinecraftLogo (F)V
+CLASS cy net/minecraft/world/level/levelgen/LargeFeature
+	FIELD a radius I
+	FIELD b random Ljava/util/Random;
+	METHOD a addFeature (Lcn;IIII[B)V
+		ARG 1 level
+		ARG 2 chunkX
+		ARG 3 chunkZ
+		ARG 4 baseChunkX
+		ARG 5 baseChunkZ
+		ARG 6 tiles
+	METHOD a apply (Lnw;Lcn;II[B)V
+		ARG 1 source
+		ARG 2 level
+		ARG 3 baseChunkX
+		ARG 4 baseChunkZ
+		ARG 5 tiles
+CLASS cz net/minecraft/world/level/pathfinder/PathFinder
+	FIELD a level Lnm;
+	FIELD b openSet Lfx;
+	FIELD c nodes Lfi;
+	FIELD d neighbors [La;
+	METHOD <init> (Lnm;)V
+		ARG 1 source
+	METHOD a getNode (III)La;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a reconstruct_path (La;La;)Lbl;
+		ARG 1 node1
+		ARG 2 node2
+	METHOD a findPath (Lkh;DDDF)Lbl;
+		ARG 1 e
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 distance
+	METHOD a findPath (Lkh;IIIF)Lbl;
+		ARG 1 e
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 distance
+	METHOD a isFree (Lkh;IIILa;)I
+		ARG 1 e
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 node
+	METHOD a getNode (Lkh;IIILa;I)La;
+		ARG 1 e
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 node
+		ARG 6 height
+	METHOD a findPath (Lkh;La;La;La;F)Lbl;
+		ARG 1 e
+		ARG 2 node1
+		ARG 3 node2
+		ARG 4 node3
+		ARG 5 distance
+	METHOD a findPath (Lkh;Lkh;F)Lbl;
+		ARG 1 e
+		ARG 2 target
+		ARG 3 distance
+	METHOD b getNeighbors (Lkh;La;La;La;F)I
+		ARG 1 e
+		ARG 2 node1
+		ARG 3 node2
+		ARG 4 node3
+		ARG 5 distance
+CLASS d net/minecraft/client/renderer/entity/CreeperRenderer
+CLASS da net/minecraft/world/level/levelgen/feature/CactusFeature
+CLASS db net/minecraft/client/CrashInfoPanel_LogoBorder
+	FIELD a image Ljava/awt/image/BufferedImage;
+	METHOD paint (Ljava/awt/Graphics;)V
+		ARG 1 g
+CLASS dc net/minecraft/world/entity/item/Boat
+	FIELD a damage I
+	FIELD b hurtTime I
+	FIELD c hurtDir I
+	METHOD <init> (Lcn;DDD)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+CLASS dd net/minecraft/world/entity/monster/Creeper
+	FIELD a swell I
+	FIELD b oldSwell I
+	FIELD c maxSwell I
+	FIELD d swellDir I
+	METHOD b getSwelling (F)F
+		ARG 1 a
+CLASS de net/minecraft/client/gui/ChatScreen
+	FIELD a message Ljava/lang/String;
+	FIELD h frame I
+CLASS df net/minecraft/client/MemoryTracker
+	FIELD a lists Ljava/util/List;
+	FIELD b textures Ljava/util/List;
+	METHOD a release ()V
+	METHOD a genLists (I)I
+		ARG 0 id
+	METHOD a genTextures (Ljava/nio/IntBuffer;)V
+		ARG 0 i
+	METHOD b createByteBuffer (I)Ljava/nio/ByteBuffer;
+		ARG 0 size
+	METHOD c createIntBuffer (I)Ljava/nio/IntBuffer;
+		ARG 0 size
+	METHOD d createFloatBuffer (I)Ljava/nio/FloatBuffer;
+		ARG 0 size
+CLASS dg net/minecraft/client/multiplayer/ReceivingLevelScreen
+	FIELD a connection Lgy;
+	FIELD h tickCount I
+	METHOD <init> (Lgy;)V
+		ARG 1 connection
+CLASS dh net/minecraft/world/level/tile/SandTile
+	FIELD a instaFall Z
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+	METHOD a_ isFree (Lcn;III)Z
+		ARG 0 level
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD h checkSlide (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS di net/minecraft/world/item/Item
+	FIELD A hatchet_emerald Ldi;
+	FIELD B stick Ldi;
+	FIELD C bowl Ldi;
+	FIELD D mushroomStew Ldi;
+	FIELD E sword_gold Ldi;
+	FIELD F shovel_gold Ldi;
+	FIELD G pickAxe_gold Ldi;
+	FIELD H hatchet_gold Ldi;
+	FIELD I string Ldi;
+	FIELD J feather Ldi;
+	FIELD K sulphur Ldi;
+	FIELD L hoe_wood Ldi;
+	FIELD M hoe_stone Ldi;
+	FIELD N hoe_iron Ldi;
+	FIELD O hoe_emerald Ldi;
+	FIELD P hoe_gold Ldi;
+	FIELD Q seeds Ldi;
+	FIELD R wheat Ldi;
+	FIELD S bread Ldi;
+	FIELD T helmet_cloth Ldi;
+	FIELD U chestplate_cloth Ldi;
+	FIELD V leggings_cloth Ldi;
+	FIELD W boots_cloth Ldi;
+	FIELD X helmet_chain Ldi;
+	FIELD Y chestplate_chain Ldi;
+	FIELD Z leggings_chain Ldi;
+	FIELD aA redStone Ldi;
+	FIELD aB snowBall Ldi;
+	FIELD aC boat Ldi;
+	FIELD aD leather Ldi;
+	FIELD aE milk Ldi;
+	FIELD aF brick Ldi;
+	FIELD aG clay Ldi;
+	FIELD aH reeds Ldi;
+	FIELD aI paper Ldi;
+	FIELD aJ book Ldi;
+	FIELD aK slimeBall Ldi;
+	FIELD aL minecart_chest Ldi;
+	FIELD aM minecart_furnace Ldi;
+	FIELD aN egg Ldi;
+	FIELD aO compass Ldi;
+	FIELD aP fishingRod Ldi;
+	FIELD aQ record_01 Ldi;
+	FIELD aR record_02 Ldi;
+	FIELD aS id I
+	FIELD aT maxStackSize I
+	FIELD aU maxDamage I
+	FIELD aV icon I
+	FIELD aW handEquipped Z
+	FIELD aa boots_chain Ldi;
+	FIELD ab helmet_iron Ldi;
+	FIELD ac chestplate_iron Ldi;
+	FIELD ad leggings_iron Ldi;
+	FIELD ae boots_iron Ldi;
+	FIELD af helmet_diamond Ldi;
+	FIELD ag chestplate_diamond Ldi;
+	FIELD ah leggings_diamond Ldi;
+	FIELD ai boots_diamond Ldi;
+	FIELD aj helmet_gold Ldi;
+	FIELD ak chestplate_gold Ldi;
+	FIELD al leggings_gold Ldi;
+	FIELD am boots_gold Ldi;
+	FIELD an flint Ldi;
+	FIELD ao porkChop_raw Ldi;
+	FIELD ap porkChop_cooked Ldi;
+	FIELD aq painting Ldi;
+	FIELD ar apple_gold Ldi;
+	FIELD as sign Ldi;
+	FIELD at door_wood Ldi;
+	FIELD au bucket_empty Ldi;
+	FIELD av bucket_water Ldi;
+	FIELD aw bucket_lava Ldi;
+	FIELD ax minecart Ldi;
+	FIELD ay saddle Ldi;
+	FIELD az door_iron Ldi;
+	FIELD b random Ljava/util/Random;
+	FIELD c items [Ldi;
+	FIELD d shovel_item Ldi;
+	FIELD e pickAxe_iron Ldi;
+	FIELD f hatchet_iron Ldi;
+	FIELD g flintAndSteel Ldi;
+	FIELD h apple Ldi;
+	FIELD i bow Ldi;
+	FIELD j arrow Ldi;
+	FIELD k coal Ldi;
+	FIELD l emerald Ldi;
+	FIELD m ironIngot Ldi;
+	FIELD n goldIngot Ldi;
+	FIELD o sword_iron Ldi;
+	FIELD p sword_wood Ldi;
+	FIELD q shovel_wood Ldi;
+	FIELD r pickAxe_wood Ldi;
+	FIELD s hatchet_wood Ldi;
+	FIELD t sword_stone Ldi;
+	FIELD u shovel_stone Ldi;
+	FIELD v pickAxe_stone Ldi;
+	FIELD w hatchet_stone Ldi;
+	FIELD x sword_emerald Ldi;
+	FIELD y shovel_emerald Ldi;
+	FIELD z pickAxe_emerald Ldi;
+	METHOD <init> (I)V
+		ARG 1 id
+	METHOD a isHandEquipped ()Z
+	METHOD a setIcon (I)Ldi;
+		ARG 1 icon
+	METHOD a getIcon (Lev;)I
+		ARG 1 item
+	METHOD a mineBlock (Lev;IIII)V
+		ARG 1 item
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 face
+	METHOD a use (Lev;Lcn;Ldm;)Lev;
+		ARG 1 item
+		ARG 2 level
+		ARG 3 player
+	METHOD a useOn (Lev;Ldm;Lcn;IIII)Z
+		ARG 1 item
+		ARG 2 player
+		ARG 3 level
+		ARG 4 x
+		ARG 5 y
+		ARG 6 z
+		ARG 7 face
+	METHOD a hurtEnemy (Lev;Lge;)V
+		ARG 1 item
+		ARG 2 enemy
+	METHOD a getDestroySpeed (Lev;Lly;)F
+		ARG 1 item
+		ARG 2 tile
+	METHOD a getAttackDamage (Lkh;)I
+		ARG 1 entity
+	METHOD a canDestroySpecial (Lly;)Z
+		ARG 1 tile
+	METHOD b getMaxStackSize ()I
+	METHOD b interactEnemy (Lev;Lge;)V
+		ARG 1 item
+		ARG 2 enemy
+	METHOD c getMaxDamage ()I
+	METHOD d handEquipped ()Ldi;
+CLASS dj net/minecraft/client/renderer/entity/FallingTileRenderer
+	FIELD d _tileRenderer Lbc;
+CLASS dk net/minecraft/world/inventory/Slot
+	FIELD a slot I
+	FIELD b container Lgh;
+	METHOD <init> (Lgh;I)V
+		ARG 1 container
+		ARG 2 slot
+	METHOD a onTake ()V
+	METHOD a mayPlace (Lev;)Z
+		ARG 1 item
+	METHOD b getItem ()Lev;
+	METHOD b set (Lev;)V
+		ARG 1 item
+	METHOD c getNoItemIcon ()I
+	METHOD d setChanged ()V
+CLASS dl net/minecraft/client/User
+	FIELD a allowedTiles Ljava/util/List;
+	FIELD b name Ljava/lang/String;
+	FIELD c sessionId Ljava/lang/String;
+	FIELD d mpPassword Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 name
+		ARG 2 sessionId
+CLASS dm net/minecraft/world/entity/player/Player
+	FIELD a dmgSpill I
+	FIELD b inventory Leu;
+	FIELD c userType B
+	FIELD d score I
+	FIELD e oBob F
+	FIELD f bob F
+	FIELD g swinging Z
+	FIELD h swingTime I
+	FIELD i name Ljava/lang/String;
+	METHOD a reallyDrop (Ldx;)V
+		ARG 1 itemEntity
+	METHOD a drop (Lev;)V
+		ARG 1 item
+	METHOD a drop (Lev;Z)V
+		ARG 1 item
+		ARG 2 straightDown
+	METHOD a openContainer (Lgh;)V
+		ARG 1 container
+	METHOD a openFurnace (Lke;)V
+		ARG 1 furnace
+	METHOD a getDestroySpeed (Lly;)F
+		ARG 1 tile
+	METHOD a openTextEdit (Lob;)V
+		ARG 1 sign
+	METHOD a_ interact (Lkh;)V
+		ARG 1 entity
+	METHOD a_ take (Lkh;I)V
+		ARG 1 e
+		ARG 2 orgCount
+	METHOD b canDestroy (Lly;)Z
+		ARG 1 tile
+	METHOD h touch (Lkh;)V
+		ARG 1 entity
+	METHOD l startCrafting ()V
+	METHOD r getScore ()I
+	METHOD t getSelectedItem ()Lev;
+	METHOD u removeSelectedItem ()V
+	METHOD w swing ()V
+CLASS dn net/minecraft/client/renderer/entity/MobRenderer
+	FIELD d model Lfo;
+	FIELD e armor Lfo;
+	METHOD <init> (Lfo;F)V
+		ARG 1 model
+		ARG 2 shadow
+	METHOD a setArmor (Lfo;)V
+		ARG 1 armor
+	METHOD a getFlipDegrees (Lge;)F
+		ARG 1 mob
+	METHOD a scale (Lge;F)V
+		ARG 1 mob
+		ARG 2 a
+	METHOD a getOverlayColor (Lge;FF)I
+		ARG 1 mob
+		ARG 2 br
+		ARG 3 a
+	METHOD a prepareArmor (Lge;I)Z
+		ARG 1 mob
+		ARG 2 layer
+	METHOD b additionalRendering (Lge;F)V
+		ARG 1 mob
+		ARG 2 a
+	METHOD c getAttackAnim (Lge;F)F
+		ARG 1 mob
+		ARG 2 a
+	METHOD d getBob (Lge;F)F
+		ARG 1 mob
+		ARG 2 a
+CLASS do net/minecraft/network/packet/UseItemPacket
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	FIELD d face I
+	FIELD e item I
+	METHOD <init> (IIIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+		ARG 5 item
+CLASS dp net/minecraft/client/particle/ExplodeParticle
+CLASS dq net/minecraft/world/entity/monster/Monster
+	FIELD e attackDamage I
+CLASS dr net/minecraft/world/item/crafting/ToolRecipies
+	FIELD a shapes [[Ljava/lang/String;
+	FIELD b map [[Ljava/lang/Object;
+	METHOD a addRecipes (Ldw;)V
+		ARG 1 recipes
+CLASS ds net/minecraft/world/level/tile/BookshelfTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS dt net/minecraft/world/level/tile/Sapling
+CLASS du net/minecraft/network/packet/SetTimePacket
+	FIELD a time J
+CLASS dv net/minecraft/client/model/CowModel
+	FIELD a udder Lip;
+	FIELD b horn1 Lip;
+	FIELD c horn2 Lip;
+CLASS dw net/minecraft/world/item/crafting/Recipes
+	FIELD a instance Ldw;
+	FIELD b recipies Ljava/util/List;
+	METHOD a getInstance ()Ldw;
+	METHOD a addShapedRecipy (Lev;[Ljava/lang/Object;)V
+		ARG 1 item
+		ARG 2 values
+	METHOD a getItemFor ([I)Lev;
+		ARG 1 items
+CLASS dx net/minecraft/world/entity/item/ItemEntity
+	FIELD a item Lev;
+	FIELD b age I
+	FIELD c throwTime I
+	FIELD d bobOffs F
+	FIELD e _tickCount I
+	FIELD f health I
+	METHOD <init> (Lcn;DDDLev;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 item
+	METHOD g checkInTile (DDD)Z
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+CLASS dy com/mojang/nbt/ByteArrayTag
+	FIELD a data [B
+	METHOD <init> ([B)V
+		ARG 1 data
+CLASS dz net/minecraft/network/packet/SetCarriedItemPacket
+	FIELD a id I
+	FIELD b slot I
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 slot
+CLASS e net/minecraft/client/renderer/LevelRenderer
+	FIELD A darkList I
+	FIELD B xMinChunk I
+	FIELD C yMinChunk I
+	FIELD D zMinChunk I
+	FIELD E xMaxChunk I
+	FIELD F yMaxChunk I
+	FIELD G zMaxChunk I
+	FIELD H lastViewDistance I
+	FIELD I noEntityRenderFrames I
+	FIELD J totalEntities I
+	FIELD K renderedEntities I
+	FIELD L culledEntities I
+	FIELD M totalChunks I
+	FIELD N offscreenChunks I
+	FIELD O occludedChunks I
+	FIELD P renderedChunks I
+	FIELD Q emptyChunks I
+	FIELD R renderChunks Ljava/util/List;
+	FIELD S renderLists [Lkw;
+	FIELD a renderableTileEntities Ljava/util/List;
+	FIELD b toRender [I
+	FIELD c resultBuffer Ljava/nio/IntBuffer;
+	FIELD d frame I
+	FIELD e repeatList I
+	FIELD f xOld D
+	FIELD g yOld D
+	FIELD h zOld D
+	FIELD i destroyProgress F
+	FIELD j cullStep I
+	FIELD k level Lcn;
+	FIELD l textures Ley;
+	FIELD m dirtyChunks Ljava/util/List;
+	FIELD n sortedChunks [Lbn;
+	FIELD o chunks [Lbn;
+	FIELD p xChunks I
+	FIELD q yChunks I
+	FIELD r zChunks I
+	FIELD s chunkLists I
+	FIELD t mc Lnet/minecraft/client/Minecraft;
+	FIELD u tileRenderer Lbc;
+	FIELD v occlusionCheckIds Ljava/nio/IntBuffer;
+	FIELD w occlusionCheck Z
+	FIELD x ticks I
+	FIELD y starList I
+	FIELD z skyList I
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Ley;)V
+		ARG 1 mc
+		ARG 2 textures
+	METHOD a allChanged ()V
+	METHOD a renderSky (F)V
+		ARG 1 alpha
+	METHOD a renderSameAsLast (ID)V
+		ARG 1 layer
+		ARG 2 alpha
+	METHOD a checkQueryResults (II)V
+		ARG 1 from
+		ARG 2 to
+	METHOD a renderChunks (IIID)I
+		ARG 1 from
+		ARG 2 to
+		ARG 3 layer
+		ARG 4 alpha
+	METHOD a setDirty (IIIIII)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 z0
+		ARG 4 x1
+		ARG 5 y1
+		ARG 6 z1
+	METHOD a renderEntities (Laj;Loe;F)V
+		ARG 1 cam
+		ARG 2 culler
+		ARG 3 a
+	METHOD a render (Lcf;)V
+		ARG 1 b
+	METHOD a setLevel (Lcn;)V
+		ARG 1 level
+	METHOD a render (Ldm;ID)I
+		ARG 1 player
+		ARG 2 layer
+		ARG 3 alpha
+	METHOD a renderHit (Ldm;Lmf;ILev;F)V
+		ARG 1 player
+		ARG 2 h
+		ARG 3 mode
+		ARG 4 inventoryItem
+		ARG 5 a
+	METHOD a updateDirtyChunks (Ldm;Z)Z
+		ARG 1 player
+		ARG 2 force
+	METHOD a cull (Loe;F)V
+		ARG 1 culler
+		ARG 2 a
+	METHOD b gatherStats1 ()Ljava/lang/String;
+	METHOD b renderClouds (F)V
+		ARG 1 alpha
+	METHOD b resortChunks (III)V
+		ARG 1 xc
+		ARG 2 yc
+		ARG 3 zc
+	METHOD b renderHitOutline (Ldm;Lmf;ILev;F)V
+		ARG 1 player
+		ARG 2 h
+		ARG 3 mode
+		ARG 4 inventoryItem
+		ARG 5 a
+	METHOD c gatherStats2 ()Ljava/lang/String;
+	METHOD c renderAdvancedClouds (F)V
+		ARG 1 alpha
+	METHOD d tick ()V
+	METHOD f renderStars ()V
+CLASS ea net/minecraft/client/gui/inventory/ContainerScreen
+	FIELD j inventory Lgh;
+	FIELD l container Lgh;
+	FIELD m containerRows I
+	METHOD <init> (Lgh;Lgh;)V
+		ARG 1 inventory
+		ARG 2 container
+CLASS eb net/minecraft/client/sound/SoundRepository
+	FIELD a count I
+	FIELD b trimDigits Z
+	FIELD c random Ljava/util/Random;
+	FIELD d urls Ljava/util/Map;
+	FIELD e all Ljava/util/List;
+	METHOD a any ()Lah;
+	METHOD a get (Ljava/lang/String;)Lah;
+		ARG 1 name
+	METHOD a add (Ljava/lang/String;Ljava/io/File;)Lah;
+		ARG 1 name
+		ARG 2 file
+CLASS ec net/minecraft/world/item/DoorItem
+	FIELD a material Lgb;
+	METHOD <init> (ILgb;)V
+		ARG 1 id
+		ARG 2 m
+CLASS ed net/minecraft/client/model/Vertex
+	FIELD a pos Laj;
+	FIELD b u F
+	FIELD c v F
+	METHOD <init> (FFFFF)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 u
+		ARG 5 v
+	METHOD <init> (Laj;FF)V
+		ARG 1 pos
+		ARG 2 u
+		ARG 3 v
+	METHOD <init> (Led;FF)V
+		ARG 1 vertex
+		ARG 2 u
+		ARG 3 v
+	METHOD a remap (FF)Led;
+		ARG 1 u
+		ARG 2 v
+CLASS ee net/minecraft/client/gui/inventory/AbstractContainerScreen
+	FIELD a imageWidth I
+	FIELD h imageHeight I
+	FIELD i slots Ljava/util/List;
+	FIELD j itemRenderer Lab;
+	METHOD a renderBg (F)V
+		ARG 1 a
+	METHOD a findSlot (II)Ldk;
+		ARG 1 x
+		ARG 2 y
+	METHOD a renderSlot (Lmm;)V
+		ARG 1 slot
+	METHOD j renderLabels ()V
+CLASS ef net/minecraft/world/item/RedStoneItem
+CLASS eg net/minecraft/client/renderer/ptexture/LavaSideTexture
+	FIELD g current [F
+	FIELD h next [F
+	FIELD i heat [F
+	FIELD j heata [F
+	FIELD k tickCount I
+CLASS eh net/minecraft/network/packet/MovePlayerPacket
+	FIELD a x D
+	FIELD b y D
+	FIELD c z D
+	FIELD d yView D
+	FIELD e yRot F
+	FIELD f xRot F
+	FIELD g onGround Z
+	FIELD h hasPos Z
+	FIELD i hasRot Z
+	METHOD <init> (Z)V
+		ARG 1 onGround
+CLASS ei net/minecraft/client/renderer/entity/ItemSpriteRenderer
+CLASS ej net/minecraft/world/level/levelgen/feature/BasicTree
+	FIELD a axisConversionArray [B
+	FIELD b rnd Ljava/util/Random;
+	FIELD c thisLevel Lcn;
+	FIELD d origin [I
+	FIELD e height I
+	FIELD f trunkHeight I
+	FIELD g trunkHeightScale D
+	FIELD h branchDensity D
+	FIELD i branchSlope D
+	FIELD j widthScale D
+	FIELD k foliageDensity D
+	FIELD l trunkWidth I
+	FIELD m heightVariance I
+	FIELD n foliageHeight I
+	FIELD o foliageCoords [[I
+	METHOD a prepare ()V
+	METHOD a treeShape (I)F
+		ARG 1 y
+	METHOD a foliageCluster (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a crossection (IIIFBI)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 radius
+		ARG 5 axis
+		ARG 6 tile
+	METHOD a checkLine ([I[I)I
+		ARG 1 startPos
+		ARG 2 endPos
+	METHOD a limb ([I[II)V
+		ARG 1 startPos
+		ARG 2 endPos
+		ARG 3 tile
+	METHOD b makeFoliage ()V
+	METHOD b foliageShape (I)F
+		ARG 1 y
+	METHOD c makeTrunk ()V
+	METHOD c trimBranches (I)Z
+		ARG 1 y
+	METHOD d makeBranches ()V
+	METHOD e checkLocation ()Z
+CLASS ek net/minecraft/world/entity/PathfinderMob
+	FIELD a path Lbl;
+	FIELD f attackTarget Lkh;
+	FIELD g holdGround Z
+	METHOD a getWalkTargetValue (III)F
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a checkHurtTarget (Lkh;F)V
+		ARG 1 target
+		ARG 2 distanceTo
+	METHOD i findAttackTarget ()Lkh;
+CLASS el com/mojang/nbt/Tag
+	FIELD a name Ljava/lang/String;
+	METHOD a getId ()B
+	METHOD a newTag (B)Lel;
+		ARG 0 tagType
+	METHOD a writeNamedTag (Lel;Ljava/io/DataOutput;)V
+		ARG 0 tag
+		ARG 1 dataOutput
+	METHOD a load (Ljava/io/DataInput;)V
+		ARG 1 dataInput
+	METHOD a write (Ljava/io/DataOutput;)V
+		ARG 1 dataOutput
+	METHOD a setName (Ljava/lang/String;)Lel;
+		ARG 1 name
+	METHOD b getName ()Ljava/lang/String;
+	METHOD b getTagName (B)Ljava/lang/String;
+		ARG 0 tagType
+	METHOD b readNamedTag (Ljava/io/DataInput;)Lel;
+		ARG 0 dataInput
+CLASS em net/minecraft/client/model/CreeperModel
+	FIELD a head Lip;
+	FIELD b hair Lip;
+	FIELD c body Lip;
+	FIELD d leg0 Lip;
+	FIELD e leg1 Lip;
+	FIELD f leg2 Lip;
+	FIELD g leg3 Lip;
+CLASS en net/minecraft/client/particle/RedDustParticle
+	FIELD a oSize F
+	METHOD <init> (Lcn;DDD)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+	METHOD <init> (Lcn;DDDF)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 scale
+CLASS eo util/Mth
+	FIELD a sin [F
+	METHOD a sqrt (D)F
+		ARG 0 value
+	METHOD a asbMax (DD)D
+		ARG 0 min
+		ARG 2 max
+	METHOD a sin (F)F
+		ARG 0 value
+	METHOD a intFloorDiv (II)I
+		ARG 0 a
+		ARG 1 b
+	METHOD b floor (D)I
+		ARG 0 value
+	METHOD b cos (F)F
+		ARG 0 value
+	METHOD c sqrt (F)F
+		ARG 0 value
+	METHOD d floor (F)I
+		ARG 0 value
+	METHOD e abs (F)F
+		ARG 0 value
+CLASS ep net/minecraft/client/sound/CodecMus
+CLASS eq net/minecraft/client/renderer/entity/ChickenRenderer
+CLASS er net/minecraft/world/entity/Painting_Motive
+	FIELD A h I
+	FIELD B uo I
+	FIELD C vo I
+	FIELD y name Ljava/lang/String;
+	FIELD z w I
+	METHOD <init> (Ljava/lang/String;ILjava/lang/String;IIII)V
+		ARG 3 name
+		ARG 4 w
+		ARG 5 h
+		ARG 6 uo
+		ARG 7 vo
+CLASS es net/minecraft/world/level/levelgen/feature/ReedsFeature
+CLASS et net/minecraft/world/inventory/CraftingMenu
+	FIELD a craftSlots Lgu;
+	FIELD b resultSlots Lgh;
+CLASS eu net/minecraft/world/entity/player/Inventory
+	FIELD a items [Lev;
+	FIELD b armor [Lev;
+	FIELD c crafting [Lev;
+	FIELD d selected I
+	FIELD e carried Lev;
+	FIELD f changed Z
+	FIELD g player Ldm;
+	METHOD <init> (Ldm;)V
+		ARG 1 player
+	METHOD a getSelected ()Lev;
+	METHOD a swapPaint (I)V
+		ARG 1 dir
+	METHOD a grabTexture (IZ)V
+		ARG 1 id
+		ARG 2 isCreative
+	METHOD a isSame (Leu;)Z
+		ARG 1 inventory
+	METHOD a add (Lev;)Z
+		ARG 1 item
+	METHOD a isSame (Lev;Lev;)Z
+		ARG 1 i0
+		ARG 2 i1
+	METHOD a getAttackDamage (Lkh;)I
+		ARG 1 e
+	METHOD a save (Lki;)Lki;
+		ARG 1 tag
+	METHOD a getDestroySpeed (Lly;)F
+		ARG 1 tile
+	METHOD b tick ()V
+	METHOD b removeResource (I)Z
+		ARG 1 id
+	METHOD b addResource (II)I
+		ARG 1 id
+		ARG 2 count
+	METHOD b load (Lki;)V
+		ARG 1 tag
+	METHOD b canDestroy (Lly;)Z
+		ARG 1 tile
+	METHOD d getArmor (I)Lev;
+		ARG 1 slot
+	METHOD e hurtArmor (I)V
+		ARG 1 damage
+	METHOD f getArmorValue ()I
+	METHOD f getSlot (I)I
+		ARG 1 id
+	METHOD g dropAll ()V
+	METHOD g getSlotWithRemainingSpace (I)I
+		ARG 1 id
+	METHOD i copy ()Leu;
+	METHOD j getFreeSlot ()I
+CLASS ev net/minecraft/world/item/ItemInstance
+	FIELD a count I
+	FIELD b popTime I
+	FIELD c id I
+	FIELD d auxValue I
+	METHOD <init> (I)V
+		ARG 1 id
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 count
+	METHOD <init> (III)V
+		ARG 1 id
+		ARG 2 count
+		ARG 3 auxValue
+	METHOD <init> (Ldi;)V
+		ARG 1 item
+	METHOD <init> (Ldi;I)V
+		ARG 1 item
+		ARG 2 count
+	METHOD <init> (Lhm;)V
+		ARG 1 tag
+	METHOD <init> (Lly;)V
+		ARG 1 tile
+	METHOD <init> (Lly;I)V
+		ARG 1 tile
+		ARG 2 count
+	METHOD a getItem ()Ldi;
+	METHOD a remove (I)Lev;
+		ARG 1 count
+	METHOD a mineBlock (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+	METHOD a use (Lcn;Ldm;)Lev;
+		ARG 1 level
+		ARG 2 player
+	METHOD a snap (Ldm;)V
+		ARG 1 player
+	METHOD a useOn (Ldm;Lcn;IIII)Z
+		ARG 1 player
+		ARG 2 level
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+		ARG 6 face
+	METHOD a hurtEnemy (Lge;)V
+		ARG 1 mob
+	METHOD a save (Lhm;)Lhm;
+		ARG 1 tag
+	METHOD a getAttackDamage (Lkh;)I
+		ARG 1 entity
+	METHOD a getDestroySpeed (Lly;)F
+		ARG 1 tile
+	METHOD b getIcon ()I
+	METHOD b hurt (I)V
+		ARG 1 damage
+	METHOD b interactEnemy (Lge;)V
+		ARG 1 enemy
+	METHOD b load (Lhm;)V
+		ARG 1 tag
+	METHOD b canDestroySpecial (Lly;)Z
+		ARG 1 tile
+	METHOD c getMaxStackSize ()I
+	METHOD d getMaxDamage ()I
+	METHOD e copy ()Lev;
+CLASS ew net/minecraft/world/entity/EntityIO
+	FIELD a idClassMap Ljava/util/Map;
+	FIELD b classIdMap Ljava/util/Map;
+	FIELD c numClassMap Ljava/util/Map;
+	FIELD d classNumMap Ljava/util/Map;
+	METHOD a newById (ILcn;)Lkh;
+		ARG 0 num
+		ARG 1 level
+	METHOD a loadStatic (Lhm;Lcn;)Lkh;
+		ARG 0 tag
+		ARG 1 level
+	METHOD a setId (Ljava/lang/Class;Ljava/lang/String;I)V
+		ARG 0 e
+		ARG 1 id
+		ARG 2 num
+	METHOD a newEntity (Ljava/lang/String;Lcn;)Lkh;
+		ARG 0 id
+		ARG 1 level
+	METHOD a getId (Lkh;)I
+		ARG 0 e
+	METHOD b getEncodeId (Lkh;)Ljava/lang/String;
+		ARG 0 e
+CLASS ex net/minecraft/client/renderer/tileentity/TileEntityRenderer
+	FIELD a tileEntityRenderDispatcher Lfz;
+	METHOD a getFont ()Lkd;
+	METHOD a init (Lfz;)V
+		ARG 1 tileEntityRenderDispatcher
+	METHOD a render (Lic;DDDF)V
+		ARG 1 spawner
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 a
+	METHOD a bindTexture (Ljava/lang/String;)V
+		ARG 1 resourceName
+CLASS ey net/minecraft/client/renderer/Textures
+	FIELD a MIPMAP Z
+	FIELD b idMap Ljava/util/HashMap;
+	FIELD c loadedImages Ljava/util/HashMap;
+	FIELD d ib Ljava/nio/IntBuffer;
+	FIELD e pixels Ljava/nio/ByteBuffer;
+	FIELD f dynamicTextures Ljava/util/List;
+	FIELD g httpTextures Ljava/util/Map;
+	FIELD h options Lfr;
+	FIELD i clamp Z
+	METHOD <init> (Lfr;)V
+		ARG 1 options
+	METHOD a tick ()V
+	METHOD a releaseTexture (I)V
+		ARG 1 id
+	METHOD a smoothBlend (II)I
+		ARG 1 c0
+		ARG 2 c1
+	METHOD a getTexture (Ljava/awt/image/BufferedImage;)I
+		ARG 1 img
+	METHOD a loadTexture (Ljava/awt/image/BufferedImage;I)V
+		ARG 1 img
+		ARG 2 id
+	METHOD a loadTexture (Ljava/lang/String;)I
+		ARG 1 resourceName
+	METHOD a addHttpTexture (Ljava/lang/String;Lhb;)Lcc;
+		ARG 1 url
+		ARG 2 processor
+	METHOD a loadHttpTexture (Ljava/lang/String;Ljava/lang/String;)I
+		ARG 1 url
+		ARG 2 backup
+	METHOD a addDynamicTexture (Lz;)V
+		ARG 1 dynamicTexture
+	METHOD b reloadAll ()V
+	METHOD b bind (I)V
+		ARG 1 id
+	METHOD b crispBlend (II)I
+		ARG 1 c0
+		ARG 2 c1
+	METHOD b makeStrip (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;
+		ARG 1 source
+	METHOD b removeHttpTexture (Ljava/lang/String;)V
+		ARG 1 url
+CLASS ez net/minecraft/network/packet/AddMobPacket
+	FIELD a id I
+	FIELD b type B
+	FIELD c x I
+	FIELD d y I
+	FIELD e z I
+	FIELD f yRot B
+	FIELD g xRot B
+	METHOD <init> (Lge;)V
+		ARG 1 mob
+CLASS f com/mojang/nbt/FloatTag
+	FIELD a data F
+	METHOD <init> (F)V
+		ARG 1 data
+CLASS fa net/minecraft/isom/IsomPreview_OS
+CLASS fb net/minecraft/client/renderer/DistanceChunkSorter
+	FIELD a player Lkh;
+	METHOD <init> (Lkh;)V
+		ARG 1 player
+	METHOD compare (Ljava/lang/Object;Ljava/lang/Object;)I
+		ARG 1 c0
+		ARG 2 c1
+CLASS fc net/minecraft/world/level/tile/HalfTransparentTile
+	FIELD a allowSame Z
+	METHOD <init> (IILgb;Z)V
+		ARG 1 id
+		ARG 2 tex
+		ARG 3 m
+		ARG 4 allowSame
+CLASS fd net/minecraft/world/level/tile/TopSnowTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+	METHOD h checkCanSurvive (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS fe net/minecraft/world/level/tile/entity/ChestTileEntity
+	FIELD a items [Lev;
+CLASS ff net/minecraft/world/entity/item/FallingTile
+	FIELD a tile I
+	FIELD b time I
+	METHOD <init> (Lcn;FFFI)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 tile
+	METHOD i getLevel ()Lcn;
+CLASS fg net/minecraft/network/packet/PlayerActionPacket
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	FIELD d face I
+	FIELD e action I
+	METHOD <init> (IIIII)V
+		ARG 1 action
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 face
+CLASS fh net/minecraft/world/level/tile/FenceTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS fi util/IntHashMap
+	FIELD a table [Lmx;
+	FIELD b size I
+	FIELD c threshold I
+	FIELD d loadFactor F
+	FIELD e modCount I
+	METHOD a clear ()V
+	METHOD a get (I)Ljava/lang/Object;
+		ARG 1 key
+	METHOD a indexFor (II)I
+		ARG 0 hash
+		ARG 1 length
+	METHOD a addEntry (IILjava/lang/Object;I)V
+		ARG 1 hash
+		ARG 2 key
+		ARG 3 value
+		ARG 4 next
+	METHOD a put (ILjava/lang/Object;)V
+		ARG 1 key
+		ARG 2 value
+	METHOD a transfer ([Lmx;)V
+		ARG 1 entries
+	METHOD b remove (I)Ljava/lang/Object;
+		ARG 1 key
+	METHOD c removeEntryForKey (I)Lmx;
+		ARG 1 key
+	METHOD e hash (I)I
+		ARG 0 key
+	METHOD f resize (I)V
+		ARG 1 size
+CLASS fj net/minecraft/world/item/crafting/StructureRecipies
+	METHOD a addRecipes (Ldw;)V
+		ARG 1 recipes
+CLASS fk net/minecraft/client/gui/Button
+	FIELD a w I
+	FIELD b h I
+	FIELD c x I
+	FIELD d y I
+	FIELD e msg Ljava/lang/String;
+	FIELD f id I
+	FIELD g active Z
+	FIELD h visible Z
+	METHOD <init> (IIIIILjava/lang/String;)V
+		ARG 1 id
+		ARG 2 x
+		ARG 3 y
+		ARG 4 w
+		ARG 5 h
+		ARG 6 msg
+	METHOD <init> (IIILjava/lang/String;)V
+		ARG 1 id
+		ARG 2 x
+		ARG 3 y
+		ARG 4 msg
+	METHOD a released (II)V
+		ARG 1 mx
+		ARG 2 my
+	METHOD a render (Lnet/minecraft/client/Minecraft;II)V
+		ARG 1 minecraft
+		ARG 2 xm
+		ARG 3 ym
+	METHOD a getYImage (Z)I
+		ARG 1 hovered
+	METHOD b renderBg (Lnet/minecraft/client/Minecraft;II)V
+		ARG 1 minecraft
+		ARG 2 xm
+		ARG 3 ym
+	METHOD c clicked (Lnet/minecraft/client/Minecraft;II)Z
+		ARG 1 minecraft
+		ARG 2 mx
+		ARG 3 my
+CLASS fl net/minecraft/client/Minecraft_1
+CLASS fm net/minecraft/client/Minecraft_3
+CLASS fn net/minecraft/network/packet/Packet
+	FIELD a idToClassMap Ljava/util/Map;
+	FIELD b classToIdMap Ljava/util/Map;
+	FIELD j shouldDelay Z
+	METHOD a getEstimatedSize ()I
+	METHOD a getPacket (I)Lfn;
+		ARG 0 id
+	METHOD a map (ILjava/lang/Class;)V
+		ARG 0 id
+		ARG 1 packet
+	METHOD a writePacket (Lfn;Ljava/io/DataOutputStream;)V
+		ARG 0 packet
+		ARG 1 dos
+	METHOD a read (Ljava/io/DataInputStream;)V
+		ARG 1 dis
+	METHOD a write (Ljava/io/DataOutputStream;)V
+		ARG 1 dos
+	METHOD a handle (Llb;)V
+		ARG 1 listener
+	METHOD b getId ()I
+	METHOD b readPacket (Ljava/io/DataInputStream;)Lfn;
+		ARG 0 dis
+CLASS fo net/minecraft/client/model/Model
+	FIELD k attackTime F
+	FIELD l riding Z
+	METHOD a setupAnim (FFFFFF)V
+		ARG 1 time
+		ARG 2 r
+		ARG 3 bob
+		ARG 4 yRot
+		ARG 5 xRot
+		ARG 6 scale
+	METHOD b render (FFFFFF)V
+		ARG 1 time
+		ARG 2 r
+		ARG 3 bob
+		ARG 4 yRot
+		ARG 5 xRot
+		ARG 6 scale
+CLASS fp net/minecraft/client/Minecraft_4
+CLASS fq net/minecraft/client/Minecraft_2
+CLASS fr net/minecraft/client/Options
+	FIELD A optionsFile Ljava/io/File;
+	FIELD a music F
+	FIELD b sound F
+	FIELD c sensitivity F
+	FIELD d invertYMouse Z
+	FIELD e viewDistance I
+	FIELD f bobView Z
+	FIELD g anaglyph3d Z
+	FIELD h limitFramerate Z
+	FIELD i fancyGraphics Z
+	FIELD j keyUp Lit;
+	FIELD k keyLeft Lit;
+	FIELD l keyDown Lit;
+	FIELD m keyRight Lit;
+	FIELD n keyJump Lit;
+	FIELD o keyInventory Lit;
+	FIELD p keyDrop Lit;
+	FIELD q keyChat Lit;
+	FIELD r keyFog Lit;
+	FIELD s keySneak Lit;
+	FIELD t keyMappings [Lit;
+	FIELD u minecraft Lnet/minecraft/client/Minecraft;
+	FIELD v _numOptions I
+	FIELD w difficulty I
+	FIELD x thirdPersonView Z
+	FIELD y RENDER_DISTANCE_NAMES [Ljava/lang/String;
+	FIELD z DIFFICULTY_NAMES [Ljava/lang/String;
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Ljava/io/File;)V
+		ARG 2 workingDirectory
+	METHOD a load ()V
+	METHOD a getKeyDescription (I)Ljava/lang/String;
+		ARG 1 key
+	METHOD a set (IF)V
+		ARG 1 option
+		ARG 2 value
+	METHOD a setKey (II)V
+		ARG 1 key
+		ARG 2 keyCode
+	METHOD a readFloat (Ljava/lang/String;)F
+		ARG 1 value
+	METHOD b save ()V
+	METHOD b getProgressValue (I)I
+		ARG 1 option
+	METHOD b toggle (II)V
+		ARG 1 option
+		ARG 2 i
+	METHOD c getBooleanValue (I)F
+		ARG 1 option
+	METHOD d getMessage (I)Ljava/lang/String;
+		ARG 1 option
+CLASS fs net/minecraft/world/item/crafting/Recipes_1
+	METHOD <init> (Ldw;)V
+		ARG 1 recipes
+	METHOD compare (Ljava/lang/Object;Ljava/lang/Object;)I
+		ARG 1 r0
+		ARG 2 r1
+CLASS ft net/minecraft/world/level/chunk/ChunkCache
+	FIELD a xLast I
+	FIELD b zLast I
+	FIELD c emptyChunk Lga;
+	FIELD d source Law;
+	FIELD e storage Laf;
+	FIELD f chunks [Lga;
+	FIELD g level Lcn;
+	FIELD h last Lga;
+	METHOD <init> (Lcn;Laf;Law;)V
+		ARG 1 level
+		ARG 2 storage
+		ARG 3 source
+	METHOD a saveEntities (Lga;)V
+		ARG 1 chunk
+	METHOD b save (Lga;)V
+		ARG 1 chunk
+	METHOD c load (II)Lga;
+		ARG 1 x
+		ARG 2 z
+CLASS fu net/minecraft/world/item/HoeItem
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tier
+CLASS fv net/minecraft/client/model/SkeletonModel
+CLASS fw net/minecraft/world/level/tile/DoorTile
+	METHOD a setOpen (Lcn;IIIZ)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 hasSignal
+	METHOD b setShape (I)V
+		ARG 1 data
+	METHOD c getDir (I)I
+		ARG 1 data
+CLASS fx net/minecraft/world/level/pathfinder/BinaryHeap
+	FIELD a heap [La;
+	FIELD b size I
+	METHOD a clear ()V
+	METHOD a upHeap (I)V
+		ARG 1 node
+	METHOD a insert (La;)La;
+		ARG 1 node
+	METHOD a changeCost (La;F)V
+		ARG 1 node
+		ARG 2 cost
+	METHOD b pop ()La;
+	METHOD b downHeap (I)V
+		ARG 1 node
+	METHOD c isEmpty ()Z
+CLASS fy com/mojang/nbt/EndTag
+CLASS fz net/minecraft/client/renderer/tileentity/TileEntityRenderDispatcher
+	FIELD a instance Lfz;
+	FIELD b xOff D
+	FIELD c yOff D
+	FIELD d zOff D
+	FIELD e textures Ley;
+	FIELD f level Lcn;
+	FIELD g player Ldm;
+	FIELD h playerRotY F
+	FIELD i playerRotX F
+	FIELD j xPlayer D
+	FIELD k yPlayer D
+	FIELD l zPlayer D
+	FIELD m renderers Ljava/util/Map;
+	FIELD n font Lkd;
+	METHOD a getFont ()Lkd;
+	METHOD a prepare (Lcn;Ley;Lkd;Ldm;F)V
+		ARG 1 level
+		ARG 2 textures
+		ARG 3 font
+		ARG 4 player
+		ARG 5 a
+	METHOD a hasRenderer (Lic;)Z
+		ARG 1 e
+	METHOD a render (Lic;DDDF)V
+		ARG 1 entity
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 a
+	METHOD a render (Lic;F)V
+		ARG 1 e
+		ARG 2 a
+	METHOD a getRenderer (Ljava/lang/Class;)Lex;
+		ARG 1 e
+	METHOD b getRenderer (Lic;)Lex;
+		ARG 1 e
+CLASS g net/minecraft/client/MinecraftApplet_2
+CLASS ga net/minecraft/world/level/chunk/LevelChunk
+	FIELD a touchedSky Z
+	FIELD b blocks [B
+	FIELD c loaded Z
+	FIELD d level Lcn;
+	FIELD e data Lmu;
+	FIELD f skyLight Lmu;
+	FIELD g blockLight Lmu;
+	FIELD h heightmap [B
+	FIELD i minHeight I
+	FIELD j x I
+	FIELD k z I
+	FIELD l tileEntities Ljava/util/Map;
+	FIELD m entityBlocks [Ljava/util/List;
+	FIELD n terrainPopulated Z
+	FIELD o unsaved Z
+	FIELD p dontSave Z
+	FIELD q isEmpty Z
+	FIELD r lastSaveHadEntities Z
+	FIELD s lastSaveTime J
+	METHOD <init> (Lcn;II)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 z
+	METHOD <init> (Lcn;[BII)V
+		ARG 1 level
+		ARG 2 blocks
+		ARG 3 x
+		ARG 4 z
+	METHOD a recalcBlockLights ()V
+	METHOD a isAt (II)Z
+		ARG 1 x
+		ARG 2 z
+	METHOD a getTile (III)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a setTile (IIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tile
+	METHOD a setTileAndData (IIIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tile
+		ARG 5 data
+	METHOD a setTileEntity (IIILic;)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tileEntity
+	METHOD a getRandom (J)Ljava/util/Random;
+		ARG 1 xor
+	METHOD a getBrightness (Lby;III)I
+		ARG 1 layer
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD a setBrightness (Lby;IIII)V
+		ARG 1 layer
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 br
+	METHOD a addTileEntity (Lic;)V
+		ARG 1 tileEntity
+	METHOD a getEntitiesOfClass (Ljava/lang/Class;Lcf;Ljava/util/List;)V
+		ARG 1 e
+		ARG 2 aabb
+		ARG 3 results
+	METHOD a addEntity (Lkh;)V
+		ARG 1 e
+	METHOD a removeEntity (Lkh;I)V
+		ARG 1 e
+		ARG 2 section
+	METHOD a getEntities (Lkh;Lcf;Ljava/util/List;)V
+		ARG 1 entity
+		ARG 2 aabb
+		ARG 3 list
+	METHOD a shouldSave (Z)Z
+		ARG 1 force
+	METHOD a setBlocksAndData ([BIIIIIII)I
+		ARG 1 data
+		ARG 2 x0
+		ARG 3 y0
+		ARG 4 z0
+		ARG 5 x1
+		ARG 6 y1
+		ARG 7 z1
+		ARG 8 offset
+	METHOD b recalcHeightmapOnly ()V
+	METHOD b getHeightmap (II)I
+		ARG 1 x
+		ARG 2 z
+	METHOD b getData (III)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD b setData (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 data
+	METHOD b removeEntity (Lkh;)V
+		ARG 1 e
+	METHOD c recalcHeightmap ()V
+	METHOD c lightGaps (II)V
+		ARG 1 x
+		ARG 2 z
+	METHOD c isSkyLit (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD c getRawBrightness (IIII)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 skyDarken
+	METHOD d load ()V
+	METHOD d getTileEntity (III)Lic;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD e unload ()V
+	METHOD e removeTileEntity (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD f markUnsaved ()V
+	METHOD f lightGap (III)V
+		ARG 1 x
+		ARG 2 z
+		ARG 3 y
+	METHOD g recalcHeight (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+CLASS gb net/minecraft/world/level/material/Material
+	FIELD a air Lgb;
+	FIELD b dirt Lgb;
+	FIELD c wood Lgb;
+	FIELD d stone Lgb;
+	FIELD e metal Lgb;
+	FIELD f water Lgb;
+	FIELD g lava Lgb;
+	FIELD h leaves Lgb;
+	FIELD i plant Lgb;
+	FIELD j sponge Lgb;
+	FIELD k cloth Lgb;
+	FIELD l fire Lgb;
+	FIELD m sand Lgb;
+	FIELD n decoration Lgb;
+	FIELD o glass Lgb;
+	FIELD p explosive Lgb;
+	FIELD q coral Lgb;
+	FIELD r ice Lgb;
+	FIELD s topSnow Lgb;
+	FIELD t snow Lgb;
+	FIELD u cactus Lgb;
+	FIELD v clay Lgb;
+	FIELD w flammable Z
+	METHOD a isSolid ()Z
+	METHOD b blockLight ()Z
+	METHOD c blocksMotion ()Z
+	METHOD d isLiquid ()Z
+	METHOD e isFlammable ()Z
+	METHOD f flammable ()Lgb;
+CLASS gc net/minecraft/client/gui/JoinMultiplayerScreen
+	FIELD a lastScreen Lbh;
+	FIELD h frame I
+	FIELD i ip Ljava/lang/String;
+	METHOD <init> (Lbh;)V
+		ARG 1 lastScreen
+CLASS gd net/minecraft/client/player/KeyboardInput
+	FIELD f keys [Z
+	FIELD g options Lfr;
+	METHOD <init> (Lfr;)V
+		ARG 1 options
+CLASS ge net/minecraft/world/entity/Mob
+	FIELD A renderOffset F
+	FIELD B interpolateOnly Z
+	FIELD C oAttackAnim F
+	FIELD D attackAnim F
+	FIELD E health I
+	FIELD F lastHealth I
+	FIELD G hurtTime I
+	FIELD H hurtDuration I
+	FIELD I hurtDir F
+	FIELD J deathTime I
+	FIELD K attackTime I
+	FIELD L oTilt F
+	FIELD M tilt F
+	FIELD N dead Z
+	FIELD O modelNum I
+	FIELD P animSpeed F
+	FIELD Q walkAnimSpeedO F
+	FIELD R walkAnimSpeed F
+	FIELD S walkAnimPos F
+	FIELD T fallTime F
+	FIELD U noActionTime I
+	FIELD V xxa F
+	FIELD W yya F
+	FIELD X yRotA F
+	FIELD Y jumping Z
+	FIELD Z defaultLookAngle F
+	FIELD a ambientSoundTime I
+	FIELD aa runSpeed F
+	FIELD b lSteps I
+	FIELD c lx D
+	FIELD d ly D
+	FIELD e lz D
+	FIELD f lyr D
+	FIELD g lxr D
+	FIELD h lookingAt Lkh;
+	FIELD i lookTime I
+	FIELD j invulnerableDuration I
+	FIELD k timeOffs F
+	FIELD m rotA F
+	FIELD n yBodyRot F
+	FIELD o yBodyRotO F
+	FIELD p oRun F
+	FIELD q run F
+	FIELD r animStep F
+	FIELD s animStepO F
+	FIELD t hasHair Z
+	FIELD u textureName Ljava/lang/String;
+	FIELD v allowAlpha Z
+	FIELD w rotOffs F
+	FIELD x modelName Ljava/lang/String;
+	FIELD y bobStrength F
+	FIELD z deathScore I
+	METHOD A onLadder ()Z
+	METHOD C jumpFromGround ()V
+	METHOD D beforeRemove ()V
+	METHOD a canSpawn ()Z
+	METHOD a pick (DF)Lmf;
+		ARG 1 range
+		ARG 3 a
+	METHOD a knockback (Lkh;IDD)V
+		ARG 1 e
+		ARG 2 dmg
+		ARG 3 xd
+		ARG 5 zd
+	METHOD b getAmbientSoundInterval ()I
+	METHOD b travel (FF)V
+		ARG 1 xd
+		ARG 2 zd
+	METHOD b rotlerp (FFF)F
+		ARG 1 oRot
+		ARG 2 rot
+		ARG 3 maxRot
+	METHOD b heal (I)V
+		ARG 1 amount
+	METHOD b die (Lkh;)V
+		ARG 1 killer
+	METHOD b lookAt (Lkh;F)V
+		ARG 1 e
+		ARG 2 maxRot
+	METHOD b_ updateAi ()V
+	METHOD c getAmbientSound ()Ljava/lang/String;
+	METHOD c canSee (Lkh;)Z
+		ARG 1 e
+	METHOD d getHurtSound ()Ljava/lang/String;
+	METHOD d getAttackAnim (F)F
+		ARG 1 a
+	METHOD e getDeathSound ()Ljava/lang/String;
+	METHOD e getPos (F)Laj;
+		ARG 1 a
+	METHOD f getSoundVolume ()F
+	METHOD f getViewVector (F)Laj;
+		ARG 1 a
+	METHOD g getDeathLoot ()I
+	METHOD j aiStep ()V
+	METHOD z spawnAnim ()V
+CLASS gf net/minecraft/world/item/TilePlanterItem
+	FIELD a tileId I
+	METHOD <init> (ILly;)V
+		ARG 1 id
+		ARG 2 tile
+CLASS gg net/minecraft/world/level/material/GasMaterial
+CLASS gh net/minecraft/world/Container
+	METHOD a removeItem (II)Lev;
+		ARG 1 id
+		ARG 2 count
+	METHOD a setItem (ILev;)V
+		ARG 1 slot
+		ARG 2 count
+	METHOD c getContainerSize ()I
+	METHOD c getItem (I)Lev;
+		ARG 1 slot
+	METHOD d getName ()Ljava/lang/String;
+	METHOD e getMaxStackSize ()I
+	METHOD j_ setChanged ()V
+CLASS gi net/minecraft/network/packet/KeepAlivePacket
+CLASS gj net/minecraft/client/renderer/entity/DefaultRenderer
+CLASS gk net/minecraft/client/renderer/entity/ArrowRenderer
+CLASS gl net/minecraft/client/renderer/DirtyChunkSorter
+	FIELD a player Ldm;
+	METHOD <init> (Ldm;)V
+		ARG 1 player
+	METHOD compare (Ljava/lang/Object;Ljava/lang/Object;)I
+		ARG 1 c0
+		ARG 2 c1
+CLASS gm net/minecraft/client/renderer/entity/PigRenderer
+	METHOD <init> (Lfo;Lfo;F)V
+		ARG 1 model
+		ARG 2 armor
+		ARG 3 shadow
+CLASS gn com/mojang/nbt/LongTag
+	FIELD a data J
+	METHOD <init> (J)V
+		ARG 1 data
+CLASS go net/minecraft/client/CrashReport
+	FIELD a title Ljava/lang/String;
+	FIELD b e Ljava/lang/Throwable;
+	METHOD <init> (Ljava/lang/String;Ljava/lang/Throwable;)V
+		ARG 1 title
+		ARG 2 e
+CLASS gp net/minecraft/network/packet/AddPlayerPacket
+	FIELD a id I
+	FIELD b name Ljava/lang/String;
+	FIELD c x I
+	FIELD d y I
+	FIELD e z I
+	FIELD f yRot B
+	FIELD g xRot B
+	FIELD h carriedItem I
+	METHOD <init> (Ldm;)V
+		ARG 1 player
+CLASS gq net/minecraft/client/renderer/entity/SlimeRenderer
+	FIELD f _armor Lfo;
+	METHOD <init> (Lfo;Lfo;F)V
+		ARG 1 model
+		ARG 2 armor
+		ARG 3 shadow
+CLASS gr net/minecraft/client/ProgressRenderer
+	FIELD a status Ljava/lang/String;
+	FIELD b minecraft Lnet/minecraft/client/Minecraft;
+	FIELD c title Ljava/lang/String;
+	FIELD d lastTime J
+	FIELD e noAbort Z
+	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
+		ARG 1 minecraft
+	METHOD a progressStart (Ljava/lang/String;)V
+		ARG 1 title
+	METHOD c _progressStart (Ljava/lang/String;)V
+		ARG 1 title
+CLASS gs net/minecraft/client/multiplayer/MultiPlayerLevel
+	FIELD A connection Lgy;
+	FIELD B chunkCache Llz;
+	FIELD D entitiesById Lfi;
+	FIELD E forced Ljava/util/Set;
+	FIELD F reEntries Ljava/util/Set;
+	FIELD z updatesToReset Ljava/util/LinkedList;
+	METHOD <init> (Lgy;)V
+		ARG 1 connection
+	METHOD a setChunkVisible (IIZ)V
+		ARG 1 x
+		ARG 2 z
+		ARG 3 visible
+	METHOD a putEntity (ILkh;)V
+		ARG 1 id
+		ARG 2 e
+	METHOD b getEntity (I)Lkh;
+		ARG 1 id
+	METHOD c removeEntity (I)Lkh;
+		ARG 1 id
+	METHOD c doSetTileAndData (IIIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tile
+		ARG 5 data
+	METHOD c clearResetRegion (IIIIII)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 z0
+		ARG 4 x1
+		ARG 5 y1
+		ARG 6 z1
+CLASS gt net/minecraft/network/packet/PreLoginPacket
+	FIELD a userName Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;)V
+		ARG 1 userName
+CLASS gu net/minecraft/world/inventory/CraftingContainer
+	FIELD a items [Lev;
+	FIELD b size I
+	FIELD c menu Lar;
+	METHOD <init> (Lar;II)V
+		ARG 1 menu
+		ARG 2 width
+		ARG 3 height
+	METHOD <init> (Lar;[Lev;)V
+		ARG 1 menu
+		ARG 2 items
+CLASS gv net/minecraft/world/level/levelgen/feature/ClayFeature
+	FIELD a tile I
+	FIELD b count I
+	METHOD <init> (I)V
+		ARG 1 count
+CLASS gw net/minecraft/world/level/tile/OreTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS gx net/minecraft/client/model/SheepModel
+CLASS gy net/minecraft/client/multiplayer/ClientConnection
+	FIELD a message Ljava/lang/String;
+	FIELD b random Ljava/util/Random;
+	FIELD c done Z
+	FIELD d connection Lii;
+	FIELD e minecraft Lnet/minecraft/client/Minecraft;
+	FIELD f level Lgs;
+	FIELD g started Z
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Ljava/lang/String;I)V
+		ARG 1 minecraft
+		ARG 2 ip
+		ARG 3 port
+	METHOD a tick ()V
+	METHOD a send (Lfn;)V
+		ARG 1 packet
+	METHOD b close ()V
+CLASS gz net/minecraft/world/level/tile/GravelTile
+CLASS h net/minecraft/client/MinecraftApplet_1
+CLASS ha net/minecraft/network/packet/AddItemEntityPacket
+	FIELD a id I
+	FIELD b x I
+	FIELD c y I
+	FIELD d z I
+	FIELD e xa B
+	FIELD f ya B
+	FIELD g za B
+	FIELD h itemId I
+	FIELD i itemCount I
+	METHOD <init> (Ldx;)V
+		ARG 1 itemEntity
+CLASS hb net/minecraft/client/renderer/HttpTextureProcessor
+	METHOD a process (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;
+		ARG 1 in
+CLASS hc net/minecraft/client/multiplayer/MultiPlayerChunkCache_ChunkPos
+	FIELD a x I
+	FIELD b z I
+	METHOD <init> (II)V
+		ARG 1 x
+		ARG 2 z
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 obj
+CLASS hd net/minecraft/world/level/tile/CropTile
+	METHOD i getGrowthSpeed (Lcn;III)F
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS he net/minecraft/world/level/tile/IceTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS hf net/minecraft/network/packet/AnimatePacket
+	FIELD a id I
+	FIELD b action I
+	METHOD <init> (Lkh;I)V
+		ARG 1 entity
+		ARG 2 action
+CLASS hg net/minecraft/client/model/QuadrupedModel
+	FIELD d head Lip;
+	FIELD e body Lip;
+	FIELD f leg0 Lip;
+	FIELD g leg1 Lip;
+	FIELD h leg2 Lip;
+	FIELD i leg3 Lip;
+	METHOD <init> (IF)V
+		ARG 1 legSize
+		ARG 2 g
+CLASS hh net/minecraft/client/model/SlimeModel
+	FIELD a cube Lip;
+	FIELD b eye0 Lip;
+	FIELD c eye1 Lip;
+	FIELD d mouth Lip;
+	METHOD <init> (I)V
+		ARG 1 vOffs
+CLASS hi net/minecraft/world/level/tile/TransparentTile
+	FIELD a allowSame Z
+	METHOD <init> (IILgb;Z)V
+		ARG 1 id
+		ARG 2 tex
+		ARG 3 m
+		ARG 4 allowSame
+CLASS hj net/minecraft/client/model/MinecartModel
+	FIELD a cubes [Lip;
+CLASS hk net/minecraft/client/sound/CodecMus_DecoderInputStream
+	FIELD a buff [B
+	FIELD c seed I
+	FIELD d in Ljava/io/InputStream;
+	METHOD <init> (Lep;Ljava/net/URL;Ljava/io/InputStream;)V
+		ARG 2 url
+		ARG 3 in
+	METHOD read ([BII)I
+		ARG 1 buff
+		ARG 2 off
+		ARG 3 len
+CLASS hl net/minecraft/world/entity/monster/Giant
+CLASS hm com/mojang/nbt/CompoundTag
+	FIELD a tags Ljava/util/Map;
+	METHOD a putByte (Ljava/lang/String;B)V
+		ARG 1 name
+		ARG 2 data
+	METHOD a putDouble (Ljava/lang/String;D)V
+		ARG 1 name
+		ARG 2 data
+	METHOD a putFloat (Ljava/lang/String;F)V
+		ARG 1 name
+		ARG 2 data
+	METHOD a putInt (Ljava/lang/String;I)V
+		ARG 1 name
+		ARG 2 data
+	METHOD a putLong (Ljava/lang/String;J)V
+		ARG 1 name
+		ARG 2 data
+	METHOD a put (Ljava/lang/String;Lel;)V
+		ARG 1 name
+		ARG 2 tag
+	METHOD a putCompound (Ljava/lang/String;Lhm;)V
+		ARG 1 name
+		ARG 2 data
+	METHOD a putString (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 name
+		ARG 2 data
+	METHOD a putShort (Ljava/lang/String;S)V
+		ARG 1 name
+		ARG 2 data
+	METHOD a putBoolean (Ljava/lang/String;Z)V
+		ARG 1 name
+		ARG 2 data
+	METHOD a putByteArray (Ljava/lang/String;[B)V
+		ARG 1 name
+		ARG 2 data
+	METHOD b contains (Ljava/lang/String;)Z
+		ARG 1 name
+	METHOD c getByte (Ljava/lang/String;)B
+		ARG 1 name
+	METHOD d getShort (Ljava/lang/String;)S
+		ARG 1 name
+	METHOD e getInt (Ljava/lang/String;)I
+		ARG 1 name
+	METHOD f getLong (Ljava/lang/String;)J
+		ARG 1 name
+	METHOD g getFloat (Ljava/lang/String;)F
+		ARG 1 name
+	METHOD h getDouble (Ljava/lang/String;)D
+		ARG 1 name
+	METHOD i getString (Ljava/lang/String;)Ljava/lang/String;
+		ARG 1 name
+	METHOD j getByteArray (Ljava/lang/String;)[B
+		ARG 1 name
+	METHOD k getCompound (Ljava/lang/String;)Lhm;
+		ARG 1 name
+	METHOD l getList (Ljava/lang/String;)Lki;
+		ARG 1 name
+	METHOD m getBoolean (Ljava/lang/String;)Z
+		ARG 1 name
+CLASS hn net/minecraft/world/level/tile/LiquidTileStatic
+	METHOD j setDynamic (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD k isFlammable (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS ho net/minecraft/client/renderer/Tesselator
+	FIELD A vboCounts I
+	FIELD B size I
+	FIELD a instance Lho;
+	FIELD b TRIANGLE_MODE Z
+	FIELD c USE_VBO Z
+	FIELD d buffer Ljava/nio/ByteBuffer;
+	FIELD e ib Ljava/nio/IntBuffer;
+	FIELD f fb Ljava/nio/FloatBuffer;
+	FIELD g array [I
+	FIELD h vertices I
+	FIELD i u D
+	FIELD j v D
+	FIELD k col I
+	FIELD l hasColor Z
+	FIELD m hasTexture Z
+	FIELD n hasNormal Z
+	FIELD o p I
+	FIELD p count I
+	FIELD q noColor Z
+	FIELD r mode I
+	FIELD s xo D
+	FIELD t yo D
+	FIELD u zo D
+	FIELD v normal I
+	FIELD w tesselating Z
+	FIELD x vboMode Z
+	FIELD y vboIds Ljava/nio/IntBuffer;
+	FIELD z vboId I
+	METHOD <init> (I)V
+		ARG 1 size
+	METHOD a end ()V
+	METHOD a tex (DD)V
+		ARG 1 u
+		ARG 3 v
+	METHOD a vertex (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD a vertexUV (DDDDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 u
+		ARG 9 v
+	METHOD a color (FFF)V
+		ARG 1 r
+		ARG 2 g
+		ARG 3 b
+	METHOD a color (FFFF)V
+		ARG 1 r
+		ARG 2 g
+		ARG 3 b
+		ARG 4 a
+	METHOD a begin (I)V
+		ARG 1 mode
+	METHOD a color (III)V
+		ARG 1 r
+		ARG 2 g
+		ARG 3 b
+	METHOD a color (IIII)V
+		ARG 1 r
+		ARG 2 g
+		ARG 3 b
+		ARG 4 a
+	METHOD b begin ()V
+	METHOD b offset (DDD)V
+		ARG 1 xo
+		ARG 3 yo
+		ARG 5 zo
+	METHOD b normal (FFF)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD b color (I)V
+		ARG 1 c
+	METHOD c noColor ()V
+	METHOD c addOffset (FFF)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD d clear ()V
+CLASS hp net/minecraft/network/packet/LoginPacket
+	FIELD a clientVersion I
+	FIELD b userName Ljava/lang/String;
+	FIELD c loginKey Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;Ljava/lang/String;I)V
+		ARG 1 userName
+		ARG 2 loginKey
+		ARG 3 clientVersion
+CLASS hq net/minecraft/client/gamemode/GameMode
+	FIELD a minecraft Lnet/minecraft/client/Minecraft;
+	FIELD b instaBuild Z
+	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
+		ARG 1 minecraft
+	METHOD a stopDestroyBlock ()V
+	METHOD a render (F)V
+		ARG 1 a
+	METHOD a startDestroyBlock (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+	METHOD a initLevel (Lcn;)V
+		ARG 1 level
+	METHOD a initPlayer (Ldm;)V
+		ARG 1 player
+	METHOD a useItemOn (Ldm;Lcn;Lev;IIII)Z
+		ARG 1 player
+		ARG 2 level
+		ARG 3 item
+		ARG 4 x
+		ARG 5 y
+		ARG 6 z
+		ARG 7 face
+	METHOD b getPickRange ()F
+	METHOD b destroyBlock (IIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+	METHOD b createPlayer (Lcn;)Ldm;
+		ARG 1 level
+	METHOD b adjustPlayer (Ldm;)V
+		ARG 1 player
+	METHOD c tick ()V
+	METHOD c continueDestroyBlock (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 face
+	METHOD d canHurtPlayer ()Z
+CLASS hr net/minecraft/world/item/crafting/FoodRecipies
+	METHOD a addRecipes (Ldw;)V
+		ARG 1 recipes
+CLASS hs net/minecraft/world/CompoundContainer
+	FIELD a name Ljava/lang/String;
+	FIELD b c1 Lgh;
+	FIELD c c2 Lgh;
+	METHOD <init> (Ljava/lang/String;Lgh;Lgh;)V
+		ARG 1 name
+		ARG 2 c1
+		ARG 3 c2
+CLASS ht net/minecraft/client/renderer/ptexture/WaterSideTexture
+	FIELD g current [F
+	FIELD h next [F
+	FIELD i heat [F
+	FIELD j heata [F
+	FIELD k tickCount I
+CLASS hu net/minecraft/world/level/tile/ButtonTile
+	METHOD <init> (II)V
+		ARG 1 level
+		ARG 2 tex
+	METHOD h checkCanSurvive (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS hv net/minecraft/world/level/tile/LiquidTileDynamic
+	FIELD a maxCount I
+	FIELD b result [Z
+	FIELD c dist [I
+	METHOD a getSlopedDistance (Lcn;IIIII)I
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 data
+		ARG 6 face
+	METHOD f getHighest (Lcn;IIII)I
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 lastHighest
+	METHOD g trySpreadTo (Lcn;IIII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 data
+	METHOD j setStatic (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD k getSpread (Lcn;III)[Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD l isWaterBlocking (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD m canSpreadTo (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS hw net/minecraft/client/renderer/entity/TntRenderer
+	FIELD d _tileRenderer Lbc;
+CLASS hx net/minecraft/client/gui/inventory/CraftingScreen
+	FIELD j menu Let;
+	METHOD <init> (Leu;)V
+		ARG 1 inventory
+CLASS hy net/minecraft/world/level/tile/CactusTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS hz net/minecraft/world/level/tile/DirtTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS i net/minecraft/client/Lighting
+	FIELD a lb Ljava/nio/FloatBuffer;
+	METHOD a turnOff ()V
+	METHOD a getBuffer (DDDD)Ljava/nio/FloatBuffer;
+		ARG 0 a
+		ARG 2 b
+		ARG 4 c
+		ARG 6 d
+	METHOD a getBuffer (FFFF)Ljava/nio/FloatBuffer;
+		ARG 0 a
+		ARG 1 b
+		ARG 2 c
+		ARG 3 d
+	METHOD b turnOn ()V
+CLASS ia net/minecraft/client/gamemode/SurvivalMode
+	FIELD c xDestroyBlock I
+	FIELD d yDestroyBlock I
+	FIELD e zDestroyBlock I
+	FIELD f destroyProgress F
+	FIELD g oDestroyProgress F
+	FIELD h destroyTicks F
+	FIELD i destroyDelay I
+	FIELD j enemies Laz;
+	FIELD k friendlies Laz;
+CLASS ib net/minecraft/client/gui/DeleteWorldScreen
+CLASS ic net/minecraft/world/level/tile/entity/TileEntity
+	FIELD a idClassMap Ljava/util/Map;
+	FIELD b classIdMap Ljava/util/Map;
+	FIELD e level Lcn;
+	FIELD f x I
+	FIELD g y I
+	FIELD h z I
+	METHOD a distanceToSqr (DDD)D
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD a load (Lhm;)V
+		ARG 1 tag
+	METHOD a setId (Ljava/lang/Class;Ljava/lang/String;)V
+		ARG 0 e
+		ARG 1 name
+	METHOD b tick ()V
+	METHOD b save (Lhm;)V
+		ARG 1 tag
+	METHOD c loadStatic (Lhm;)Lic;
+		ARG 0 tag
+	METHOD f getData ()I
+	METHOD g getTile ()Lly;
+	METHOD j_ setChanged ()V
+CLASS id net/minecraft/client/gui/inventory/FurnaceScreen
+	FIELD j furnace Lke;
+	METHOD <init> (Leu;Lke;)V
+		ARG 1 inventory
+		ARG 2 furnace
+CLASS ie net/minecraft/client/gui/PauseScreen
+	FIELD a saveStep I
+	FIELD h visibleTime I
+CLASS if net/minecraft/world/level/tile/RailTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+	METHOD h updateDir (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS ig net/minecraft/client/particle/BreakingItemParticle
+	METHOD <init> (Lcn;DDDLdi;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 item
+CLASS ih net/minecraft/client/Minecraft_OS
+CLASS ii net/minecraft/network/Connection
+	FIELD a threadCounterLock Ljava/lang/Object;
+	FIELD b readThreads I
+	FIELD c writeThreads I
+	FIELD d writeLock Ljava/lang/Object;
+	FIELD e socket Ljava/net/Socket;
+	FIELD f dis Ljava/io/DataInputStream;
+	FIELD g dos Ljava/io/DataOutputStream;
+	FIELD h running Z
+	FIELD i incoming Ljava/util/List;
+	FIELD j outgoing Ljava/util/List;
+	FIELD k outgoing_slow Ljava/util/List;
+	FIELD l packetListener Llb;
+	FIELD m quitting Z
+	FIELD n writeThread Ljava/lang/Thread;
+	FIELD o readThread Ljava/lang/Thread;
+	FIELD p disconnected Z
+	FIELD q disconnectReason Ljava/lang/String;
+	FIELD r noInputTicks I
+	FIELD s estimatedRemaining I
+	FIELD t slowWriteDelay I
+	METHOD <init> (Ljava/net/Socket;Ljava/lang/String;Llb;)V
+		ARG 1 socket
+		ARG 2 name
+		ARG 3 packetListener
+	METHOD a tick ()V
+	METHOD a send (Lfn;)V
+		ARG 1 packet
+	METHOD a handleException (Ljava/lang/Exception;)V
+		ARG 1 e
+	METHOD a close (Ljava/lang/String;)V
+		ARG 1 reason
+	METHOD b writeTick ()V
+	METHOD c readTick ()V
+CLASS ij net/minecraft/network/packet/ChatPacket
+	FIELD a message Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;)V
+		ARG 1 message
+CLASS ik net/minecraft/world/level/levelgen/feature/Feature
+	METHOD a init (DDD)V
+		ARG 1 heightVariance
+		ARG 3 widthScale
+		ARG 5 foliageDensity
+	METHOD a place (Lcn;Ljava/util/Random;III)Z
+		ARG 1 level
+		ARG 2 rnd
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+CLASS il net/minecraft/client/gamemode/CreativeMode
+CLASS im net/minecraft/world/level/LevelListener
+	METHOD a tileChanged (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a tileEntityChanged (IIILic;)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 te
+	METHOD a addParticle (Ljava/lang/String;DDDDDD)V
+		ARG 1 name
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xa
+		ARG 10 ya
+		ARG 12 za
+	METHOD a playSound (Ljava/lang/String;DDDFF)V
+		ARG 1 name
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 volume
+		ARG 9 pitch
+	METHOD a playStreamingMusic (Ljava/lang/String;III)V
+		ARG 1 name
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD a entityAdded (Lkh;)V
+		ARG 1 entity
+	METHOD b setTilesDirty (IIIIII)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 z0
+		ARG 4 x1
+		ARG 5 y1
+		ARG 6 z1
+	METHOD b entityRemoved (Lkh;)V
+		ARG 1 entity
+	METHOD e skyColorChanged ()V
+CLASS in net/minecraft/client/renderer/tileentity/SignRenderer
+	FIELD b signModel Ljk;
+CLASS io com/mojang/nbt/IntTag
+	FIELD a data I
+	METHOD <init> (I)V
+		ARG 1 data
+CLASS ip net/minecraft/client/model/Cube
+	FIELD a x F
+	FIELD b y F
+	FIELD c z F
+	FIELD d xRot F
+	FIELD e yRot F
+	FIELD f zRot F
+	FIELD g mirror Z
+	FIELD h visible Z
+	FIELD i neverRender Z
+	FIELD j vertices [Led;
+	FIELD k polygons [Lll;
+	FIELD l xTexOffs I
+	FIELD m yTexOffs I
+	FIELD n compiled Z
+	FIELD o list I
+	METHOD <init> (II)V
+		ARG 1 xTexOffs
+		ARG 2 yTexOffs
+	METHOD a render (F)V
+		ARG 1 scale
+	METHOD a setPos (FFF)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a addBox (FFFIII)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 z0
+		ARG 4 w
+		ARG 5 h
+		ARG 6 d
+	METHOD a addBox (FFFIIIF)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 z0
+		ARG 4 w
+		ARG 5 h
+		ARG 6 d
+		ARG 7 g
+	METHOD b translateTo (F)V
+		ARG 1 scale
+	METHOD c compile (F)V
+		ARG 1 scale
+CLASS iq net/minecraft/client/renderer/GameRenderer
+	FIELD a itemInHandRenderer Ljh;
+	FIELD b xMod I
+	FIELD c yMod I
+	FIELD d lb Ljava/nio/FloatBuffer;
+	FIELD e fr F
+	FIELD f fg F
+	FIELD g fb F
+	FIELD h mc Lnet/minecraft/client/Minecraft;
+	FIELD i renderDistance F
+	FIELD j tick I
+	FIELD k hovered Lkh;
+	FIELD l lastActiveTime J
+	FIELD m random Ljava/util/Random;
+	FIELD n fogBrO F
+	FIELD o fogBr F
+	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
+		ARG 1 minecraft
+	METHOD a tick ()V
+	METHOD a pick (F)V
+		ARG 1 a
+	METHOD a getBuffer (FFFF)Ljava/nio/FloatBuffer;
+		ARG 1 a
+		ARG 2 b
+		ARG 3 c
+		ARG 4 d
+	METHOD a setupCamera (FI)V
+		ARG 1 a
+		ARG 2 anaPass
+	METHOD a setupFog (I)V
+		ARG 1 fogType
+	METHOD b setupGuiScreen ()V
+	METHOD b render (F)V
+		ARG 1 a
+	METHOD b renderItemInHand (FI)V
+		ARG 1 a
+		ARG 2 anaPass
+	METHOD c tickRain ()V
+	METHOD c renderLevel (F)V
+		ARG 1 a
+	METHOD d getFov (F)F
+		ARG 1 a
+	METHOD e bobHurt (F)V
+		ARG 1 a
+	METHOD f bobView (F)V
+		ARG 1 a
+	METHOD g moveCameraToPlayer (F)V
+		ARG 1 a
+	METHOD h renderSnow (F)V
+		ARG 1 a
+	METHOD i setupClearColor (F)V
+		ARG 1 a
+CLASS ir net/minecraft/client/Timer
+	FIELD a ticksPerSecond F
+	FIELD b ticks I
+	FIELD c a F
+	FIELD d timeScale F
+	FIELD e passedTime F
+	FIELD f lastTime D
+	FIELD g lastMs J
+	FIELD h lastMsSysTime J
+	FIELD i adjustTime D
+	METHOD <init> (F)V
+		ARG 1 ticksPerSecond
+	METHOD a advanceTime ()V
+CLASS is net/minecraft/network/packet/MoveEntityPacket_PosRot
+CLASS it net/minecraft/client/KeyMapping
+	FIELD a name Ljava/lang/String;
+	FIELD b key I
+	METHOD <init> (Ljava/lang/String;I)V
+		ARG 1 name
+		ARG 2 key
+CLASS iu net/minecraft/world/item/WeaponItem
+	FIELD a damage I
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tier
+CLASS iv net/minecraft/client/gui/LevelConflictScreen
+	FIELD a frame I
+CLASS iw net/minecraft/client/particle/TerrainParticle
+	METHOD <init> (Lcn;DDDDDDLly;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xa
+		ARG 10 ya
+		ARG 12 za
+		ARG 14 tile
+CLASS ix com/mojang/nbt/ByteTag
+	FIELD a data B
+	METHOD <init> (B)V
+		ARG 1 data
+CLASS iy net/minecraft/client/gui/ScreenSizeCalculator
+	FIELD a scale I
+	FIELD b w I
+	FIELD c h I
+	METHOD <init> (II)V
+		ARG 1 width
+		ARG 2 height
+	METHOD a getWidth ()I
+	METHOD b getHeight ()I
+CLASS iz net/minecraft/world/level/tile/LeafTile
+	FIELD b oTex I
+	FIELD c maxRecursions I
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+	METHOD a setFancy (Z)V
+		ARG 1 fancy
+	METHOD f updateNeighbor (Lcn;IIII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 data
+	METHOD g getNeighborDataIfHigher (Lcn;IIII)I
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 data
+	METHOD h checkShouldDecay (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD i die (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS j net/minecraft/client/renderer/culling/Frustum
+	FIELD e frustum Lj;
+	FIELD f _proj Ljava/nio/FloatBuffer;
+	FIELD g _modl Ljava/nio/FloatBuffer;
+	FIELD h _clip Ljava/nio/FloatBuffer;
+	METHOD a getFrustum ()Lbt;
+	METHOD a normalizePlane ([[FI)V
+		ARG 1 frustum
+		ARG 2 side
+	METHOD b calculateFrustum ()V
+CLASS ja net/minecraft/client/gui/ConfirmScreen
+	FIELD a parent Lbh;
+	FIELD h title1 Ljava/lang/String;
+	FIELD i title2 Ljava/lang/String;
+	FIELD j id I
+	METHOD <init> (Lbh;Ljava/lang/String;Ljava/lang/String;I)V
+		ARG 1 parent
+		ARG 2 title1
+		ARG 3 title2
+		ARG 4 id
+CLASS jb net/minecraft/client/particle/FlameParticle
+	FIELD a oSize F
+CLASS jc net/minecraft/world/entity/Painting
+	FIELD a dir I
+	FIELD b motive Ler;
+	FIELD c checkInterval I
+	FIELD d xTile I
+	FIELD e yTile I
+	FIELD f zTile I
+	METHOD <init> (Lcn;IIII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 dir
+	METHOD b setDir (I)V
+		ARG 1 dir
+	METHOD c offs (I)F
+		ARG 1 len
+	METHOD i survives ()Z
+CLASS jd net/minecraft/world/entity/item/PrimedTnt
+	FIELD a life I
+	METHOD <init> (Lcn;FFF)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD i explode ()V
+CLASS je net/minecraft/world/level/Explosion
+	METHOD a explode (Lcn;Lkh;DDDF)V
+		ARG 1 level
+		ARG 2 e
+		ARG 3 x
+		ARG 5 y
+		ARG 7 z
+		ARG 9 r
+CLASS jf net/minecraft/world/level/TickNextTickData
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	FIELD d tileId I
+	FIELD e delay J
+	FIELD f C J
+	FIELD g c J
+	METHOD <init> (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tileId
+	METHOD a delay (J)Ljf;
+		ARG 1 delay
+	METHOD compareTo (Ljava/lang/Object;)I
+		ARG 1 obj
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 obj
+CLASS jg net/minecraft/world/item/BowItem
+CLASS jh net/minecraft/client/renderer/ItemInHandRenderer
+	FIELD a mc Lnet/minecraft/client/Minecraft;
+	FIELD b selectedItem Lev;
+	FIELD c height F
+	FIELD d oHeight F
+	FIELD e tileRenderer Lbc;
+	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
+		ARG 1 mc
+	METHOD a tick ()V
+	METHOD a render (F)V
+		ARG 1 a
+	METHOD a renderTex (FI)V
+		ARG 1 a
+		ARG 2 tex
+	METHOD a renderItem (Lev;)V
+		ARG 1 item
+	METHOD b itemPlaced ()V
+	METHOD b renderScreenEffect (F)V
+		ARG 1 a
+	METHOD c itemUsed ()V
+	METHOD c renderWater (F)V
+		ARG 1 a
+	METHOD d renderFire (F)V
+		ARG 1 a
+CLASS ji net/minecraft/network/packet/SetSpawnPositionPacket
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+CLASS jj net/minecraft/isom/Zone
+	FIELD a image Ljava/awt/image/BufferedImage;
+	FIELD b level Lcn;
+	FIELD c x I
+	FIELD d y I
+	FIELD e rendered Z
+	FIELD f noContent Z
+	FIELD g lastVisible I
+	FIELD h addedToRenderQueue Z
+	METHOD <init> (Lcn;II)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+	METHOD a init (II)V
+		ARG 1 x
+		ARG 2 y
+	METHOD a init (Lcn;II)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+CLASS jk net/minecraft/client/model/SignModel
+	FIELD a cube Lip;
+	FIELD b cube2 Lip;
+	METHOD a render ()V
+CLASS jl net/minecraft/network/packet/TeleportEntityPacket
+	FIELD a id I
+	FIELD b x I
+	FIELD c y I
+	FIELD d z I
+	FIELD e yRot B
+	FIELD f xRot B
+	METHOD <init> (Lkh;)V
+		ARG 1 entity
+CLASS jm net/minecraft/world/level/tile/ReedTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+	METHOD h checkAlive (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS jn net/minecraft/world/item/SeedItem
+	FIELD a resultId I
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 resultId
+CLASS jo net/minecraft/world/item/MinecartItem
+	FIELD a type I
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 type
+CLASS jp net/minecraft/world/level/tile/LiquidTile
+	FIELD d type I
+	METHOD a getSlopeAngle (Lnm;IIILgb;)D
+		ARG 0 level
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 m
+	METHOD b getHeight (I)F
+		ARG 0 data
+	METHOD b getRenderedDepth (Lnm;III)I
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD e getFlow (Lnm;III)Laj;
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD h getDepth (Lcn;III)I
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD i fizz (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD j updateLiquid (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS jq net/minecraft/client/gui/SelectWorldScreen
+	FIELD a lastScreen Lbh;
+	FIELD h title Ljava/lang/String;
+	FIELD i done Z
+	METHOD <init> (Lbh;)V
+		ARG 1 lastScreen
+	METHOD c worldSelected (I)V
+		ARG 1 id
+	METHOD d getWorldName (I)Ljava/lang/String;
+		ARG 1 id
+	METHOD j postInit ()V
+CLASS jr net/minecraft/client/renderer/MobSkinTextureProcessor
+	FIELD a pixels [I
+	FIELD b width I
+	FIELD c height I
+	METHOD a setForceAlpha (IIII)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 x1
+		ARG 4 y1
+	METHOD b setNoAlpha (IIII)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 x1
+		ARG 4 y1
+	METHOD c hasAlpha (IIII)Z
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 x1
+		ARG 4 y1
+CLASS js net/minecraft/world/level/tile/PressurePlateTile_Sensitivity
+CLASS jt net/minecraft/world/level/tile/EntityTile
+	METHOD a_ newTileEntity ()Lic;
+CLASS ju net/minecraft/network/packet/RemoveEntityPacket
+	FIELD a id I
+CLASS jv net/minecraft/world/level/tile/ClayTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS jw net/minecraft/world/item/SaddleItem
+CLASS jx net/minecraft/network/packet/MoveEntityPacket_Rot
+CLASS jy net/minecraft/client/model/SpiderModel
+	FIELD a head Lip;
+	FIELD b body0 Lip;
+	FIELD c body1 Lip;
+	FIELD d leg0 Lip;
+	FIELD e leg1 Lip;
+	FIELD f leg2 Lip;
+	FIELD g leg3 Lip;
+	FIELD h leg4 Lip;
+	FIELD i leg5 Lip;
+	FIELD j leg6 Lip;
+	FIELD m leg7 Lip;
+CLASS jz net/minecraft/client/renderer/ptexture/FireTexture
+	FIELD g current [F
+	FIELD h next [F
+CLASS k net/minecraft/client/gamemode/SurvivalMode_1
+	METHOD <init> (Lia;ILjava/lang/Class;[Ljava/lang/Class;)V
+		ARG 2 maxMobs
+		ARG 3 category
+		ARG 4 mobs
+CLASS ka net/minecraft/network/packet/ChunkVisibilityPacket
+	FIELD a x I
+	FIELD b z I
+	FIELD c visible Z
+CLASS kb net/minecraft/world/level/material/LiquidMaterial
+CLASS kc net/minecraft/client/title/TitleScreen_LetterBlock
+	FIELD a y D
+	FIELD b yO D
+	FIELD c ya D
+	METHOD a tick ()V
+CLASS kd net/minecraft/client/gui/Font
+	FIELD a fontTexture I
+	FIELD b charWidths [I
+	FIELD c listPos I
+	FIELD d ib Ljava/nio/IntBuffer;
+	METHOD <init> (Lfr;Ljava/lang/String;Ley;)V
+		ARG 1 options
+		ARG 2 name
+		ARG 3 textures
+	METHOD a width (Ljava/lang/String;)I
+		ARG 1 str
+	METHOD a drawShadow (Ljava/lang/String;III)V
+		ARG 1 str
+		ARG 2 x
+		ARG 3 y
+		ARG 4 color
+	METHOD a draw (Ljava/lang/String;IIIZ)V
+		ARG 1 str
+		ARG 2 x
+		ARG 3 y
+		ARG 4 color
+		ARG 5 darken
+	METHOD b draw (Ljava/lang/String;III)V
+		ARG 1 str
+		ARG 2 x
+		ARG 3 y
+		ARG 4 color
+CLASS ke net/minecraft/world/level/tile/entity/FurnaceTileEntity
+	FIELD a items [Lev;
+	FIELD b litTime I
+	FIELD c litDuration I
+	FIELD d tickCount I
+	METHOD a isLit ()Z
+	METHOD a getBurnProgress (I)I
+		ARG 1 steps
+	METHOD a getBurnDuration (Lev;)I
+		ARG 1 item
+	METHOD b getLitProgress (I)I
+		ARG 1 steps
+	METHOD d getResult (I)I
+		ARG 1 item
+	METHOD i burn ()V
+	METHOD j canBurn ()Z
+CLASS kf net/minecraft/world/level/tile/RedStoneDustTile
+	FIELD a shouldSignal Z
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+	METHOD b shouldConnectTo (Lnm;III)Z
+		ARG 0 level
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD g checkTarget (Lcn;IIII)I
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 data
+	METHOD h updatePowerStrength (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD i checkCornerChangeAt (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS kg net/minecraft/world/entity/projectile/Arrow
+	FIELD a shakeTime I
+	FIELD b xTile I
+	FIELD c yTile I
+	FIELD d zTile I
+	FIELD e lastTile I
+	FIELD f inGround Z
+	FIELD g owner Lge;
+	FIELD h life I
+	FIELD i flightTime I
+	METHOD <init> (Lcn;Lge;)V
+		ARG 1 level
+		ARG 2 owner
+	METHOD a shoot (DDDFF)V
+		ARG 1 xd
+		ARG 3 yd
+		ARG 5 zd
+		ARG 7 speed
+		ARG 8 waver
+CLASS kh net/minecraft/world/entity/Entity
+	FIELD a entityCounter I
+	FIELD aA removed Z
+	FIELD aB heightOffset F
+	FIELD aC bbWidth F
+	FIELD aD bbHeight F
+	FIELD aE walkDistO F
+	FIELD aF walkDist F
+	FIELD aG makeStepSound Z
+	FIELD aH fallDistance F
+	FIELD aI xOld D
+	FIELD aJ yOld D
+	FIELD aK zOld D
+	FIELD aL ySlideOffset F
+	FIELD aM footSize F
+	FIELD aN noPhysics Z
+	FIELD aO pushthrough F
+	FIELD aP hovered Z
+	FIELD aQ random Ljava/util/Random;
+	FIELD aR tickCount I
+	FIELD aS flameTime I
+	FIELD aT onFire I
+	FIELD aU airCapacity I
+	FIELD aV wasInWater Z
+	FIELD aW invulnerableTime I
+	FIELD aX airSupply I
+	FIELD aY customTextureUrl Ljava/lang/String;
+	FIELD aZ inChunk Z
+	FIELD ab entityId I
+	FIELD ac viewScale D
+	FIELD ad blocksBuilding Z
+	FIELD ae rider Lkh;
+	FIELD af riding Lkh;
+	FIELD ag level Lcn;
+	FIELD ah xo D
+	FIELD ai yo D
+	FIELD aj zo D
+	FIELD ak x D
+	FIELD al y D
+	FIELD am z D
+	FIELD an xd D
+	FIELD ao yd D
+	FIELD ap zd D
+	FIELD aq yRot F
+	FIELD ar xRot F
+	FIELD as yRotO F
+	FIELD at xRotO F
+	FIELD au bb Lcf;
+	FIELD av onGround Z
+	FIELD aw horizontalCollision Z
+	FIELD ax verticalCollision Z
+	FIELD ay collision Z
+	FIELD az slide Z
+	FIELD b nextStep I
+	FIELD ba xChunk I
+	FIELD bb yChunk I
+	FIELD bc zChunk I
+	FIELD bd xp I
+	FIELD be yp I
+	FIELD bf zp I
+	FIELD c firstTick Z
+	FIELD d xRideRotA D
+	FIELD e yRideRotA D
+	METHOD <init> (Lcn;)V
+		ARG 1 level
+	METHOD B isAlive ()Z
+	METHOD E outOfWorld ()V
+	METHOD F remove ()V
+	METHOD G isInLava ()Z
+	METHOD H getEncodeId ()Ljava/lang/String;
+	METHOD I isInWall ()Z
+	METHOD a shouldRenderAtSqrDistance (D)Z
+		ARG 1 sqrDistance
+	METHOD a setPos (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD a lerpTo (DDDFFI)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 yRot
+		ARG 8 xRot
+		ARG 9 steps
+	METHOD a getBrightness (F)F
+		ARG 1 a
+	METHOD a setSize (FF)V
+		ARG 1 width
+		ARG 2 height
+	METHOD a moveRelative (FFF)V
+		ARG 1 xd
+		ARG 2 zd
+		ARG 3 speed
+	METHOD a burn (I)V
+		ARG 1 damage
+	METHOD a spawnAtLocation (IIF)Ldx;
+		ARG 1 id
+		ARG 2 count
+		ARG 3 yOffs
+	METHOD a shouldRender (Laj;)Z
+		ARG 1 camera
+	METHOD a setLevel (Lcn;)V
+		ARG 1 level
+	METHOD a interact (Ldm;)Z
+		ARG 1 player
+	METHOD a isUnderLiquid (Lgb;)Z
+		ARG 1 m
+	METHOD a addAdditonalSaveData (Lhm;)V
+		ARG 1 entityTag
+	METHOD a hurt (Lkh;I)Z
+		ARG 1 source
+		ARG 2 dmg
+	METHOD a newDoubleList ([D)Lki;
+		ARG 1 list
+	METHOD a newFloatList ([F)Lki;
+		ARG 1 list
+	METHOD b isFree (DDD)Z
+		ARG 1 xd
+		ARG 3 yd
+		ARG 5 zd
+	METHOD b absMoveTo (DDDFF)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 yRot
+		ARG 8 xRot
+	METHOD b spawnAtLocation (II)Ldx;
+		ARG 1 id
+		ARG 2 count
+	METHOD b playerTouch (Ldm;)V
+		ARG 1 player
+	METHOD b readAdditionalSaveData (Lhm;)V
+		ARG 1 tag
+	METHOD b awardKillScore (Lkh;I)V
+		ARG 1 e
+		ARG 2 score
+	METHOD b_ getCollideAgainstBox (Lkh;)Lcf;
+		ARG 1 e
+	METHOD c move (DDD)V
+		ARG 1 xd
+		ARG 3 yd
+		ARG 5 zd
+	METHOD c moveTo (DDDFF)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 yRot
+		ARG 8 xRot
+	METHOD c causeFallDamage (F)V
+		ARG 1 fallDistance
+	METHOD c setRot (FF)V
+		ARG 1 yRot
+		ARG 2 xRot
+	METHOD c save (Lhm;)Z
+		ARG 1 tag
+	METHOD c_ isPickable ()Z
+	METHOD d distanceToSqr (DDD)D
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD d turn (FF)V
+		ARG 1 yRotD
+		ARG 2 xRotD
+	METHOD d saveWithoutId (Lhm;)V
+		ARG 1 tag
+	METHOD d distanceTo (Lkh;)F
+		ARG 1 e
+	METHOD d_ isPushable ()Z
+	METHOD e distanceTo (DDD)D
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD e load (Lhm;)V
+		ARG 1 tag
+	METHOD e distanceToSqr (Lkh;)D
+		ARG 1 e
+	METHOD e_ tick ()V
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 obj
+	METHOD f push (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD f push (Lkh;)V
+		ARG 1 entity
+	METHOD f_ getCollideBox ()Lcf;
+	METHOD g ride (Lkh;)V
+		ARG 1 vehicle
+	METHOD g_ isInWater ()Z
+	METHOD h getRideHeight ()D
+	METHOD h_ getShadowHeightOffs ()F
+	METHOD i_ positionRider ()V
+	METHOD o isSneaking ()Z
+	METHOD p rideTick ()V
+	METHOD q resetPos ()V
+	METHOD s getHeadHeight ()F
+	METHOD v getRidingHeight ()D
+	METHOD x getTexture ()Ljava/lang/String;
+	METHOD y baseTick ()V
+CLASS ki com/mojang/nbt/ListTag
+	FIELD a list Ljava/util/List;
+	FIELD b type B
+	METHOD a get (I)Lel;
+		ARG 1 idx
+	METHOD a add (Lel;)V
+		ARG 1 tag
+	METHOD c size ()I
+CLASS kj net/minecraft/network/packet/AddEntityPacket
+	FIELD a id I
+	FIELD b x I
+	FIELD c y I
+	FIELD d z I
+	FIELD e type I
+CLASS kk net/minecraft/world/level/levelgen/LargeCaveFeature
+	METHOD a addRoom (II[BDDD)V
+		ARG 1 xChunk
+		ARG 2 zChunk
+		ARG 3 tiles
+		ARG 4 x
+		ARG 6 y
+		ARG 8 z
+	METHOD a addTunnel (II[BDDDFFFIID)V
+		ARG 1 xChunk
+		ARG 2 zChunk
+		ARG 3 tiles
+		ARG 4 x
+		ARG 6 y
+		ARG 8 z
+		ARG 10 radius
+		ARG 11 yRot
+		ARG 12 xRot
+		ARG 13 start
+		ARG 14 end
+		ARG 15 height
+CLASS kl net/minecraft/client/renderer/culling/FrustumCuller
+	FIELD a frustum Lbt;
+	FIELD b xOff D
+	FIELD c yOff D
+	FIELD d zOff D
+	METHOD a cubeInFrustum (DDDDDD)Z
+		ARG 1 x0
+		ARG 3 y0
+		ARG 5 z0
+		ARG 7 x1
+		ARG 9 y1
+		ARG 11 z1
+CLASS km net/minecraft/world/level/tile/StairTile
+	FIELD a base Lly;
+	METHOD <init> (ILly;)V
+		ARG 1 id
+		ARG 2 base
+	METHOD h updateDir (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD i isSolid (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD j isStairs (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS kn net/minecraft/world/level/LightUpdate
+	FIELD a layer Lby;
+	FIELD b x0 I
+	FIELD c y0 I
+	FIELD d z0 I
+	FIELD e x1 I
+	FIELD f y1 I
+	FIELD g z1 I
+	METHOD <init> (Lby;IIIIII)V
+		ARG 1 layer
+		ARG 2 x0
+		ARG 3 y0
+		ARG 4 z0
+		ARG 5 x1
+		ARG 6 y1
+		ARG 7 z1
+	METHOD a expandToContain (IIIIII)Z
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 z0
+		ARG 4 x1
+		ARG 5 y1
+		ARG 6 z1
+	METHOD a update (Lcn;)V
+		ARG 1 level
+CLASS ko net/minecraft/client/GuiMessage
+	FIELD a string Ljava/lang/String;
+	FIELD b ticks I
+	METHOD <init> (Ljava/lang/String;)V
+		ARG 1 string
+CLASS kp net/minecraft/network/packet/MoveEntityPacket_Pos
+CLASS kq net/minecraft/client/particle/SplashParticle
+CLASS kr com/mojang/nbt/DoubleTag
+	FIELD a data D
+	METHOD <init> (D)V
+		ARG 1 data
+CLASS ks net/minecraft/world/item/HatchetItem
+	FIELD aX diggables [Lly;
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tier
+CLASS kt net/minecraft/client/renderer/entity/MinecartRenderer
+	FIELD d model Lfo;
+CLASS ku net/minecraft/world/level/tile/FurnaceTile
+	FIELD a lit Z
+	METHOD <init> (IZ)V
+		ARG 1 id
+		ARG 2 lit
+	METHOD a setLit (ZLcn;III)V
+		ARG 0 lit
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD h recalcLockDir (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS kv net/minecraft/client/model/ChickenModel
+	FIELD a head Lip;
+	FIELD b body Lip;
+	FIELD c leg0 Lip;
+	FIELD d leg1 Lip;
+	FIELD e wing0 Lip;
+	FIELD f wing1 Lip;
+	FIELD g beak Lip;
+	FIELD h redThing Lip;
+CLASS kw net/minecraft/client/renderer/OffsettedRenderList
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	FIELD d xOff F
+	FIELD e yOff F
+	FIELD f zOff F
+	FIELD g lists Ljava/nio/IntBuffer;
+	FIELD h inited Z
+	FIELD i rendered Z
+	METHOD a render ()V
+	METHOD a add (I)V
+		ARG 1 list
+	METHOD a isAt (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a init (IIIDDD)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 xOff
+		ARG 6 yOff
+		ARG 8 zOff
+	METHOD b clear ()V
+CLASS kx net/minecraft/client/renderer/entity/EntityRenderDispatcher
+	FIELD a instance Lkx;
+	FIELD b xOff D
+	FIELD c yOff D
+	FIELD d zOff D
+	FIELD e textures Ley;
+	FIELD f itemInHandRenderer Ljh;
+	FIELD g level Lcn;
+	FIELD h player Ldm;
+	FIELD i playerRotY F
+	FIELD j playerRotX F
+	FIELD k options Lfr;
+	FIELD l xPlayer D
+	FIELD m yPlayer D
+	FIELD n zPlayer D
+	FIELD o renderers Ljava/util/Map;
+	FIELD p font Lkd;
+	METHOD a getFont ()Lkd;
+	METHOD a distanceToSqr (DDD)D
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD a setLevel (Lcn;)V
+		ARG 1 level
+	METHOD a prepare (Lcn;Ley;Lkd;Ldm;Lfr;F)V
+		ARG 1 level
+		ARG 2 textures
+		ARG 3 font
+		ARG 4 player
+		ARG 5 options
+		ARG 6 a
+	METHOD a getRenderer (Ljava/lang/Class;)Lak;
+		ARG 1 e
+	METHOD a getRenderer (Lkh;)Lak;
+		ARG 1 e
+	METHOD a render (Lkh;DDDFF)V
+		ARG 1 entity
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 rot
+		ARG 9 a
+	METHOD a render (Lkh;F)V
+		ARG 1 e
+		ARG 2 a
+CLASS ky net/minecraft/world/level/tile/Mushroom
+CLASS kz net/minecraft/client/renderer/HttpTexture_1
+CLASS l net/minecraft/world/item/crafting/ArmorRecipes
+	FIELD a shapes [[Ljava/lang/String;
+	FIELD b map [[Ljava/lang/Object;
+	METHOD a addRecipes (Ldw;)V
+		ARG 1 recipes
+CLASS la net/minecraft/client/multiplayer/MultiplayerLocalPlayer
+	FIELD bg connection Lgy;
+	FIELD bh lastInventorySendTime I
+	FIELD bi xLast D
+	FIELD bj yLast1 D
+	FIELD bk yLast2 D
+	FIELD bl zLast D
+	FIELD bm yRotLast F
+	FIELD bn xRotLast F
+	FIELD bo invBackup Leu;
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lcn;Ldl;Lgy;)V
+		ARG 1 minecraft
+		ARG 2 level
+		ARG 3 user
+		ARG 4 connection
+	METHOD J sendPosition ()V
+CLASS lb net/minecraft/network/packet/PacketListener
+	METHOD a handleTakeItemEntity (Lbm;)V
+		ARG 1 packet
+	METHOD a handleBlockRegionUpdate (Lbz;)V
+		ARG 1 packet
+	METHOD a handleUseItem (Ldo;)V
+		ARG 1 packet
+	METHOD a handleSetTime (Ldu;)V
+		ARG 1 packet
+	METHOD a handleSetCarriedItem (Ldz;)V
+		ARG 1 packet
+	METHOD a handleMovePlayer (Leh;)V
+		ARG 1 packet
+	METHOD a handleAddMob (Lez;)V
+		ARG 1 packet
+	METHOD a handlePlayerAction (Lfg;)V
+		ARG 1 packet
+	METHOD a handleAddPlayer (Lgp;)V
+		ARG 1 packet
+	METHOD a handlePreLogin (Lgt;)V
+		ARG 1 packet
+	METHOD a handleAddItemEntity (Lha;)V
+		ARG 1 packet
+	METHOD a handleAnimate (Lhf;)V
+		ARG 1 packet
+	METHOD a handleLogin (Lhp;)V
+		ARG 1 packet
+	METHOD a handleChat (Lij;)V
+		ARG 1 packet
+	METHOD a onDisconnect (Ljava/lang/String;)V
+		ARG 1 reason
+	METHOD a handleSetSpawn (Lji;)V
+		ARG 1 packet
+	METHOD a handleTeleportEntity (Ljl;)V
+		ARG 1 packet
+	METHOD a handleRemoveEntity (Lju;)V
+		ARG 1 packet
+	METHOD a handleChunkVisibility (Lka;)V
+		ARG 1 packet
+	METHOD a handleAddEntity (Lkj;)V
+		ARG 1 packet
+	METHOD a handleGiveItem (Lld;)V
+		ARG 1 packet
+	METHOD a handleTileUpdate (Lli;)V
+		ARG 1 packet
+	METHOD a handleMoveEntity (Llq;)V
+		ARG 1 packet
+	METHOD a handleSetEquippedItem (Lm;)V
+		ARG 1 packet
+	METHOD a handleChunkTilesUpdate (Lna;)V
+		ARG 1 packet
+	METHOD a handleUpdateTileEntity (Lny;)V
+		ARG 1 packet
+	METHOD a handleDisconnect (Loh;)V
+		ARG 1 packet
+	METHOD b onUnhandledPacket (Lfn;)V
+		ARG 1 packet
+CLASS lc net/minecraft/client/multiplayer/MultiPlayerLevel_ResetInfo
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	FIELD d ticks I
+	FIELD e tile I
+	FIELD f data I
+	METHOD <init> (Lgs;IIIII)V
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 tile
+		ARG 6 data
+CLASS ld net/minecraft/network/packet/GiveItemPacket
+	FIELD a id I
+	FIELD b count I
+	FIELD c value I
+CLASS le net/minecraft/world/level/chunk/storage/OldChunkStorage
+	FIELD a dir Ljava/io/File;
+	FIELD b create Z
+	METHOD <init> (Ljava/io/File;Z)V
+		ARG 1 dir
+		ARG 2 create
+	METHOD a getFile (II)Ljava/io/File;
+		ARG 1 x
+		ARG 2 z
+	METHOD a load (Lcn;Lhm;)Lga;
+		ARG 0 level
+		ARG 1 tag
+	METHOD a save (Lga;Lcn;Lhm;)V
+		ARG 1 chunk
+		ARG 2 level
+		ARG 3 tag
+CLASS lf net/minecraft/world/item/crafting/OreRecipies
+	FIELD a map [[Ljava/lang/Object;
+	METHOD a addRecipes (Ldw;)V
+		ARG 1 recipes
+CLASS lg net/minecraft/world/item/RecordingItem
+	FIELD a recording Ljava/lang/String;
+	METHOD <init> (ILjava/lang/String;)V
+		ARG 1 id
+		ARG 2 recording
+CLASS lh net/minecraft/isom/IsomPreview_3
+CLASS li net/minecraft/network/packet/TileUpdatePacket
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	FIELD d block I
+	FIELD e data I
+CLASS lj net/minecraft/client/gui/inventory/InventoryScreen_1
+	METHOD <init> (Llo;Lee;Lgh;IIII)V
+		ARG 3 container
+		ARG 4 slot
+		ARG 5 x
+		ARG 6 y
+CLASS lk net/minecraft/isom/IsomPreview_2
+CLASS ll net/minecraft/client/model/Polygon
+	FIELD a vertices [Led;
+	FIELD b vertexCount I
+	FIELD c flipNormal Z
+	METHOD <init> ([Led;)V
+		ARG 1 vertices
+	METHOD <init> ([Led;IIII)V
+		ARG 1 vertices
+		ARG 2 u0
+		ARG 3 v0
+		ARG 4 u1
+		ARG 5 v1
+	METHOD a mirror ()V
+	METHOD a render (Lho;F)V
+		ARG 1 t
+		ARG 2 scale
+CLASS lm net/minecraft/client/gui/GuiComponent
+	FIELD k blitOffset F
+	METHOD a fill (IIIII)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 x1
+		ARG 4 y1
+		ARG 5 col
+	METHOD a fillGradient (IIIIII)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 x1
+		ARG 4 y1
+		ARG 5 col1
+		ARG 6 col2
+	METHOD a drawCenteredString (Lkd;Ljava/lang/String;III)V
+		ARG 1 font
+		ARG 2 str
+		ARG 3 x
+		ARG 4 y
+		ARG 5 color
+	METHOD b blit (IIIIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 sx
+		ARG 4 sy
+		ARG 5 w
+		ARG 6 h
+	METHOD b drawString (Lkd;Ljava/lang/String;III)V
+		ARG 1 font
+		ARG 2 str
+		ARG 3 x
+		ARG 4 y
+		ARG 5 color
+CLASS ln net/minecraft/isom/IsomPreview_1
+CLASS lo net/minecraft/client/gui/inventory/InventoryScreen
+	FIELD j menu Ln;
+	FIELD l xMouse F
+	FIELD m yMouse F
+	METHOD <init> (Lgh;[Lev;)V
+		ARG 1 container
+		ARG 2 items
+CLASS lp net/minecraft/world/level/levelgen/synth/PerlinNoise
+	FIELD a noiseLevels [Lv;
+	FIELD b levels I
+	METHOD <init> (Ljava/util/Random;I)V
+		ARG 1 random
+		ARG 2 levels
+	METHOD a getValue (DD)D
+		ARG 1 x
+		ARG 3 y
+	METHOD a getRegion ([DDDDIIIDDD)[D
+		ARG 1 results
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 width
+		ARG 9 height
+		ARG 10 depth
+		ARG 11 xs
+		ARG 13 ys
+		ARG 15 zs
+CLASS lq net/minecraft/network/packet/MoveEntityPacket
+	FIELD a id I
+	FIELD b xa B
+	FIELD c ya B
+	FIELD d za B
+	FIELD e yRot B
+	FIELD f xRot B
+	FIELD g hasRot Z
+CLASS lr net/minecraft/world/level/tile/SignTile
+	FIELD a clas Ljava/lang/Class;
+	FIELD b onGround Z
+	METHOD <init> (ILjava/lang/Class;Z)V
+		ARG 1 id
+		ARG 2 clas
+		ARG 3 onGround
+CLASS ls com/mojang/nbt/ShortTag
+	FIELD a data S
+	METHOD <init> (S)V
+		ARG 1 data
+CLASS lt net/minecraft/isom/ZoneRenderer
+	FIELD a texCols [F
+	FIELD b pixels [I
+	FIELD c zBuf [I
+	FIELD d waterBuf [I
+	FIELD e waterBr [I
+	FIELD f yBuf [I
+	FIELD g textures [I
+	METHOD a postProcess ()V
+	METHOD a render (Ljj;)V
+		ARG 1 zone
+CLASS lu net/minecraft/client/gui/Gui
+	FIELD a selectedName Ljava/lang/String;
+	FIELD b progress F
+	FIELD c tbr F
+	FIELD d itemRenderer Lab;
+	FIELD e guiMessages Ljava/util/List;
+	FIELD f random Ljava/util/Random;
+	FIELD g minecraft Lnet/minecraft/client/Minecraft;
+	FIELD h tickCount I
+	FIELD i nowPlayingString Ljava/lang/String;
+	FIELD j nowPlayingTime I
+	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
+		ARG 1 minecraft
+	METHOD a tick ()V
+	METHOD a renderVignette (FII)V
+		ARG 1 br
+		ARG 2 width
+		ARG 3 height
+	METHOD a render (FZII)V
+		ARG 1 a
+		ARG 2 screenOpen
+		ARG 3 mx
+		ARG 4 my
+	METHOD a renderSlot (IIIF)V
+		ARG 1 slot
+		ARG 2 x
+		ARG 3 y
+		ARG 4 a
+	METHOD a addMessage (Ljava/lang/String;)V
+		ARG 1 message
+	METHOD b setNowPlaying (Ljava/lang/String;)V
+		ARG 1 nowPlaying
+CLASS lv net/minecraft/client/player/Input
+	FIELD a xa F
+	FIELD b ya F
+	FIELD c wasJumping Z
+	FIELD d jumping Z
+	FIELD e sneaking Z
+	METHOD a releaseAllKeys ()V
+	METHOD a setKey (IZ)V
+		ARG 1 eventKey
+		ARG 2 eventKeyState
+	METHOD a tick (Ldm;)V
+		ARG 1 player
+CLASS lw net/minecraft/client/gui/ControlsScreen
+	FIELD a title Ljava/lang/String;
+	FIELD h lastScreen Lbh;
+	FIELD i options Lfr;
+	FIELD j selectedKey I
+	METHOD <init> (Lbh;Lfr;)V
+		ARG 1 lastScreen
+		ARG 2 options
+CLASS lx net/minecraft/world/level/LevelConflictException
+	METHOD <init> (Ljava/lang/String;)V
+		ARG 1 message
+CLASS ly net/minecraft/world/level/tile/Tile
+	FIELD A unbreakable Lly;
+	FIELD B water Lly;
+	FIELD C calmWater Lly;
+	FIELD D lava Lly;
+	FIELD E calmLava Lly;
+	FIELD F sand Lly;
+	FIELD G gravel Lly;
+	FIELD H goldOre Lly;
+	FIELD I ironOre Lly;
+	FIELD J coalOre Lly;
+	FIELD K treeTrunk Lly;
+	FIELD L leaves Liz;
+	FIELD M sponge Lly;
+	FIELD N glass Lly;
+	FIELD O unused_21 Lly;
+	FIELD P unused_22 Lly;
+	FIELD Q unused_23 Lly;
+	FIELD R unused_24 Lly;
+	FIELD S unused_25 Lly;
+	FIELD T unused_26 Lly;
+	FIELD U unused_27 Lly;
+	FIELD V unused_28 Lly;
+	FIELD W unused_29 Lly;
+	FIELD X unused_30 Lly;
+	FIELD Y unused_31 Lly;
+	FIELD Z unused_32 Lly;
+	FIELD aA crops Lly;
+	FIELD aB farmland Lly;
+	FIELD aC furnace Lly;
+	FIELD aD furnace_lit Lly;
+	FIELD aE sign Lly;
+	FIELD aF door_wood Lly;
+	FIELD aG ladder Lly;
+	FIELD aH rail Lly;
+	FIELD aI stairs_stone Lly;
+	FIELD aJ wallSign Lly;
+	FIELD aK lever Lly;
+	FIELD aL pressurePlate_stone Lly;
+	FIELD aM door_iron Lly;
+	FIELD aN pressurePlate_wood Lly;
+	FIELD aO redStoneOre Lly;
+	FIELD aP redStoneOre_lit Lly;
+	FIELD aQ notGate_off Lly;
+	FIELD aR notGate_on Lly;
+	FIELD aS button Lly;
+	FIELD aT topSnow Lly;
+	FIELD aU ice Lly;
+	FIELD aV snow Lly;
+	FIELD aW cactus Lly;
+	FIELD aX clay Lly;
+	FIELD aY reeds Lly;
+	FIELD aZ recordPlayer Lly;
+	FIELD aa unused_33 Lly;
+	FIELD ab unused_34 Lly;
+	FIELD ac cloth Lly;
+	FIELD ad unused_36 Lly;
+	FIELD ae flower Lmq;
+	FIELD af rose Lmq;
+	FIELD ag mushroom1 Lmq;
+	FIELD ah mushroom2 Lmq;
+	FIELD ai goldBlock Lly;
+	FIELD aj ironBlock Lly;
+	FIELD ak stoneSlab Lly;
+	FIELD al stoneSlabHalf Lly;
+	FIELD am redBrick Lly;
+	FIELD an tnt Lly;
+	FIELD ao bookshelf Lly;
+	FIELD ap mossStone Lly;
+	FIELD aq obsidian Lly;
+	FIELD ar torch Lly;
+	FIELD as fire Log;
+	FIELD at mobSpawner Lly;
+	FIELD au stairs_wood Lly;
+	FIELD av chest Lly;
+	FIELD aw redStoneDust Lly;
+	FIELD ax emeraldOre Lly;
+	FIELD ay emeraldBlock Lly;
+	FIELD az workBench Lly;
+	FIELD ba fence Lly;
+	FIELD bb tex I
+	FIELD bc id I
+	FIELD bd destroySpeed F
+	FIELD be explosionResistance F
+	FIELD bf xx0 D
+	FIELD bg yy0 D
+	FIELD bh zz0 D
+	FIELD bi xx1 D
+	FIELD bj yy1 D
+	FIELD bk zz1 D
+	FIELD bl soundType Lbb;
+	FIELD bm gravity F
+	FIELD bn material Lgb;
+	FIELD bo friction F
+	FIELD e SOUND_NORMAL Lbb;
+	FIELD f SOUND_WOOD Lbb;
+	FIELD g SOUND_GRAVEL Lbb;
+	FIELD h SOUND_GRASS Lbb;
+	FIELD i SOUND_STONE Lbb;
+	FIELD j SOUND_METAL Lbb;
+	FIELD k SOUND_GLASS Lbb;
+	FIELD l SOUND_CLOTH Lbb;
+	FIELD m SOUND_SAND Lbb;
+	FIELD n tiles [Lly;
+	FIELD o shouldTick [Z
+	FIELD p solid [Z
+	FIELD q isEntityTile [Z
+	FIELD r lightBlock [I
+	FIELD s transculent [Z
+	FIELD t lightEmission [I
+	FIELD u rock Lly;
+	FIELD v grass Lmy;
+	FIELD w dirt Lly;
+	FIELD x stoneBrick Lly;
+	FIELD y wood Lly;
+	FIELD z sapling Lly;
+	METHOD <init> (IILgb;)V
+		ARG 1 id
+		ARG 2 tex
+		ARG 3 m
+	METHOD <init> (ILgb;)V
+		ARG 1 id
+		ARG 2 m
+	METHOD a getTickDelay ()I
+	METHOD a setLightEmission (F)Lly;
+		ARG 1 lightEmission
+	METHOD a setShape (FFFFFF)V
+		ARG 1 xx0
+		ARG 2 yy0
+		ARG 3 zz0
+		ARG 4 xx1
+		ARG 5 yy1
+		ARG 6 zz1
+	METHOD a getTexture (I)I
+		ARG 1 face
+	METHOD a getTexture (II)I
+		ARG 1 face
+		ARG 2 data
+	METHOD a getResource (ILjava/util/Random;)I
+		ARG 1 data
+		ARG 2 random
+	METHOD a mayPick (IZ)Z
+		ARG 1 data
+		ARG 2 pickLiquids
+	METHOD a containsX (Laj;)Z
+		ARG 1 v
+	METHOD a setSoundType (Lbb;)Lly;
+		ARG 1 soundType
+	METHOD a mayPlace (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD a neighborChanged (Lcn;IIII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 face
+	METHOD a spawnResources (Lcn;IIIIF)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 data
+		ARG 6 chance
+	METHOD a clip (Lcn;IIILaj;Laj;)Lmf;
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 from
+		ARG 6 to
+	METHOD a addAABBs (Lcn;IIILcf;Ljava/util/ArrayList;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 bb
+		ARG 6 bbs
+	METHOD a use (Lcn;IIILdm;)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 player
+	METHOD a tick (Lcn;IIILjava/util/Random;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 random
+	METHOD a stepOn (Lcn;IIILkh;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 e
+	METHOD a handleEntityInside (Lcn;IIILkh;Laj;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 e
+		ARG 6 movementMod
+	METHOD a getDestroyProgress (Ldm;)F
+		ARG 1 player
+	METHOD a getResourceCount (Ljava/util/Random;)I
+		ARG 1 random
+	METHOD a getExplosionResistance (Lkh;)F
+		ARG 1 entity
+	METHOD a updateShape (Lnm;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD a getTexture (Lnm;IIII)I
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 face
+	METHOD a_ playerDestroy (Lcn;IIII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 data
+	METHOD b isSolidRender ()Z
+	METHOD b setExplodeable (F)Lly;
+		ARG 1 resistance
+	METHOD b containsY (Laj;)Z
+		ARG 1 v
+	METHOD b onRemove (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD b destroy (Lcn;IIII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 data
+	METHOD b attack (Lcn;IIILdm;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 player
+	METHOD b animateTick (Lcn;IIILjava/util/Random;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 random
+	METHOD b entityInside (Lcn;IIILkh;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 e
+	METHOD b getSignal (Lnm;IIII)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 face
+	METHOD b setTicking (Z)V
+		ARG 1 ticking
+	METHOD b_ spawnResources (Lcn;IIII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 data
+	METHOD c isCubeShaped ()Z
+	METHOD c setDestroyTime (F)Lly;
+		ARG 1 destroyTime
+	METHOD c containsZ (Laj;)Z
+		ARG 1 v
+	METHOD c wasExploded (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD c getDirectSignal (Lcn;IIII)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 face
+	METHOD c getBrightness (Lnm;III)F
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD c shouldRenderFace (Lnm;IIII)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 face
+	METHOD d isSignalSource ()Z
+	METHOD d setLightBlock (I)Lly;
+		ARG 1 lightBlock
+	METHOD d getAABB (Lcn;III)Lcf;
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD d setPlacedOnFace (Lcn;IIII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 face
+	METHOD d getColor (Lnm;III)I
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD e updateDefaultShape ()V
+	METHOD e onPlace (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD f getRenderShape ()I
+	METHOD f getTileAABB (Lcn;III)Lcf;
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD g getRenderLayer ()I
+	METHOD g canSurvive (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD h mayPick ()Z
+	METHOD i isTranculent ()Z
+CLASS lz net/minecraft/client/multiplayer/MultiPlayerChunkCache
+	FIELD a emptyChunk Lga;
+	FIELD b loadedChunks Ljava/util/Map;
+	FIELD c loadedChunkList Ljava/util/List;
+	FIELD d level Lcn;
+	METHOD <init> (Lcn;)V
+		ARG 1 level
+	METHOD c drop (II)V
+		ARG 1 x
+		ARG 2 z
+	METHOD d create (II)Lga;
+		ARG 1 x
+		ARG 2 z
+CLASS m net/minecraft/network/packet/SetEquippedItemPacket
+	FIELD a entity I
+	FIELD b items [Lev;
+	METHOD <init> (I[Lev;)V
+		ARG 1 entity
+		ARG 2 items
+CLASS ma net/minecraft/world/entity/monster/Slime
+	FIELD a squish F
+	FIELD b oSquish F
+	FIELD c size I
+	FIELD d jumpDelay I
+	METHOD c setSize (I)V
+		ARG 1 size
+CLASS mb net/minecraft/world/entity/monster/Zombie
+CLASS mc net/minecraft/client/renderer/entity/CowRenderer
+CLASS md net/minecraft/world/item/SignItem
+CLASS me net/minecraft/world/item/BoatItem
+CLASS mf net/minecraft/world/phys/HitResult
+	FIELD a type I
+	FIELD b x I
+	FIELD c y I
+	FIELD d z I
+	FIELD e f I
+	FIELD f pos Laj;
+	FIELD g entity Lkh;
+	METHOD <init> (IIIILaj;)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 f
+		ARG 5 pos
+	METHOD <init> (Lkh;)V
+		ARG 1 entity
+CLASS mg net/minecraft/world/level/tile/TreeTile
+	METHOD <init> (I)V
+		ARG 1 id
+CLASS mh net/minecraft/network/packet/MovePlayerPacket_Rot
+	METHOD <init> (FFZ)V
+		ARG 1 yRot
+		ARG 2 xRot
+		ARG 3 onGround
+CLASS mi net/minecraft/world/level/tile/FarmTile
+	METHOD <init> (I)V
+		ARG 1 id
+	METHOD h isUnderCrops (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD i isNearWater (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS mj net/minecraft/world/level/tile/TorchTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+	METHOD h checkCanSurvive (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS mk net/minecraft/world/level/tile/RailTile_Rail
+	FIELD b level Lcn;
+	FIELD c x I
+	FIELD d y I
+	FIELD e z I
+	FIELD f data I
+	FIELD g connections Ljava/util/List;
+	METHOD <init> (Lif;Lcn;III)V
+		ARG 2 level
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+	METHOD a updateConnections ()V
+	METHOD a hasRail (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a getRail (Lmt;)Lmk;
+		ARG 1 pos
+	METHOD a place (Z)V
+		ARG 1 hasSignal
+	METHOD b removeSoftConnections ()V
+	METHOD b hasConnection (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD b connectsTo (Lmk;)Z
+		ARG 1 rail
+	METHOD c countPotentialConnections ()I
+	METHOD c hasNeighborRail (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD c canConnectTo (Lmk;)Z
+		ARG 1 rail
+	METHOD d connectTo (Lmk;)V
+		ARG 1 rail
+CLASS ml net/minecraft/client/renderer/ptexture/WaterTexture
+	FIELD g current [F
+	FIELD h next [F
+	FIELD i heat [F
+	FIELD j heata [F
+	FIELD k tickCount I
+CLASS mm net/minecraft/world/inventory/ContainerSlot
+	FIELD c screen Lee;
+	FIELD e x I
+	FIELD f y I
+	METHOD <init> (Lee;Lgh;III)V
+		ARG 1 screen
+		ARG 2 container
+		ARG 3 slot
+		ARG 4 x
+		ARG 5 y
+	METHOD a isHovering (II)Z
+		ARG 1 x
+		ARG 2 y
+CLASS mn net/minecraft/client/multiplayer/ConnectScreen
+	FIELD a connection Lgy;
+	FIELD h aborted Z
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Ljava/lang/String;I)V
+		ARG 1 minecraft
+		ARG 2 ip
+		ARG 3 port
+CLASS mo net/minecraft/client/gui/SlideButton
+	FIELD i value F
+	FIELD j sliding Z
+	FIELD l option I
+	METHOD <init> (IIIILjava/lang/String;F)V
+		ARG 1 id
+		ARG 2 x
+		ARG 3 y
+		ARG 4 option
+		ARG 5 msg
+		ARG 6 value
+CLASS mp net/minecraft/client/MouseHandler
+	FIELD a xd I
+	FIELD b yd I
+	FIELD c parent Ljava/awt/Component;
+	FIELD d invisibleCursor Lorg/lwjgl/input/Cursor;
+	FIELD e toSkip I
+	METHOD <init> (Ljava/awt/Component;)V
+		ARG 1 parent
+	METHOD a grab ()V
+	METHOD b release ()V
+	METHOD c poll ()V
+CLASS mq net/minecraft/world/level/tile/Bush
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+	METHOD b mayPlaceOn (I)Z
+		ARG 1 tile
+	METHOD h checkAlive (Lcn;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS mr net/minecraft/world/item/ArmorItem
+	FIELD a tier I
+	FIELD aX slot I
+	FIELD aY defense I
+	FIELD aZ _icon I
+	FIELD ba defensePerSlot [I
+	FIELD bb healthPerSlot [I
+	METHOD <init> (IIII)V
+		ARG 1 id
+		ARG 2 tier
+		ARG 3 icon
+		ARG 4 slot
+CLASS ms net/minecraft/world/item/ShovelItem
+	FIELD aX diggables [Lly;
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tier
+CLASS mt net/minecraft/world/level/TilePos
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	METHOD <init> (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 obj
+CLASS mu net/minecraft/world/level/chunk/DataLayer
+	FIELD a data [B
+	METHOD <init> (I)V
+		ARG 1 size
+	METHOD <init> ([B)V
+		ARG 1 data
+	METHOD a isValid ()Z
+	METHOD a get (III)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD a set (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 value
+CLASS mv net/minecraft/world/entity/animal/Pig
+	FIELD a saddled Z
+CLASS mw net/minecraft/world/inventory/ResultContainer
+	FIELD a items [Lev;
+CLASS mx util/IntHashMap_Entry
+	FIELD a key I
+	FIELD b value Ljava/lang/Object;
+	FIELD c next Lmx;
+	FIELD d hash I
+	METHOD <init> (IILjava/lang/Object;Lmx;)V
+		ARG 1 hash
+		ARG 2 key
+		ARG 3 value
+		ARG 4 entry
+	METHOD a getKey ()I
+	METHOD b getValue ()Ljava/lang/Object;
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 obj
+CLASS my net/minecraft/world/level/tile/GrassTile
+	METHOD <init> (I)V
+		ARG 1 id
+CLASS mz net/minecraft/world/entity/animal/Chicken
+	FIELD a sheared Z
+	FIELD b flap F
+	FIELD c flapSpeed F
+	FIELD d oFlapSpeed F
+	FIELD e oFlap F
+	FIELD h flapping F
+	FIELD i eggTime I
+CLASS n net/minecraft/world/inventory/InventoryMenu
+	FIELD a craftSlots Lgu;
+	FIELD b resultSlots Lgh;
+	METHOD <init> ([Lev;)V
+		ARG 1 items
+CLASS na net/minecraft/network/packet/ChunkTilesUpdatePacket
+	FIELD a xc I
+	FIELD b zc I
+	FIELD c positions [S
+	FIELD d blocks [B
+	FIELD e data [B
+	FIELD f count I
+CLASS nb net/minecraft/client/CrashInfoPanel_Border
+	METHOD <init> (I)V
+		ARG 1 size
+CLASS nc net/minecraft/client/multiplayer/ConnectScreen_1
+CLASS nd net/minecraft/world/item/crafting/WeaponRecipies
+	FIELD a shapes [[Ljava/lang/String;
+	FIELD b map [[Ljava/lang/Object;
+	METHOD a addRecipes (Ldw;)V
+		ARG 1 recipes
+CLASS ne com/mojang/nbt/StringTag
+	FIELD a data Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;)V
+		ARG 1 data
+CLASS net/minecraft/client/Minecraft
+	FIELD A soundEngine Lof;
+	FIELD B mouseHandler Lmp;
+	FIELD C workingDirectory Ljava/io/File;
+	FIELD D frameTimes [J
+	FIELD E frameTimePos I
+	FIELD F running Z
+	FIELD G fpsString Ljava/lang/String;
+	FIELD H lastTimer J
+	FIELD I mouseGrabbed Z
+	FIELD J isRaining Z
+	FIELD K lastTickTime J
+	FIELD L openGLCapabilities Lbe;
+	FIELD M timer Lir;
+	FIELD N bgLoader Lbf;
+	FIELD O ticks I
+	FIELD P missTime I
+	FIELD Q orgWidth I
+	FIELD R orgHeight I
+	FIELD S connectToIp Ljava/lang/String;
+	FIELD T connectToPort I
+	FIELD U waterTexture Lml;
+	FIELD V lavaTexture Lat;
+	FIELD W workDir Ljava/io/File;
+	FIELD X lastClickTick I
+	FIELD Y recheckPlayerIn I
+	FIELD a fullscreen Z
+	FIELD b gameMode Lhq;
+	FIELD c width I
+	FIELD d height I
+	FIELD e level Lcn;
+	FIELD f levelRenderer Le;
+	FIELD g player Lbi;
+	FIELD h particleEngine Lbq;
+	FIELD i user Ldl;
+	FIELD j serverDomain Ljava/lang/String;
+	FIELD k parent Ljava/awt/Canvas;
+	FIELD l appletMode Z
+	FIELD m pause Z
+	FIELD n textures Ley;
+	FIELD o font Lkd;
+	FIELD p screen Lbh;
+	FIELD q progressRenderer Lgr;
+	FIELD r gameRenderer Liq;
+	FIELD s autoLoad_user Ljava/lang/String;
+	FIELD t autoLoad_id I
+	FIELD u gui Llu;
+	FIELD v noRender Z
+	FIELD w humanoidModel Lcr;
+	FIELD x hitResult Lmf;
+	FIELD y options Lfr;
+	FIELD z minecraftApplet Lnet/minecraft/client/MinecraftApplet;
+	METHOD <init> (Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V
+		ARG 1 component
+		ARG 2 parent
+		ARG 3 applet
+		ARG 4 width
+		ARG 5 height
+		ARG 6 fullscreen
+	METHOD a init ()V
+	METHOD a handleMouseClick (I)V
+		ARG 1 button
+	METHOD a resize (II)V
+		ARG 1 width
+		ARG 2 height
+	METHOD a blit (IIIIII)V
+		ARG 1 x0
+		ARG 2 y0
+		ARG 3 uo
+		ARG 4 vo
+		ARG 5 w
+		ARG 6 h
+	METHOD a handleMouseDown (IZ)V
+		ARG 1 button
+		ARG 2 pressed
+	METHOD a setScreen (Lbh;)V
+		ARG 1 scren
+	METHOD a setLevel (Lcn;)V
+		ARG 1 level
+	METHOD a setLevel (Lcn;Ljava/lang/String;)V
+		ARG 1 level
+		ARG 2 name
+	METHOD a onCrash (Lgo;)V
+		ARG 1 crashReport
+	METHOD a getWorkingDirectory (Ljava/lang/String;)Ljava/io/File;
+		ARG 0 dirName
+	METHOD a connectTo (Ljava/lang/String;I)V
+		ARG 1 ip
+		ARG 2 port
+	METHOD a fileDownloaded (Ljava/lang/String;Ljava/io/File;)V
+		ARG 1 path
+		ARG 2 file
+	METHOD a start (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 0 name
+		ARG 1 sessionId
+	METHOD a startAndConnectTo (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+		ARG 0 name
+		ARG 1 sessionId
+		ARG 2 ip
+	METHOD b getWorkingDirectory ()Ljava/io/File;
+	METHOD b selectLevel (Ljava/lang/String;)V
+		ARG 1 name
+	METHOD c destroy ()V
+	METHOD c checkGlError (Ljava/lang/String;)V
+		ARG 1 message
+	METHOD d stop ()V
+	METHOD d prepareLevel (Ljava/lang/String;)V
+		ARG 1 name
+	METHOD e grabMouse ()V
+	METHOD f releaseMouse ()V
+	METHOD g pauseGame ()V
+	METHOD h toggleFullScreen ()V
+	METHOD i tick ()V
+	METHOD j isOnline ()Z
+	METHOD k getOpenGLCapabilities ()Lbe;
+	METHOD l gatherStats1 ()Ljava/lang/String;
+	METHOD m gatherStats2 ()Ljava/lang/String;
+	METHOD main main ([Ljava/lang/String;)V
+		ARG 0 args
+	METHOD n gatherStats3 ()Ljava/lang/String;
+	METHOD o respawnPlayer ()V
+	METHOD p renderLoadingScreen ()V
+	METHOD q getPlatform ()Lih;
+	METHOD r renderFpsMeter ()V
+	METHOD run run ()V
+	METHOD s handleGrabTexture ()V
+	METHOD t reloadSound ()V
+CLASS net/minecraft/client/MinecraftApplet
+	FIELD a canvas Ljava/awt/Canvas;
+	FIELD b minecraft Lnet/minecraft/client/Minecraft;
+	FIELD c thread Ljava/lang/Thread;
+	METHOD a startGameThread ()V
+	METHOD b stopGameThread ()V
+	METHOD c clearMemory ()V
+	METHOD destroy destroy ()V
+	METHOD init init ()V
+	METHOD start start ()V
+	METHOD stop stop ()V
+CLASS net/minecraft/isom/IsomPreviewApplet
+	FIELD a isomPreview Lad;
+CLASS nf net/minecraft/client/particle/WaterDropParticle
+	METHOD <init> (Lcn;DDD)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+CLASS ng net/minecraft/world/level/tile/Sponge
+	METHOD <init> (I)V
+		ARG 1 id
+CLASS nh net/minecraft/network/Connection_3
+CLASS ni net/minecraft/network/Connection_1
+	METHOD <init> (Lii;Ljava/lang/String;)V
+		ARG 2 name
+CLASS nj net/minecraft/client/multiplayer/MultiPlayerGameMode
+	FIELD c xDestroyBlock I
+	FIELD d yDestroyBlock I
+	FIELD e zDestroyBlock I
+	FIELD f destroyProgress F
+	FIELD g oDestroyProgress F
+	FIELD h destroyTicks F
+	FIELD i destroyDelay I
+	FIELD j isDestroying Z
+	FIELD k connection Lgy;
+	FIELD l carriedItem I
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lgy;)V
+		ARG 1 minecraft
+		ARG 2 connection
+	METHOD e ensureHasSentCarriedItem ()V
+CLASS nk net/minecraft/network/Connection_2
+	METHOD <init> (Lii;Ljava/lang/String;)V
+		ARG 2 name
+CLASS nl net/minecraft/client/particle/SmokeParticle
+	FIELD a oSize F
+	METHOD <init> (Lcn;DDD)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+	METHOD <init> (Lcn;DDDF)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 scale
+CLASS nm net/minecraft/world/level/LevelSource
+	METHOD a getTile (III)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD b getTileEntity (III)Lic;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD c getBrightness (III)F
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD e getData (III)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD f getMaterial (III)Lgb;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD g isSolidTile (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+CLASS nn net/minecraft/world/level/levelgen/feature/SpringFeature
+	FIELD a tile I
+	METHOD <init> (I)V
+		ARG 1 tile
+CLASS no net/minecraft/world/level/tile/LeverTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+	METHOD h checkCanSurvive (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS np net/minecraft/world/level/tile/NotGateTile_Toggles
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	FIELD d when J
+	METHOD <init> (IIIJ)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 when
+CLASS nq net/minecraft/client/particle/Particle
+	FIELD b tex I
+	FIELD c uo F
+	FIELD d vo F
+	FIELD e age I
+	FIELD f lifetime I
+	FIELD g size F
+	FIELD h gravity F
+	FIELD i rCol F
+	FIELD j gCol F
+	FIELD k bCol F
+	FIELD l xOff D
+	FIELD m yOff D
+	FIELD n zOff D
+	METHOD <init> (Lcn;DDDDDD)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xa
+		ARG 10 ya
+		ARG 12 za
+	METHOD a render (Lho;FFFFFF)V
+		ARG 1 t
+		ARG 2 a
+		ARG 3 xa
+		ARG 4 ya
+		ARG 5 za
+		ARG 6 xa2
+		ARG 7 za2
+	METHOD b setPower (F)Lnq;
+		ARG 1 power
+	METHOD c getParticleTexture ()I
+	METHOD d scale (F)Lnq;
+		ARG 1 scale
+CLASS nr net/minecraft/client/StopGameException
+CLASS ns net/minecraft/client/renderer/entity/SheepRenderer
+	METHOD <init> (Lfo;Lfo;F)V
+		ARG 1 model
+		ARG 2 armor
+		ARG 3 shadow
+CLASS nt net/minecraft/client/player/RemotePlayer
+	FIELD a _fallTime F
+	FIELD bg _lSteps I
+	FIELD bh _lx D
+	FIELD bi _ly D
+	FIELD bj _lz D
+	FIELD bk _lyr D
+	FIELD bl _lxr D
+	METHOD <init> (Lcn;Ljava/lang/String;)V
+		ARG 1 level
+		ARG 2 name
+CLASS nu util/ProgressListener
+	METHOD a progressStagePercentage (I)V
+		ARG 1 i
+	METHOD b progressStartNoAbort (Ljava/lang/String;)V
+		ARG 1 string
+	METHOD d progressStage (Ljava/lang/String;)V
+		ARG 1 status
+CLASS nv net/minecraft/client/gui/inventory/TextEditScreen
+	FIELD a title Ljava/lang/String;
+	FIELD h sign Lob;
+	FIELD i frame I
+	FIELD j line I
+	METHOD <init> (Lob;)V
+		ARG 1 sign
+CLASS nw net/minecraft/world/level/levelgen/RandomLevelSource
+	FIELD a scaleNoise Llp;
+	FIELD b depthNoise Llp;
+	FIELD c forestNoise Llp;
+	FIELD d pnr [D
+	FIELD e ar [D
+	FIELD f br [D
+	FIELD g sr [D
+	FIELD h dr [D
+	FIELD i waterDepths [[I
+	FIELD j random Ljava/util/Random;
+	FIELD k lperlinNoise1 Llp;
+	FIELD l lperlinNoise2 Llp;
+	FIELD m perlinNoise1 Llp;
+	FIELD n perlinNoise2 Llp;
+	FIELD o perlinNoise3 Llp;
+	FIELD p level Lcn;
+	FIELD q buffer [D
+	FIELD r sandBuffer [D
+	FIELD s gravelBuffer [D
+	FIELD t depthBuffer [D
+	FIELD u caveFeature Lcy;
+	METHOD <init> (Lcn;J)V
+		ARG 1 level
+		ARG 2 seed
+	METHOD a prepareHeights (II[B)V
+		ARG 1 x
+		ARG 2 z
+		ARG 3 tiles
+	METHOD a getHeights ([DIIIIII)[D
+		ARG 1 tiles
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 width
+		ARG 6 height
+		ARG 7 depth
+	METHOD b buildSurfaces (II[B)V
+		ARG 1 x
+		ARG 2 z
+		ARG 3 tiles
+CLASS nx net/minecraft/world/item/FlintAndSteelItem
+CLASS ny net/minecraft/network/packet/UpdateTileEntityPacket
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	FIELD d data [B
+	FIELD e tag Lhm;
+	METHOD <init> (IIILic;)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tileEntity
+CLASS nz net/minecraft/client/renderer/entity/GiantMobRenderer
+	FIELD f scale F
+	METHOD <init> (Lfo;FF)V
+		ARG 1 model
+		ARG 2 shadow
+		ARG 3 scale
+CLASS o net/minecraft/client/gui/SmallButton
+CLASS oa net/minecraft/world/level/levelgen/feature/TreeFeature
+CLASS ob net/minecraft/world/level/tile/entity/SignTileEntity
+	FIELD a messages [Ljava/lang/String;
+	FIELD b selectedLine I
+CLASS oc net/minecraft/world/entity/item/Minecart
+	FIELD a damage I
+	FIELD b hurtTime I
+	FIELD c hurtDir I
+	FIELD d type I
+	FIELD e fuel I
+	FIELD f xPush D
+	FIELD g zPush D
+	FIELD h items [Lev;
+	FIELD i flipped Z
+	FIELD j EXITS [[[I
+	FIELD k lSteps I
+	FIELD l lx D
+	FIELD m ly D
+	FIELD n lz D
+	FIELD o lxd D
+	FIELD p lyd D
+	METHOD <init> (Lcn;DDDI)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 type
+	METHOD a getPosOffs (DDDD)Laj;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 offs
+	METHOD g getPos (DDD)Laj;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+CLASS od net/minecraft/world/item/PaintingItem
+CLASS oe net/minecraft/client/renderer/culling/Culler
+	METHOD a prepare (DDD)V
+		ARG 1 xOff
+		ARG 3 yOff
+		ARG 5 zOff
+	METHOD a isVisible (Lcf;)Z
+		ARG 1 bb
+CLASS of net/minecraft/client/sound/SoundEngine
+	FIELD a soundSystem Lpaulscode/sound/SoundSystem;
+	FIELD b sounds Leb;
+	FIELD c streamingSounds Leb;
+	FIELD d songs Leb;
+	FIELD e idCounter I
+	FIELD f options Lfr;
+	FIELD g loaded Z
+	FIELD h random Ljava/util/Random;
+	FIELD i noMusicDelay I
+	METHOD a updateOptions ()V
+	METHOD a init (Lfr;)V
+		ARG 1 options
+	METHOD a update (Lge;F)V
+		ARG 1 player
+		ARG 2 a
+	METHOD a playUI (Ljava/lang/String;FF)V
+		ARG 1 name
+		ARG 2 volume
+		ARG 3 pitch
+	METHOD a playStreaming (Ljava/lang/String;FFFFF)V
+		ARG 1 name
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 volume
+		ARG 6 pitch
+	METHOD a add (Ljava/lang/String;Ljava/io/File;)V
+		ARG 1 name
+		ARG 2 file
+	METHOD b destroy ()V
+	METHOD b play (Ljava/lang/String;FFFFF)V
+		ARG 1 name
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 volume
+		ARG 6 pitch
+	METHOD b addStreaming (Ljava/lang/String;Ljava/io/File;)V
+		ARG 1 name
+		ARG 2 file
+	METHOD c playMusicTick ()V
+	METHOD c addMusic (Ljava/lang/String;Ljava/io/File;)V
+		ARG 1 name
+		ARG 2 file
+	METHOD d loadLibrary ()V
+CLASS og net/minecraft/world/level/tile/FireTile
+	FIELD a flameOdds [I
+	FIELD b burnOdds [I
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+	METHOD a setFlammable (III)V
+		ARG 1 id
+		ARG 2 flameOdds
+		ARG 3 burnOdds
+	METHOD a checkBurn (Lcn;IIIILjava/util/Random;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 heat
+		ARG 6 random
+	METHOD b canBurn (Lnm;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD g getFlammability (Lcn;IIII)I
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 lastFlammability
+	METHOD h isValidFireLocation (Lcn;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD i getFireOdds (Lcn;III)I
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+CLASS oh net/minecraft/network/packet/DisconnectPacket
+	FIELD a reason Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;)V
+		ARG 1 reason
+CLASS oi net/minecraft/world/level/tile/StoneSlabTile
+	FIELD a fullSize Z
+	METHOD <init> (IZ)V
+		ARG 1 id
+		ARG 2 fullSize
+CLASS oj net/minecraft/world/item/FoodItem
+	FIELD a nutrition I
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 heals
+CLASS ok net/minecraft/client/renderer/entity/SpiderRenderer
+CLASS ol net/minecraft/world/level/ChunkPos
+	FIELD a x I
+	FIELD b z I
+	METHOD <init> (II)V
+		ARG 1 x
+		ARG 2 z
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 obj
+CLASS p net/minecraft/world/level/tile/SnowTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS q net/minecraft/world/level/tile/TntTile
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tex
+CLASS r net/minecraft/client/renderer/tileentity/MobSpawnerRenderer
+	FIELD b models Ljava/util/Map;
+CLASS s net/minecraft/network/packet/MovePlayerPacket_Pos
+	METHOD <init> (DDDDZ)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 yView
+		ARG 7 z
+		ARG 9 onGround
+CLASS t net/minecraft/world/level/tile/Tile_2
+CLASS u net/minecraft/world/level/tile/Tile_1
+CLASS v net/minecraft/world/level/levelgen/synth/ImprovedNoise
+	FIELD a xo D
+	FIELD b yo D
+	FIELD c zo D
+	FIELD d p [I
+	METHOD <init> (Ljava/util/Random;)V
+		ARG 1 random
+	METHOD a getValue (DD)D
+		ARG 1 x
+		ARG 3 y
+	METHOD a noise (DDD)D
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD a grad (IDDD)D
+		ARG 1 hash
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+	METHOD a add ([DDDDIIIDDDD)V
+		ARG 1 result
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 w
+		ARG 9 h
+		ARG 10 d
+		ARG 11 xs
+		ARG 13 ys
+		ARG 15 zs
+		ARG 17 ls
+	METHOD b lerp (DDD)D
+		ARG 1 t
+		ARG 3 a
+		ARG 5 b
+CLASS w net/minecraft/world/level/material/DecorationMaterial
+CLASS x com/mojang/nbt/NbtIo
+	METHOD a compress (Lhm;)[B
+		ARG 0 tag
+	METHOD a write (Lhm;Ljava/io/DataOutput;)V
+		ARG 0 tag
+		ARG 1 dataOutput
+	METHOD a writeCompressed (Lhm;Ljava/io/OutputStream;)V
+		ARG 0 tag
+		ARG 1 stream
+	METHOD a read (Ljava/io/DataInput;)Lhm;
+		ARG 0 dataInput
+	METHOD a readCompressed (Ljava/io/InputStream;)Lhm;
+		ARG 0 stream
+	METHOD a decompress ([B)Lhm;
+		ARG 0 data
+CLASS y net/minecraft/world/item/PickaxeItem
+	FIELD aX diggables [Lly;
+	FIELD aY _tier I
+	METHOD <init> (II)V
+		ARG 1 id
+		ARG 2 tier
+CLASS z net/minecraft/client/renderer/ptexture/DynamicTexture
+	FIELD a pixels [B
+	FIELD b tex I
+	FIELD c anaglyph3d Z
+	FIELD d copyTo I
+	FIELD e replicate I
+	FIELD f textureId I
+	METHOD <init> (I)V
+		ARG 1 tex
+	METHOD a tick ()V
+	METHOD a bindTexture (Ley;)V
+		ARG 1 textures
