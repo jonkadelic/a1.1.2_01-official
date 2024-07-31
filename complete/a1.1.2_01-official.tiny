@@ -384,7 +384,7 @@ c	b	net/minecraft/world/level/tile/ChestTile
 		p	3		y
 		p	4		z
 c	ba	net/minecraft/client/particle/BubbleParticle
-c	bb	net/minecraft/world/level/tile/Tile_SoundType
+c	bb	net/minecraft/world/level/tile/Tile$SoundType
 	f	Ljava/lang/String;	a	name
 	f	F	b	volume
 	f	F	c	pitch
@@ -986,7 +986,7 @@ c	cg	net/minecraft/world/level/levelgen/feature/MonsterRoomFeature
 		p	1		random
 	m	(Ljava/util/Random;)Ljava/lang/String;	b	randomEntityId
 		p	1		random
-c	ch	net/minecraft/network/packet/MovePlayerPacket_PosRot
+c	ch	net/minecraft/network/packet/MovePlayerPacket$PosRot
 	m	(DDDDFFZ)V	<init>	
 		p	1		x
 		p	3		y
@@ -1578,7 +1578,7 @@ c	cz	net/minecraft/world/level/pathfinder/PathFinder
 		p	5		distance
 c	d	net/minecraft/client/renderer/entity/CreeperRenderer
 c	da	net/minecraft/world/level/levelgen/feature/CactusFeature
-c	db	net/minecraft/client/CrashInfoPanel_LogoBorder
+c	db	net/minecraft/client/CrashInfoPanel$LogoBorder
 	f	Ljava/awt/image/BufferedImage;	a	image
 	m	(Ljava/awt/Graphics;)V	paint	
 		p	1		g
@@ -2247,7 +2247,7 @@ c	eo	util/Mth
 		p	0		value
 c	ep	net/minecraft/client/sound/CodecMus
 c	eq	net/minecraft/client/renderer/entity/ChickenRenderer
-c	er	net/minecraft/world/entity/Painting_Motive
+c	er	net/minecraft/world/entity/Painting$Motive
 	f	I	A	h
 	f	I	B	uo
 	f	I	C	vo
@@ -2496,7 +2496,7 @@ c	f	com/mojang/nbt/FloatTag
 	f	F	a	data
 	m	(F)V	<init>	
 		p	1		data
-c	fa	net/minecraft/isom/IsomPreview_OS
+c	fa	net/minecraft/isom/IsomPreview$OS
 c	fb	net/minecraft/client/renderer/DistanceChunkSorter
 	f	Lkh;	a	player
 	m	(Lkh;)V	<init>	
@@ -2619,8 +2619,8 @@ c	fk	net/minecraft/client/gui/Button
 		p	1		minecraft
 		p	2		mx
 		p	3		my
-c	fl	net/minecraft/client/Minecraft_1
-c	fm	net/minecraft/client/Minecraft_3
+c	fl	net/minecraft/client/Minecraft$1
+c	fm	net/minecraft/client/Minecraft$3
 c	fn	net/minecraft/network/packet/Packet
 	f	Ljava/util/Map;	a	idToClassMap
 	f	Ljava/util/Map;	b	classToIdMap
@@ -2660,8 +2660,8 @@ c	fo	net/minecraft/client/model/Model
 		p	4		yRot
 		p	5		xRot
 		p	6		scale
-c	fp	net/minecraft/client/Minecraft_4
-c	fq	net/minecraft/client/Minecraft_2
+c	fp	net/minecraft/client/Minecraft$4
+c	fq	net/minecraft/client/Minecraft$2
 c	fr	net/minecraft/client/Options
 	f	Ljava/io/File;	A	optionsFile
 	f	F	a	music
@@ -2713,7 +2713,7 @@ c	fr	net/minecraft/client/Options
 		p	1		option
 	m	(I)Ljava/lang/String;	d	getMessage
 		p	1		option
-c	fs	net/minecraft/world/item/crafting/Recipes_1
+c	fs	net/minecraft/world/item/crafting/Recipes$1
 	m	(Ldw;)V	<init>	
 		p	1		recipes
 	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	
@@ -2808,7 +2808,7 @@ c	fz	net/minecraft/client/renderer/tileentity/TileEntityRenderDispatcher
 		p	1		e
 	m	(Lic;)Lex;	b	getRenderer
 		p	1		e
-c	g	net/minecraft/client/MinecraftApplet_2
+c	g	net/minecraft/client/MinecraftApplet$2
 c	ga	net/minecraft/world/level/chunk/LevelChunk
 	f	Z	a	touchedSky
 	f	[B	b	blocks
@@ -3233,7 +3233,7 @@ c	gy	net/minecraft/client/multiplayer/ClientConnection
 		p	1		packet
 	m	()V	b	close
 c	gz	net/minecraft/world/level/tile/GravelTile
-c	h	net/minecraft/client/MinecraftApplet_1
+c	h	net/minecraft/client/MinecraftApplet$1
 c	ha	net/minecraft/network/packet/AddItemEntityPacket
 	f	I	a	id
 	f	I	b	x
@@ -3249,7 +3249,7 @@ c	ha	net/minecraft/network/packet/AddItemEntityPacket
 c	hb	net/minecraft/client/renderer/HttpTextureProcessor
 	m	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	a	process
 		p	1		in
-c	hc	net/minecraft/client/multiplayer/MultiPlayerChunkCache_ChunkPos
+c	hc	net/minecraft/client/multiplayer/MultiPlayerChunkCache$ChunkPos
 	f	I	a	x
 	f	I	b	z
 	m	(II)V	<init>	
@@ -3299,7 +3299,7 @@ c	hi	net/minecraft/world/level/tile/TransparentTile
 		p	4		allowSame
 c	hj	net/minecraft/client/model/MinecartModel
 	f	[Lip;	a	cubes
-c	hk	net/minecraft/client/sound/CodecMus_DecoderInputStream
+c	hk	net/minecraft/client/sound/CodecMus$DecoderInputStream
 	f	[B	a	buff
 	f	I	c	seed
 	f	Ljava/io/InputStream;	d	in
@@ -3669,7 +3669,7 @@ c	ig	net/minecraft/client/particle/BreakingItemParticle
 		p	4		y
 		p	6		z
 		p	8		item
-c	ih	net/minecraft/client/Minecraft_OS
+c	ih	net/minecraft/client/Minecraft$OS
 c	ii	net/minecraft/network/Connection
 	f	Ljava/lang/Object;	a	threadCounterLock
 	f	I	b	readThreads
@@ -3877,7 +3877,7 @@ c	ir	net/minecraft/client/Timer
 	m	(F)V	<init>	
 		p	1		ticksPerSecond
 	m	()V	a	advanceTime
-c	is	net/minecraft/network/packet/MoveEntityPacket_PosRot
+c	is	net/minecraft/network/packet/MoveEntityPacket$PosRot
 c	it	net/minecraft/client/KeyMapping
 	f	Ljava/lang/String;	a	name
 	f	I	b	key
@@ -4165,7 +4165,7 @@ c	jr	net/minecraft/client/renderer/MobSkinTextureProcessor
 		p	2		y0
 		p	3		x1
 		p	4		y1
-c	js	net/minecraft/world/level/tile/PressurePlateTile_Sensitivity
+c	js	net/minecraft/world/level/tile/PressurePlateTile$Sensitivity
 c	jt	net/minecraft/world/level/tile/EntityTile
 	m	()Lic;	a_	newTileEntity
 c	ju	net/minecraft/network/packet/RemoveEntityPacket
@@ -4175,7 +4175,7 @@ c	jv	net/minecraft/world/level/tile/ClayTile
 		p	1		id
 		p	2		tex
 c	jw	net/minecraft/world/item/SaddleItem
-c	jx	net/minecraft/network/packet/MoveEntityPacket_Rot
+c	jx	net/minecraft/network/packet/MoveEntityPacket$Rot
 c	jy	net/minecraft/client/model/SpiderModel
 	f	Lip;	a	head
 	f	Lip;	b	body0
@@ -4191,7 +4191,7 @@ c	jy	net/minecraft/client/model/SpiderModel
 c	jz	net/minecraft/client/renderer/ptexture/FireTexture
 	f	[F	g	current
 	f	[F	h	next
-c	k	net/minecraft/client/gamemode/SurvivalMode_1
+c	k	net/minecraft/client/gamemode/SurvivalMode$1
 	m	(Lia;ILjava/lang/Class;[Ljava/lang/Class;)V	<init>	
 		p	2		maxMobs
 		p	3		category
@@ -4201,7 +4201,7 @@ c	ka	net/minecraft/network/packet/ChunkVisibilityPacket
 	f	I	b	z
 	f	Z	c	visible
 c	kb	net/minecraft/world/level/material/LiquidMaterial
-c	kc	net/minecraft/client/title/TitleScreen_LetterBlock
+c	kc	net/minecraft/client/title/TitleScreen$LetterBlock
 	f	D	a	y
 	f	D	b	yO
 	f	D	c	ya
@@ -4590,7 +4590,7 @@ c	ko	net/minecraft/client/GuiMessage
 	f	I	b	ticks
 	m	(Ljava/lang/String;)V	<init>	
 		p	1		string
-c	kp	net/minecraft/network/packet/MoveEntityPacket_Pos
+c	kp	net/minecraft/network/packet/MoveEntityPacket$Pos
 c	kq	net/minecraft/client/particle/SplashParticle
 c	kr	com/mojang/nbt/DoubleTag
 	f	D	a	data
@@ -4699,7 +4699,7 @@ c	kx	net/minecraft/client/renderer/entity/EntityRenderDispatcher
 		p	1		e
 		p	2		a
 c	ky	net/minecraft/world/level/tile/Mushroom
-c	kz	net/minecraft/client/renderer/HttpTexture_1
+c	kz	net/minecraft/client/renderer/HttpTexture$1
 c	l	net/minecraft/world/item/crafting/ArmorRecipes
 	f	[[Ljava/lang/String;	a	shapes
 	f	[[Ljava/lang/Object;	b	map
@@ -4778,7 +4778,7 @@ c	lb	net/minecraft/network/packet/PacketListener
 		p	1		packet
 	m	(Lfn;)V	b	onUnhandledPacket
 		p	1		packet
-c	lc	net/minecraft/client/multiplayer/MultiPlayerLevel_ResetInfo
+c	lc	net/minecraft/client/multiplayer/MultiPlayerLevel$ResetInfo
 	f	I	a	x
 	f	I	b	y
 	f	I	c	z
@@ -4820,20 +4820,20 @@ c	lg	net/minecraft/world/item/RecordingItem
 	m	(ILjava/lang/String;)V	<init>	
 		p	1		id
 		p	2		recording
-c	lh	net/minecraft/isom/IsomPreview_3
+c	lh	net/minecraft/isom/IsomPreview$3
 c	li	net/minecraft/network/packet/TileUpdatePacket
 	f	I	a	x
 	f	I	b	y
 	f	I	c	z
 	f	I	d	block
 	f	I	e	data
-c	lj	net/minecraft/client/gui/inventory/InventoryScreen_1
+c	lj	net/minecraft/client/gui/inventory/InventoryScreen$1
 	m	(Llo;Lee;Lgh;IIII)V	<init>	
 		p	3		container
 		p	4		slot
 		p	5		x
 		p	6		y
-c	lk	net/minecraft/isom/IsomPreview_2
+c	lk	net/minecraft/isom/IsomPreview$2
 c	ll	net/minecraft/client/model/Polygon
 	f	[Led;	a	vertices
 	f	I	b	vertexCount
@@ -4884,7 +4884,7 @@ c	lm	net/minecraft/client/gui/GuiComponent
 		p	3		x
 		p	4		y
 		p	5		color
-c	ln	net/minecraft/isom/IsomPreview_1
+c	ln	net/minecraft/isom/IsomPreview$1
 c	lo	net/minecraft/client/gui/inventory/InventoryScreen
 	f	Ln;	j	menu
 	f	F	l	xMouse
@@ -5388,7 +5388,7 @@ c	mf	net/minecraft/world/phys/HitResult
 c	mg	net/minecraft/world/level/tile/TreeTile
 	m	(I)V	<init>	
 		p	1		id
-c	mh	net/minecraft/network/packet/MovePlayerPacket_Rot
+c	mh	net/minecraft/network/packet/MovePlayerPacket$Rot
 	m	(FFZ)V	<init>	
 		p	1		yRot
 		p	2		xRot
@@ -5415,7 +5415,7 @@ c	mj	net/minecraft/world/level/tile/TorchTile
 		p	2		x
 		p	3		y
 		p	4		z
-c	mk	net/minecraft/world/level/tile/RailTile_Rail
+c	mk	net/minecraft/world/level/tile/RailTile$Rail
 	f	Lcn;	b	level
 	f	I	c	x
 	f	I	d	y
@@ -5558,7 +5558,7 @@ c	mv	net/minecraft/world/entity/animal/Pig
 	f	Z	a	saddled
 c	mw	net/minecraft/world/inventory/ResultContainer
 	f	[Lev;	a	items
-c	mx	util/IntHashMap_Entry
+c	mx	util/IntHashMap$Entry
 	f	I	a	key
 	f	Ljava/lang/Object;	b	value
 	f	Lmx;	c	next
@@ -5595,10 +5595,10 @@ c	na	net/minecraft/network/packet/ChunkTilesUpdatePacket
 	f	[B	d	blocks
 	f	[B	e	data
 	f	I	f	count
-c	nb	net/minecraft/client/CrashInfoPanel_Border
+c	nb	net/minecraft/client/CrashInfoPanel$Border
 	m	(I)V	<init>	
 		p	1		size
-c	nc	net/minecraft/client/multiplayer/ConnectScreen_1
+c	nc	net/minecraft/client/multiplayer/ConnectScreen$1
 c	nd	net/minecraft/world/item/crafting/WeaponRecipies
 	f	[[Ljava/lang/String;	a	shapes
 	f	[[Ljava/lang/Object;	b	map
@@ -5757,8 +5757,8 @@ c	nf	net/minecraft/client/particle/WaterDropParticle
 c	ng	net/minecraft/world/level/tile/Sponge
 	m	(I)V	<init>	
 		p	1		id
-c	nh	net/minecraft/network/Connection_3
-c	ni	net/minecraft/network/Connection_1
+c	nh	net/minecraft/network/Connection$3
+c	ni	net/minecraft/network/Connection$1
 	m	(Lii;Ljava/lang/String;)V	<init>	
 		p	2		name
 c	nj	net/minecraft/client/multiplayer/MultiPlayerGameMode
@@ -5776,7 +5776,7 @@ c	nj	net/minecraft/client/multiplayer/MultiPlayerGameMode
 		p	1		minecraft
 		p	2		connection
 	m	()V	e	ensureHasSentCarriedItem
-c	nk	net/minecraft/network/Connection_2
+c	nk	net/minecraft/network/Connection$2
 	m	(Lii;Ljava/lang/String;)V	<init>	
 		p	2		name
 c	nl	net/minecraft/client/particle/SmokeParticle
@@ -5830,7 +5830,7 @@ c	no	net/minecraft/world/level/tile/LeverTile
 		p	2		x
 		p	3		y
 		p	4		z
-c	np	net/minecraft/world/level/tile/NotGateTile_Toggles
+c	np	net/minecraft/world/level/tile/NotGateTile$Toggles
 	f	I	a	x
 	f	I	b	y
 	f	I	c	z
@@ -6127,15 +6127,15 @@ c	q	net/minecraft/world/level/tile/TntTile
 		p	2		tex
 c	r	net/minecraft/client/renderer/tileentity/MobSpawnerRenderer
 	f	Ljava/util/Map;	b	models
-c	s	net/minecraft/network/packet/MovePlayerPacket_Pos
+c	s	net/minecraft/network/packet/MovePlayerPacket$Pos
 	m	(DDDDZ)V	<init>	
 		p	1		x
 		p	3		y
 		p	5		yView
 		p	7		z
 		p	9		onGround
-c	t	net/minecraft/world/level/tile/Tile_2
-c	u	net/minecraft/world/level/tile/Tile_1
+c	t	net/minecraft/world/level/tile/Tile$2
+c	u	net/minecraft/world/level/tile/Tile$1
 c	v	net/minecraft/world/level/levelgen/synth/ImprovedNoise
 	f	D	a	xo
 	f	D	b	yo

@@ -383,7 +383,7 @@ CLASS b net/minecraft/world/level/tile/ChestTile
 		ARG 3 y
 		ARG 4 z
 CLASS ba net/minecraft/client/particle/BubbleParticle
-CLASS bb net/minecraft/world/level/tile/Tile_SoundType
+CLASS bb net/minecraft/world/level/tile/Tile
 	FIELD a name Ljava/lang/String;
 	FIELD b volume F
 	FIELD c pitch F
@@ -985,7 +985,7 @@ CLASS cg net/minecraft/world/level/levelgen/feature/MonsterRoomFeature
 		ARG 1 random
 	METHOD b randomEntityId (Ljava/util/Random;)Ljava/lang/String;
 		ARG 1 random
-CLASS ch net/minecraft/network/packet/MovePlayerPacket_PosRot
+CLASS ch net/minecraft/network/packet/MovePlayerPacket
 	METHOD <init> (DDDDFFZ)V
 		ARG 1 x
 		ARG 3 y
@@ -1577,7 +1577,7 @@ CLASS cz net/minecraft/world/level/pathfinder/PathFinder
 		ARG 5 distance
 CLASS d net/minecraft/client/renderer/entity/CreeperRenderer
 CLASS da net/minecraft/world/level/levelgen/feature/CactusFeature
-CLASS db net/minecraft/client/CrashInfoPanel_LogoBorder
+CLASS db net/minecraft/client/CrashInfoPanel
 	FIELD a image Ljava/awt/image/BufferedImage;
 	METHOD paint (Ljava/awt/Graphics;)V
 		ARG 1 g
@@ -2246,7 +2246,7 @@ CLASS eo util/Mth
 		ARG 0 value
 CLASS ep net/minecraft/client/sound/CodecMus
 CLASS eq net/minecraft/client/renderer/entity/ChickenRenderer
-CLASS er net/minecraft/world/entity/Painting_Motive
+CLASS er net/minecraft/world/entity/Painting
 	FIELD A h I
 	FIELD B uo I
 	FIELD C vo I
@@ -2495,7 +2495,7 @@ CLASS f com/mojang/nbt/FloatTag
 	FIELD a data F
 	METHOD <init> (F)V
 		ARG 1 data
-CLASS fa net/minecraft/isom/IsomPreview_OS
+CLASS fa net/minecraft/isom/IsomPreview
 CLASS fb net/minecraft/client/renderer/DistanceChunkSorter
 	FIELD a player Lkh;
 	METHOD <init> (Lkh;)V
@@ -2618,8 +2618,8 @@ CLASS fk net/minecraft/client/gui/Button
 		ARG 1 minecraft
 		ARG 2 mx
 		ARG 3 my
-CLASS fl net/minecraft/client/Minecraft_1
-CLASS fm net/minecraft/client/Minecraft_3
+CLASS fl net/minecraft/client/Minecraft
+CLASS fm net/minecraft/client/Minecraft
 CLASS fn net/minecraft/network/packet/Packet
 	FIELD a idToClassMap Ljava/util/Map;
 	FIELD b classToIdMap Ljava/util/Map;
@@ -2659,8 +2659,8 @@ CLASS fo net/minecraft/client/model/Model
 		ARG 4 yRot
 		ARG 5 xRot
 		ARG 6 scale
-CLASS fp net/minecraft/client/Minecraft_4
-CLASS fq net/minecraft/client/Minecraft_2
+CLASS fp net/minecraft/client/Minecraft
+CLASS fq net/minecraft/client/Minecraft
 CLASS fr net/minecraft/client/Options
 	FIELD A optionsFile Ljava/io/File;
 	FIELD a music F
@@ -2712,7 +2712,7 @@ CLASS fr net/minecraft/client/Options
 		ARG 1 option
 	METHOD d getMessage (I)Ljava/lang/String;
 		ARG 1 option
-CLASS fs net/minecraft/world/item/crafting/Recipes_1
+CLASS fs net/minecraft/world/item/crafting/Recipes
 	METHOD <init> (Ldw;)V
 		ARG 1 recipes
 	METHOD compare (Ljava/lang/Object;Ljava/lang/Object;)I
@@ -2807,7 +2807,7 @@ CLASS fz net/minecraft/client/renderer/tileentity/TileEntityRenderDispatcher
 		ARG 1 e
 	METHOD b getRenderer (Lic;)Lex;
 		ARG 1 e
-CLASS g net/minecraft/client/MinecraftApplet_2
+CLASS g net/minecraft/client/MinecraftApplet
 CLASS ga net/minecraft/world/level/chunk/LevelChunk
 	FIELD a touchedSky Z
 	FIELD b blocks [B
@@ -3232,7 +3232,7 @@ CLASS gy net/minecraft/client/multiplayer/ClientConnection
 		ARG 1 packet
 	METHOD b close ()V
 CLASS gz net/minecraft/world/level/tile/GravelTile
-CLASS h net/minecraft/client/MinecraftApplet_1
+CLASS h net/minecraft/client/MinecraftApplet
 CLASS ha net/minecraft/network/packet/AddItemEntityPacket
 	FIELD a id I
 	FIELD b x I
@@ -3248,7 +3248,7 @@ CLASS ha net/minecraft/network/packet/AddItemEntityPacket
 CLASS hb net/minecraft/client/renderer/HttpTextureProcessor
 	METHOD a process (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;
 		ARG 1 in
-CLASS hc net/minecraft/client/multiplayer/MultiPlayerChunkCache_ChunkPos
+CLASS hc net/minecraft/client/multiplayer/MultiPlayerChunkCache
 	FIELD a x I
 	FIELD b z I
 	METHOD <init> (II)V
@@ -3298,7 +3298,7 @@ CLASS hi net/minecraft/world/level/tile/TransparentTile
 		ARG 4 allowSame
 CLASS hj net/minecraft/client/model/MinecartModel
 	FIELD a cubes [Lip;
-CLASS hk net/minecraft/client/sound/CodecMus_DecoderInputStream
+CLASS hk net/minecraft/client/sound/CodecMus
 	FIELD a buff [B
 	FIELD c seed I
 	FIELD d in Ljava/io/InputStream;
@@ -3668,7 +3668,7 @@ CLASS ig net/minecraft/client/particle/BreakingItemParticle
 		ARG 4 y
 		ARG 6 z
 		ARG 8 item
-CLASS ih net/minecraft/client/Minecraft_OS
+CLASS ih net/minecraft/client/Minecraft
 CLASS ii net/minecraft/network/Connection
 	FIELD a threadCounterLock Ljava/lang/Object;
 	FIELD b readThreads I
@@ -3876,7 +3876,7 @@ CLASS ir net/minecraft/client/Timer
 	METHOD <init> (F)V
 		ARG 1 ticksPerSecond
 	METHOD a advanceTime ()V
-CLASS is net/minecraft/network/packet/MoveEntityPacket_PosRot
+CLASS is net/minecraft/network/packet/MoveEntityPacket
 CLASS it net/minecraft/client/KeyMapping
 	FIELD a name Ljava/lang/String;
 	FIELD b key I
@@ -4164,7 +4164,7 @@ CLASS jr net/minecraft/client/renderer/MobSkinTextureProcessor
 		ARG 2 y0
 		ARG 3 x1
 		ARG 4 y1
-CLASS js net/minecraft/world/level/tile/PressurePlateTile_Sensitivity
+CLASS js net/minecraft/world/level/tile/PressurePlateTile
 CLASS jt net/minecraft/world/level/tile/EntityTile
 	METHOD a_ newTileEntity ()Lic;
 CLASS ju net/minecraft/network/packet/RemoveEntityPacket
@@ -4174,7 +4174,7 @@ CLASS jv net/minecraft/world/level/tile/ClayTile
 		ARG 1 id
 		ARG 2 tex
 CLASS jw net/minecraft/world/item/SaddleItem
-CLASS jx net/minecraft/network/packet/MoveEntityPacket_Rot
+CLASS jx net/minecraft/network/packet/MoveEntityPacket
 CLASS jy net/minecraft/client/model/SpiderModel
 	FIELD a head Lip;
 	FIELD b body0 Lip;
@@ -4190,7 +4190,7 @@ CLASS jy net/minecraft/client/model/SpiderModel
 CLASS jz net/minecraft/client/renderer/ptexture/FireTexture
 	FIELD g current [F
 	FIELD h next [F
-CLASS k net/minecraft/client/gamemode/SurvivalMode_1
+CLASS k net/minecraft/client/gamemode/SurvivalMode
 	METHOD <init> (Lia;ILjava/lang/Class;[Ljava/lang/Class;)V
 		ARG 2 maxMobs
 		ARG 3 category
@@ -4200,7 +4200,7 @@ CLASS ka net/minecraft/network/packet/ChunkVisibilityPacket
 	FIELD b z I
 	FIELD c visible Z
 CLASS kb net/minecraft/world/level/material/LiquidMaterial
-CLASS kc net/minecraft/client/title/TitleScreen_LetterBlock
+CLASS kc net/minecraft/client/title/TitleScreen
 	FIELD a y D
 	FIELD b yO D
 	FIELD c ya D
@@ -4589,7 +4589,7 @@ CLASS ko net/minecraft/client/GuiMessage
 	FIELD b ticks I
 	METHOD <init> (Ljava/lang/String;)V
 		ARG 1 string
-CLASS kp net/minecraft/network/packet/MoveEntityPacket_Pos
+CLASS kp net/minecraft/network/packet/MoveEntityPacket
 CLASS kq net/minecraft/client/particle/SplashParticle
 CLASS kr com/mojang/nbt/DoubleTag
 	FIELD a data D
@@ -4698,7 +4698,7 @@ CLASS kx net/minecraft/client/renderer/entity/EntityRenderDispatcher
 		ARG 1 e
 		ARG 2 a
 CLASS ky net/minecraft/world/level/tile/Mushroom
-CLASS kz net/minecraft/client/renderer/HttpTexture_1
+CLASS kz net/minecraft/client/renderer/HttpTexture
 CLASS l net/minecraft/world/item/crafting/ArmorRecipes
 	FIELD a shapes [[Ljava/lang/String;
 	FIELD b map [[Ljava/lang/Object;
@@ -4777,7 +4777,7 @@ CLASS lb net/minecraft/network/packet/PacketListener
 		ARG 1 packet
 	METHOD b onUnhandledPacket (Lfn;)V
 		ARG 1 packet
-CLASS lc net/minecraft/client/multiplayer/MultiPlayerLevel_ResetInfo
+CLASS lc net/minecraft/client/multiplayer/MultiPlayerLevel
 	FIELD a x I
 	FIELD b y I
 	FIELD c z I
@@ -4819,20 +4819,20 @@ CLASS lg net/minecraft/world/item/RecordingItem
 	METHOD <init> (ILjava/lang/String;)V
 		ARG 1 id
 		ARG 2 recording
-CLASS lh net/minecraft/isom/IsomPreview_3
+CLASS lh net/minecraft/isom/IsomPreview
 CLASS li net/minecraft/network/packet/TileUpdatePacket
 	FIELD a x I
 	FIELD b y I
 	FIELD c z I
 	FIELD d block I
 	FIELD e data I
-CLASS lj net/minecraft/client/gui/inventory/InventoryScreen_1
+CLASS lj net/minecraft/client/gui/inventory/InventoryScreen
 	METHOD <init> (Llo;Lee;Lgh;IIII)V
 		ARG 3 container
 		ARG 4 slot
 		ARG 5 x
 		ARG 6 y
-CLASS lk net/minecraft/isom/IsomPreview_2
+CLASS lk net/minecraft/isom/IsomPreview
 CLASS ll net/minecraft/client/model/Polygon
 	FIELD a vertices [Led;
 	FIELD b vertexCount I
@@ -4883,7 +4883,7 @@ CLASS lm net/minecraft/client/gui/GuiComponent
 		ARG 3 x
 		ARG 4 y
 		ARG 5 color
-CLASS ln net/minecraft/isom/IsomPreview_1
+CLASS ln net/minecraft/isom/IsomPreview
 CLASS lo net/minecraft/client/gui/inventory/InventoryScreen
 	FIELD j menu Ln;
 	FIELD l xMouse F
@@ -5387,7 +5387,7 @@ CLASS mf net/minecraft/world/phys/HitResult
 CLASS mg net/minecraft/world/level/tile/TreeTile
 	METHOD <init> (I)V
 		ARG 1 id
-CLASS mh net/minecraft/network/packet/MovePlayerPacket_Rot
+CLASS mh net/minecraft/network/packet/MovePlayerPacket
 	METHOD <init> (FFZ)V
 		ARG 1 yRot
 		ARG 2 xRot
@@ -5414,7 +5414,7 @@ CLASS mj net/minecraft/world/level/tile/TorchTile
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-CLASS mk net/minecraft/world/level/tile/RailTile_Rail
+CLASS mk net/minecraft/world/level/tile/RailTile
 	FIELD b level Lcn;
 	FIELD c x I
 	FIELD d y I
@@ -5557,7 +5557,7 @@ CLASS mv net/minecraft/world/entity/animal/Pig
 	FIELD a saddled Z
 CLASS mw net/minecraft/world/inventory/ResultContainer
 	FIELD a items [Lev;
-CLASS mx util/IntHashMap_Entry
+CLASS mx util/IntHashMap
 	FIELD a key I
 	FIELD b value Ljava/lang/Object;
 	FIELD c next Lmx;
@@ -5594,10 +5594,10 @@ CLASS na net/minecraft/network/packet/ChunkTilesUpdatePacket
 	FIELD d blocks [B
 	FIELD e data [B
 	FIELD f count I
-CLASS nb net/minecraft/client/CrashInfoPanel_Border
+CLASS nb net/minecraft/client/CrashInfoPanel
 	METHOD <init> (I)V
 		ARG 1 size
-CLASS nc net/minecraft/client/multiplayer/ConnectScreen_1
+CLASS nc net/minecraft/client/multiplayer/ConnectScreen
 CLASS nd net/minecraft/world/item/crafting/WeaponRecipies
 	FIELD a shapes [[Ljava/lang/String;
 	FIELD b map [[Ljava/lang/Object;
@@ -5756,8 +5756,8 @@ CLASS nf net/minecraft/client/particle/WaterDropParticle
 CLASS ng net/minecraft/world/level/tile/Sponge
 	METHOD <init> (I)V
 		ARG 1 id
-CLASS nh net/minecraft/network/Connection_3
-CLASS ni net/minecraft/network/Connection_1
+CLASS nh net/minecraft/network/Connection
+CLASS ni net/minecraft/network/Connection
 	METHOD <init> (Lii;Ljava/lang/String;)V
 		ARG 2 name
 CLASS nj net/minecraft/client/multiplayer/MultiPlayerGameMode
@@ -5775,7 +5775,7 @@ CLASS nj net/minecraft/client/multiplayer/MultiPlayerGameMode
 		ARG 1 minecraft
 		ARG 2 connection
 	METHOD e ensureHasSentCarriedItem ()V
-CLASS nk net/minecraft/network/Connection_2
+CLASS nk net/minecraft/network/Connection
 	METHOD <init> (Lii;Ljava/lang/String;)V
 		ARG 2 name
 CLASS nl net/minecraft/client/particle/SmokeParticle
@@ -5829,7 +5829,7 @@ CLASS no net/minecraft/world/level/tile/LeverTile
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-CLASS np net/minecraft/world/level/tile/NotGateTile_Toggles
+CLASS np net/minecraft/world/level/tile/NotGateTile
 	FIELD a x I
 	FIELD b y I
 	FIELD c z I
@@ -6126,15 +6126,15 @@ CLASS q net/minecraft/world/level/tile/TntTile
 		ARG 2 tex
 CLASS r net/minecraft/client/renderer/tileentity/MobSpawnerRenderer
 	FIELD b models Ljava/util/Map;
-CLASS s net/minecraft/network/packet/MovePlayerPacket_Pos
+CLASS s net/minecraft/network/packet/MovePlayerPacket
 	METHOD <init> (DDDDZ)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 yView
 		ARG 7 z
 		ARG 9 onGround
-CLASS t net/minecraft/world/level/tile/Tile_2
-CLASS u net/minecraft/world/level/tile/Tile_1
+CLASS t net/minecraft/world/level/tile/Tile
+CLASS u net/minecraft/world/level/tile/Tile
 CLASS v net/minecraft/world/level/levelgen/synth/ImprovedNoise
 	FIELD a xo D
 	FIELD b yo D
